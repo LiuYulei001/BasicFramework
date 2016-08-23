@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  BasicFramework
+//
+//  Created by Rainy on 16/8/18.
+//  Copyright © 2016年 Rainy. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Reachability/Reachability.h>
+#import <MyObjectCoding/NSObject+NSCoding.h>
+#import <JSONModel/JSONModel.h>
+#import "Theme.h"
+#import "CommonDefine.h"
+#import "HTTPURLDefine.h"
+#import "Constants.h"
+#import "UIImage+SPIExtension.h"
+
+
+#import "UIView+Extension.h"
+#import "NSString+LBKJExtenison.h"
+#import "UIDevice-Hardware.h"
+
+#import "DFYGProgressHUD.h"
+#import "AppSingle.h"
+#import "NetWorkManager.h"
+///888
+#import <Masonry/Masonry.h>
+
+#import <JSONModel/JSONModel.h>
+
+
+#import "CommonAppKey.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,6 @@
+framework module MyObjectCoding {
+  umbrella header "MyObjectCoding.h"
+
+  export *
+  module * { export * }
+}

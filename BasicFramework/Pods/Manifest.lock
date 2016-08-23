@@ -1,0 +1,49 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - JSONModel (1.2.0)
+  - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
+  - MyUUID (1.0.1)
+  - Reachability (3.2)
+  - SBJson (4.0.2)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - JSONModel (~> 1.2.0)
+  - Masonry (~> 1.0.1)
+  - MBProgressHUD (~> 0.9.2)
+  - MyUUID
+  - Reachability (~> 3.2)
+  - SBJson (~> 4.0.2)
+  - SDWebImage (~> 3.7)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MyUUID: 640928dcab11d78044d210834071eef71aaa6db7
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SBJson: c18691cc18375b14664ff0fec841f8c4faef1934
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+
+PODFILE CHECKSUM: 92df8a19044ed1f9ff54dc97fc339364607ba6c5
+
+COCOAPODS: 1.1.0.beta.1

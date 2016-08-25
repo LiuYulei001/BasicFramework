@@ -128,9 +128,9 @@
 		364DA6571D65851C00F6F424 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		364DA6581D65851C00F6F424 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364DA65A1D65857200F6F424 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		364FADE91D6EE0F100560F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		364FADEA1D6EE0F100560F8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		364FADEB1D6EE0F100560F8A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		364FADE91D6EE0F100560F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		364FADEA1D6EE0F100560F8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		364FADEB1D6EE0F100560F8A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
 		364FADF01D6EE0F800560F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		36A1BFED1D65B62600B67BF6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -200,10 +200,6 @@
 		364DA53D1D65849300F6F424 /* BasicFramework */ = {
 			isa = PBXGroup;
 			children = (
-				364FADEF1D6EE0F800560F8A /* LaunchScreen.storyboard */,
-				364FADE91D6EE0F100560F8A /* Assets.xcassets */,
-				364FADEA1D6EE0F100560F8A /* Info.plist */,
-				364FADEB1D6EE0F100560F8A /* main.m */,
 				364DA59F1D6584F400F6F424 /* Main(主要) */,
 				364DA5711D6584F400F6F424 /* Expand(扩展) */,
 				364DA6011D6584F400F6F424 /* SDKFile(集成) */,
@@ -635,6 +631,8 @@
 		364FADE61D6EE07500560F8A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				364FADEB1D6EE0F100560F8A /* main.m */,
+				364FADEF1D6EE0F800560F8A /* LaunchScreen.storyboard */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -642,6 +640,7 @@
 		364FADE71D6EE07500560F8A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				364FADE91D6EE0F100560F8A /* Assets.xcassets */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -649,6 +648,7 @@
 		364FADE81D6EE07500560F8A /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				364FADEA1D6EE0F100560F8A /* Info.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -911,6 +911,7 @@
 				364FADF01D6EE0F800560F8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

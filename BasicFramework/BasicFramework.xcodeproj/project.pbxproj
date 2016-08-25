@@ -27,9 +27,6 @@
 		36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABC1D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABE1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AC01D6EE58C00A03BF4 /* Placeholder */; };
-		36111AD81D6EE60000A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AD31D6EE60000A03BF4 /* Placeholder */; };
-		36111AD91D6EE60000A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AD51D6EE60000A03BF4 /* Placeholder */; };
-		36111ADA1D6EE60000A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AD71D6EE60000A03BF4 /* Placeholder */; };
 		36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADB1D6EE63200A03BF4 /* Assets.xcassets */; };
 		36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADC1D6EE63200A03BF4 /* Info.plist */; };
 		36111AE01D6EE63200A03BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36111ADD1D6EE63200A03BF4 /* main.m */; };
@@ -106,9 +103,6 @@
 		36111ABC1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ABE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AC01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AD31D6EE60000A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AD51D6EE60000A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AD71D6EE60000A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ADB1D6EE63200A03BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		36111ADC1D6EE63200A03BF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		36111ADD1D6EE63200A03BF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
@@ -447,7 +441,6 @@
 			children = (
 				36111AE11D6EE63700A03BF4 /* LaunchScreen.storyboard */,
 				36111ADD1D6EE63200A03BF4 /* main.m */,
-				36111AD31D6EE60000A03BF4 /* Placeholder */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -456,7 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				36111ADB1D6EE63200A03BF4 /* Assets.xcassets */,
-				36111AD51D6EE60000A03BF4 /* Placeholder */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -465,16 +457,16 @@
 			isa = PBXGroup;
 			children = (
 				36111ADC1D6EE63200A03BF4 /* Info.plist */,
-				36111AD71D6EE60000A03BF4 /* Placeholder */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
 		};
-		36111AE41D6EE67500A03BF4 /* SDKFile */ = {
+		36111AE41D6EE67500A03BF4 /* SDKFile(集成) */ = {
 			isa = PBXGroup;
 			children = (
 				36111AE51D6EE67500A03BF4 /* Placeholder */,
 			);
+			name = "SDKFile(集成)";
 			path = SDKFile;
 			sourceTree = "<group>";
 		};
@@ -507,7 +499,7 @@
 				364DA5711D6584F400F6F424 /* Expand(扩展) */,
 				364DA6021D6584F400F6F424 /* Vender(第三方) */,
 				36111AD11D6EE60000A03BF4 /* Resource(资源) */,
-				36111AE41D6EE67500A03BF4 /* SDKFile */,
+				36111AE41D6EE67500A03BF4 /* SDKFile(集成) */,
 				364DA53E1D65849300F6F424 /* Supporting Files */,
 			);
 			path = BasicFramework;
@@ -847,12 +839,10 @@
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
 				36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */,
-				36111ADA1D6EE60000A03BF4 /* Placeholder in Resources */,
 				36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
-				36111AD81D6EE60000A03BF4 /* Placeholder in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
 				364DA64E1D6584F400F6F424 /* MJRefresh.bundle in Resources */,
 				36111AC71D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -861,7 +851,6 @@
 				36111AC41D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC31D6EE58C00A03BF4 /* Placeholder in Resources */,
-				36111AD91D6EE60000A03BF4 /* Placeholder in Resources */,
 				36111AC21D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC61D6EE58C00A03BF4 /* Placeholder in Resources */,

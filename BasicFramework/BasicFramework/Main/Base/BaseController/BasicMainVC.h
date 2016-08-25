@@ -1,9 +1,4 @@
 //
-//  DFYGDoFaceParentVC.h
-//  CheDai
-//
-//  Created by Rainy on 16/7/26.
-//  Copyright © 2016年 DFYG_YF3. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

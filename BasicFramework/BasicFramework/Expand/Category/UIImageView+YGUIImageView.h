@@ -1,8 +1,4 @@
 //
-//  UIImageView+YGUIImageView.h
-//  
-//
-//  Created by 星空浩 on 16/6/27.
 //
 //
 

@@ -1,9 +1,4 @@
-//
-//  AppSingle.h
-//  PreheatDemo
-//
-//  Created by 星空浩 on 16/6/28.
-//  Copyright © 2016年 DFYG_YF3. All rights reserved.
+
 //
 
 #import <Foundation/Foundation.h>

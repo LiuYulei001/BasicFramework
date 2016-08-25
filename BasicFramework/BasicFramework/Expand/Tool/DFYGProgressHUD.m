@@ -1,9 +1,4 @@
 //
-//  DFYGProgressHUD.m
-//  DFYGProgressHUD
-//
-//  Created by 六 on 16/6/28.
-//  Copyright © 2016年 liujiliu. All rights reserved.
 //
 
 #import "DFYGProgressHUD.h"

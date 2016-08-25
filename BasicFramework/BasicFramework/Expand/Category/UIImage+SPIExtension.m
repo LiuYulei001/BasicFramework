@@ -1,9 +1,4 @@
 //
-//  UIImage+SPIExtension.m
-//  SPI-Piles
-//
-//  Created by SPI-绿能宝 on 16/3/7.
-//  Copyright © 2016年 北京SPI绿能宝. All rights reserved.
 //
 
 #import "UIImage+SPIExtension.h"

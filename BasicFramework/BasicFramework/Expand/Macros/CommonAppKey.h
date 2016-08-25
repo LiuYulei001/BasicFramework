@@ -1,9 +1,4 @@
 //
-//  CommonAppKey.h
-//  PreheatDemo
-//
-//  Created by victor on 16/6/29.
-//  Copyright © 2016年 DFYG_YF3. All rights reserved.
 //
 
 #ifndef CommonAppKey_h

@@ -1,9 +1,4 @@
 //
-//  UIBarButtonItem+DFYGExtension.m
-//  DFYGProductDemo
-//
-//  Created by victor on 16/7/5.
-//  Copyright © 2016年 DFYG. All rights reserved.
 //
 
 #import "UIBarButtonItem+DFYGExtension.h"

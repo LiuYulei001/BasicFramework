@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364DA5401D65849300F6F424 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA53F1D65849300F6F424 /* main.m */; };
-		364DA54B1D65849300F6F424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364DA54A1D65849300F6F424 /* Assets.xcassets */; };
-		364DA54E1D65849300F6F424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DA54C1D65849300F6F424 /* LaunchScreen.storyboard */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
 		364DA61D1D6584F400F6F424 /* NSObject+YGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5741D6584F400F6F424 /* NSObject+YGTool.m */; };
@@ -40,6 +37,10 @@
 		364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA61A1D6584F400F6F424 /* UIView+MJExtension.m */; };
 		364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */; };
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
+		364FADD91D6ED47C00560F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364FADD81D6ED47C00560F8A /* Assets.xcassets */; };
+		364FADDB1D6ED48400560F8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 364FADDA1D6ED48400560F8A /* Info.plist */; };
+		364FADDD1D6ED49300560F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 364FADDC1D6ED49300560F8A /* main.m */; };
+		364FADE41D6ED4BA00560F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364FADE21D6ED4BA00560F8A /* LaunchScreen.storyboard */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +63,6 @@
 
 /* Begin PBXFileReference section */
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		364DA53F1D65849300F6F424 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
-		364DA54A1D65849300F6F424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
-		364DA54D1D65849300F6F424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		364DA54F1D65849300F6F424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		364DA5541D65849300F6F424 /* BasicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5581D65849300F6F424 /* BasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicFrameworkTests.m; sourceTree = "<group>"; };
 		364DA55A1D65849300F6F424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +128,10 @@
 		364DA6571D65851C00F6F424 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		364DA6581D65851C00F6F424 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364DA65A1D65857200F6F424 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		364FADD81D6ED47C00560F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		364FADDA1D6ED48400560F8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		364FADDC1D6ED49300560F8A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
+		364FADE31D6ED4BA00560F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		36A1BFED1D65B62600B67BF6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -557,37 +558,12 @@
 		364DA5FD1D6584F400F6F424 /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
-				364DA5FF1D6584F400F6F424 /* Image */,
-				364DA5FE1D6584F400F6F424 /* Global */,
-				364DA6001D6584F400F6F424 /* Plist */,
+				364FADD51D6ED46700560F8A /* Global */,
+				364FADD61D6ED46700560F8A /* Image */,
+				364FADD71D6ED46700560F8A /* Plist */,
 			);
 			name = "Resource(资源)";
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		364DA5FE1D6584F400F6F424 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				364DA54C1D65849300F6F424 /* LaunchScreen.storyboard */,
-				364DA53F1D65849300F6F424 /* main.m */,
-			);
-			path = Global;
-			sourceTree = "<group>";
-		};
-		364DA5FF1D6584F400F6F424 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				364DA54A1D65849300F6F424 /* Assets.xcassets */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
-		364DA6001D6584F400F6F424 /* Plist */ = {
-			isa = PBXGroup;
-			children = (
-				364DA54F1D65849300F6F424 /* Info.plist */,
-			);
-			path = Plist;
 			sourceTree = "<group>";
 		};
 		364DA6011D6584F400F6F424 /* SDKFile(集成) */ = {
@@ -651,6 +627,31 @@
 				364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */,
 			);
 			path = NSCoding;
+			sourceTree = "<group>";
+		};
+		364FADD51D6ED46700560F8A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				364FADDC1D6ED49300560F8A /* main.m */,
+				364FADE21D6ED4BA00560F8A /* LaunchScreen.storyboard */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		364FADD61D6ED46700560F8A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				364FADD81D6ED47C00560F8A /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		364FADD71D6ED46700560F8A /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				364FADDA1D6ED48400560F8A /* Info.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
@@ -767,9 +768,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364DA54E1D65849300F6F424 /* LaunchScreen.storyboard in Resources */,
+				364FADD91D6ED47C00560F8A /* Assets.xcassets in Resources */,
+				364FADE41D6ED4BA00560F8A /* LaunchScreen.storyboard in Resources */,
 				364DA64E1D6584F400F6F424 /* MJRefresh.bundle in Resources */,
-				364DA54B1D65849300F6F424 /* Assets.xcassets in Resources */,
+				364FADDB1D6ED48400560F8A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,6 +860,7 @@
 				364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */,
 				364DA6331D6584F400F6F424 /* RootViewController.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
+				364FADDD1D6ED49300560F8A /* main.m in Sources */,
 				364DA6241D6584F400F6F424 /* UIDevice-Hardware.m in Sources */,
 				364DA6261D6584F400F6F424 /* UIImageView+YGUIImageView.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
@@ -865,7 +868,6 @@
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,
 				364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
-				364DA5401D65849300F6F424 /* main.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
 				364DA6311D6584F400F6F424 /* BasicMainVC.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,
@@ -904,10 +906,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		364DA54C1D65849300F6F424 /* LaunchScreen.storyboard */ = {
+		364FADE21D6ED4BA00560F8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				364DA54D1D65849300F6F424 /* Base */,
+				364FADE31D6ED4BA00560F8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			path = ../..;

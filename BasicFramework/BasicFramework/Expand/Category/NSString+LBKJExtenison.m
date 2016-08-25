@@ -1,8 +1,4 @@
 //
-//  NSString+LBKJExtenison.m
-//  
-//
-//  Created by ZL on 15/10/21.
 //
 //
 

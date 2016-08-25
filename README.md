@@ -1,7 +1,9 @@
-# BasicFramework
+# BasicFramework 下载记得给个星啊！谢谢支持！
 
 
 BasicFramework是一个以MVC模式搭建的开源功能集合，基于Objective-C上面进行编写，意在解决新项目对于常见功能模块 的重复开发，代码支持iOS7以后版本；
+
+超小内存，绝无垃圾文件及无用集成，方便实用，轻量级框架！
 
 模块简介
 主项目中的分层主要包含四个模块，Main(主要)、Expand(扩展)、Resource(资源)、Vender(第三方)等；

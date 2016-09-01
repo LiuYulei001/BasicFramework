@@ -1,5 +1,6 @@
 # BasicFramework 下载记得给个星啊！谢谢支持！
 
+https://github.com/LiuYulei001/BasicFramework.git
 
 BasicFramework是一个以MVC模式搭建的开源功能集合，基于Objective-C上面进行编写，意在解决新项目对于常见功能模块 的重复开发，代码支持iOS7以后版本；
 

@@ -39,6 +39,9 @@
 		36410B841DC0553800231AF5 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B831DC0553800231AF5 /* UIImageView+Extension.m */; };
 		36410B871DC0558300231AF5 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B861DC0558300231AF5 /* UIScrollView+Extension.m */; };
 		36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B891DC05C9300231AF5 /* HomePageVC.m */; };
+		36410B901DC0786300231AF5 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B8F1DC0786300231AF5 /* NSDate+Extension.m */; };
+		36410B931DC07AB000231AF5 /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */; };
+		36410B961DC0812D00231AF5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B951DC0812D00231AF5 /* UIButton+Extension.m */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
 		364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA58C1D6584F400F6F424 /* UIView+Extension.m */; };
@@ -122,6 +125,12 @@
 		36410B861DC0558300231AF5 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
 		36410B881DC05C9300231AF5 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		36410B891DC05C9300231AF5 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
+		36410B8E1DC0786300231AF5 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		36410B8F1DC0786300231AF5 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		36410B911DC07AB000231AF5 /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		36410B941DC0812D00231AF5 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		36410B951DC0812D00231AF5 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5541D65849300F6F424 /* BasicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5581D65849300F6F424 /* BasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicFrameworkTests.m; sourceTree = "<group>"; };
@@ -562,6 +571,12 @@
 				36410B831DC0553800231AF5 /* UIImageView+Extension.m */,
 				36410B851DC0558300231AF5 /* UIScrollView+Extension.h */,
 				36410B861DC0558300231AF5 /* UIScrollView+Extension.m */,
+				36410B8E1DC0786300231AF5 /* NSDate+Extension.h */,
+				36410B8F1DC0786300231AF5 /* NSDate+Extension.m */,
+				36410B911DC07AB000231AF5 /* MBProgressHUD+Extension.h */,
+				36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */,
+				36410B941DC0812D00231AF5 /* UIButton+Extension.h */,
+				36410B951DC0812D00231AF5 /* UIButton+Extension.m */,
 			);
 			name = "Category(分类)";
 			path = Category;
@@ -924,6 +939,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36410B901DC0786300231AF5 /* NSDate+Extension.m in Sources */,
 				364DA6531D6584F400F6F424 /* UIScrollView+MJExtension.m in Sources */,
 				364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
@@ -948,7 +964,9 @@
 				36410B841DC0553800231AF5 /* UIImageView+Extension.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 				364DA62C1D6584F400F6F424 /* ProgressHUD.m in Sources */,
+				36410B961DC0812D00231AF5 /* UIButton+Extension.m in Sources */,
 				364DA6311D6584F400F6F424 /* BasicMainVC.m in Sources */,
+				36410B931DC07AB000231AF5 /* MBProgressHUD+Extension.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,
 				36410B781DC0536400231AF5 /* NSString+Extension.m in Sources */,
 			);

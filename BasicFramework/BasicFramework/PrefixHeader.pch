@@ -8,8 +8,20 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+
+#pragma mark - system api
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
+#pragma mark - encapsulation public
+
+#import "ProgressHUD.h"
+#import "AppSingle.h"
+#import "NetWorkManager.h"
+
+#pragma mark - The three parties
+
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
@@ -17,10 +29,17 @@
 #import <Reachability/Reachability.h>
 #import <MyObjectCoding/NSObject+NSCoding.h>
 #import <JSONModel/JSONModel.h>
+#import <Masonry/Masonry.h>
+
+#pragma mark - H file
+
 #import "Theme.h"
 #import "CommonDefine.h"
 #import "HTTPURLDefine.h"
 #import "Constants.h"
+#import "CommonAppKey.h"
+
+#pragma mark - categories
 
 #import "NSObject+Extension.h"
 #import "UIView+Extension.h"
@@ -30,17 +49,18 @@
 #import "UIImage+Extension.h"
 #import "UIImageView+Extension.h"
 #import "UIScrollView+Extension.h"
-
-#import "ProgressHUD.h"
-#import "AppSingle.h"
-#import "NetWorkManager.h"
-
-#import <Masonry/Masonry.h>
-
-#import <JSONModel/JSONModel.h>
+#import "NSDate+Extension.h"
+#import "MBProgressHUD+Extension.h"
+#import "UIButton+Extension.h"
 
 
-#import "CommonAppKey.h"
+
+
+
+
+
+
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

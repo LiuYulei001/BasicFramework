@@ -1,5 +1,4 @@
-//
-//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -14,7 +13,7 @@ typedef NS_ENUM(NSInteger, ProgressHUDMode) {
 };
 
 //同一时间只能显示一个hud
-@interface DFYGProgressHUD : NSObject
+@interface ProgressHUD : NSObject
 
 /**
  *  显示提示框，可设置隐藏时间

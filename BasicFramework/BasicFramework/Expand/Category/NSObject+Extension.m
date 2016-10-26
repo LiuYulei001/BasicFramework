@@ -1,9 +1,16 @@
 //
+//  NSObject+Extension.m
+//  BasicFramework
+//
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "NSObject+YGTool.h"
+#import "NSObject+Extension.h"
 
-@implementation NSObject (YGTool)
+@implementation NSObject (Extension)
+
+
 + (UIViewController*)viewControllerWithviewObj:(UIView *)viewObj {
     
     for (UIView* next = [viewObj superview]; next; next =

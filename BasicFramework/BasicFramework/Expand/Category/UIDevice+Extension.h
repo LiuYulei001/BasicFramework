@@ -1,14 +1,16 @@
-/*
- Erica Sadun, http://ericasadun.com
- iPhone Developer's Cookbook, 6.x Edition
- BSD License, Use at your own risk
- 
- Modified by Eric Horacek for Monospace Ltd. on 2/4/13
- */
+//
+//  UIDevice+Extension.h
+//  BasicFramework
+//
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
+//
+
 
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
+    
     UIDeviceFamilyiPhone,
     UIDeviceFamilyiPod,
     UIDeviceFamilyiPad,
@@ -16,8 +18,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
     UIDeviceFamilyUnknown,
 };
 
-@interface UIDevice (Hardware)
-
+@interface UIDevice (Extension)
 /**
  Returns a machine-readable model name in the format of "iPhone4,1"
  */
@@ -28,7 +29,4 @@ typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
  机型
  */
 - (NSString *)modelName;
-
-
-
 @end

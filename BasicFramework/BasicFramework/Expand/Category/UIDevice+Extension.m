@@ -1,22 +1,17 @@
-/*
- Erica Sadun, http://ericasadun.com
- iPhone Developer's Cookbook, 6.x Edition
- BSD License, Use at your own risk
- 
- Modified by Eric Horacek for Monospace Ltd. on 2/4/13
- */
+//
+//  UIDevice+Extension.m
+//  BasicFramework
+//
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
+//
+
 
 #include <sys/sysctl.h>
-#import "UIDevice-Hardware.h"
+#import "UIDevice+Extension.h"
 
-@interface UIDevice (Hardward)
 
-- (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier;
-
-@end
-
-@implementation UIDevice (Hardware)
-
+@implementation UIDevice (Extension)
 - (NSString *)getSysInfoByName:(char *)typeSpecifier
 {
     size_t size;
@@ -68,8 +63,8 @@
     if ([modelIdentifier isEqualToString:@"iPhone8,2"])    return @"iPhone 6s Plus";
     if ([modelIdentifier isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
     
-//    // iPad http://theiphonewiki.com/wiki/IPad
-//    
+    //    // iPad http://theiphonewiki.com/wiki/IPad
+    //
     if ([modelIdentifier isEqualToString:@"iPad1,1"])      return @"iPad 1G";
     if ([modelIdentifier isEqualToString:@"iPad2,1"])      return @"iPad 2 (WiFi)";
     if ([modelIdentifier isEqualToString:@"iPad2,2"])      return @"iPad 2 (GSM)";
@@ -116,6 +111,5 @@
     
     return @"iPhone+";
 }
-
 
 @end

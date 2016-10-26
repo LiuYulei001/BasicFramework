@@ -1,11 +1,14 @@
 //
+//  NSString+Extension.m
+//  BasicFramework
 //
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "NSString+LBKJExtenison.h"
+#import "NSString+Extension.h"
 
-@implementation NSString (LBKJExtenison)
-
+@implementation NSString (Extension)
 
 - (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
 {

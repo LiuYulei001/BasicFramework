@@ -1,43 +1,41 @@
-//
-//
 
-#import "DFYGProgressHUD.h"
-//#import "MBProgressHUD.h"
 
-@interface DFYGProgressHUD ()
+#import "ProgressHUD.h"
+
+@interface ProgressHUD ()
 
 @property (nonatomic, weak) MBProgressHUD *progressHUD;
 
 @end
 
-@implementation DFYGProgressHUD
+@implementation ProgressHUD
 
 #pragma mark - class method
 + (instancetype)sharedHUD {
-    static DFYGProgressHUD *hud = nil;
+    static ProgressHUD *hud = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (!hud) {
-            hud = [DFYGProgressHUD new];
+            hud = [ProgressHUD new];
         }
     });
     return hud;
 }
 
 + (void)showProgressHUDWithMode:(ProgressHUDMode)mode withText:(NSString *)text afterDelay:(NSTimeInterval)delay isTouched:(BOOL)touched inView:(UIView *)view {
-    [[DFYGProgressHUD sharedHUD] showProgressHUDWithMode:mode withText:text afterDelay:delay isTouched:touched inView:view];
+    [[ProgressHUD sharedHUD] showProgressHUDWithMode:mode withText:text afterDelay:delay isTouched:touched inView:view];
 }
 
 + (void)showProgressHUDWithMode:(ProgressHUDMode)mode withText:(NSString *)text isTouched:(BOOL)touched inView:(UIView *)view {
-    [[DFYGProgressHUD sharedHUD] showProgressHUDWithMode:mode withText:text isTouched:touched inView:view];
+    [[ProgressHUD sharedHUD] showProgressHUDWithMode:mode withText:text isTouched:touched inView:view];
 }
 
 + (void)hideProgressHUDAfterDelay:(NSTimeInterval)delay {
-    [[DFYGProgressHUD sharedHUD] hideProgressHUDAfterDelay:delay];
+    [[ProgressHUD sharedHUD] hideProgressHUDAfterDelay:delay];
 }
 
 + (void)setProgress:(CGFloat)progress {
-    [[DFYGProgressHUD sharedHUD] setProgress:progress];
+    [[ProgressHUD sharedHUD] setProgress:progress];
 }
 
 

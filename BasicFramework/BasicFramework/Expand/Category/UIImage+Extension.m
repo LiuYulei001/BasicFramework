@@ -1,18 +1,16 @@
 //
+//  UIImage+Extension.m
+//  BasicFramework
+//
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "UIImage+SPIExtension.h"
+#import "UIImage+Extension.h"
 
 static UIImage *_img = nil;
 
-@interface UIImage ()
-
-
-@end
-
-
-
-@implementation UIImage (SPIExtension)
+@implementation UIImage (Extension)
 
 -(UIImage*)scaleToSize:(CGSize)size
 {
@@ -31,7 +29,7 @@ static UIImage *_img = nil;
 
 -(UIImage *)restoreMyimage
 {
-
+    
     return _img;
 }
 - (UIImage *)imageWithColor:(UIColor *)color
@@ -60,4 +58,27 @@ static UIImage *_img = nil;
     UIGraphicsEndImageContext();
     return theImage;
 }
+- (UIImage*)image_RotatedByAngle:(CGFloat)Angle
+{
+    
+    CGFloat width = CGImageGetWidth(self.CGImage);
+    CGFloat height = CGImageGetHeight(self.CGImage);
+    
+    CGSize rotatedSize;
+    
+    rotatedSize.width = width;
+    rotatedSize.height = height;
+    
+    UIGraphicsBeginImageContext(rotatedSize);
+    CGContextRef bitmap = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(bitmap, rotatedSize.width/2, rotatedSize.height/2);
+    CGContextRotateCTM(bitmap, Angle * M_PI / 180); //* M_PI / 180
+    CGContextRotateCTM(bitmap, M_PI);
+    CGContextScaleCTM(bitmap, -1.0, 1.0);
+    CGContextDrawImage(bitmap, CGRectMake(-rotatedSize.width/2, -rotatedSize.height/2, rotatedSize.width, rotatedSize.height), self.CGImage);
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 @end

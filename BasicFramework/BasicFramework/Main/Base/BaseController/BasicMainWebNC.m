@@ -1,9 +1,6 @@
-//
-//
+
 
 #import "BasicMainWebNC.h"
-
-//#import "SPIServiceWebVC.h"
 
 
 @interface BasicMainWebNC ()<UINavigationBarDelegate>
@@ -56,7 +53,7 @@
     }
     
 //    if ([self.topViewController isKindOfClass:[SPIServiceWebVC class]]) {
-//        SPIServiceWebVC* webVC = (SPIServiceWebVC *)self.viewControllers.lastObject;
+//        your web VC *webVC = (your web VC *)self.viewControllers.lastObject;
 //        if (webVC.myWebView.canGoBack) {
 //            
 //            

@@ -1,5 +1,4 @@
-//
-//
+
 #define  KEY_DEVICE_UUID @"KEY_DEVICE_UUID"
 
 #import <MyUUID/SPIMyUUID.h>

@@ -1,5 +1,4 @@
 
-//
 
 #define kSaveStatic [NSUserDefaults standardUserDefaults]
 

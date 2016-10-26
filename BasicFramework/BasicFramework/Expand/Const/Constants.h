@@ -9,8 +9,7 @@
 #ifndef Constants_h
 #define Constants_h
 
-//邮件接收人
-static NSString* const kMail_cc_ToRecipients_Address=@"mobileproject@126.com";
+static NSString* const _Mail_Address = @"163.com";
 
 
 #endif /* Constants_h */

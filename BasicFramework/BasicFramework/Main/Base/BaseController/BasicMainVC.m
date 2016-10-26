@@ -1,5 +1,4 @@
-//
-//
+
 
 #import "BasicMainVC.h"
 
@@ -12,10 +11,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (self.backBarTextIsBack) {
-        
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-    }
 }
 
 #pragma mark - removeKeyboardNotification

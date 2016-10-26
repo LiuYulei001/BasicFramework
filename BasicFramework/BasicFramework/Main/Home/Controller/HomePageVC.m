@@ -1,23 +1,22 @@
 //
-//  RootViewController.m
-//  Dome
+//  HomePageVC.m
+//  BasicFramework
 //
-//  Created by Rainy on 16/8/18.
+//  Created by Rainy on 16/10/26.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "HomePageVC.h"
 
-@interface RootViewController ()
+@interface HomePageVC ()
 
 @end
 
-@implementation RootViewController
+@implementation HomePageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 }
 
 - (void)didReceiveMemoryWarning {

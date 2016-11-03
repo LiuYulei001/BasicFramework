@@ -13,6 +13,6 @@
 @property (nonatomic, assign)CGSize size;
 @property(nonatomic,assign)CGFloat Sw;
 
-
+-(void)setBlurStyle:(UIBlurEffectStyle)style;
 
 @end

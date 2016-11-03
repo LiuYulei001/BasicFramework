@@ -12,4 +12,8 @@
 
 -(void)startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
 
+-(UIImageView *)addImg:(UIImage *)img withIMGframe:(CGRect )IMGframe;
+
+-(void)setFrame:(CGRect)frame Title:(NSString *)title font:(UIFont *)font fontColor:(UIColor *)fontColor State:(UIControlState)state;
+
 @end

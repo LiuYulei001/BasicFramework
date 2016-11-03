@@ -62,5 +62,21 @@
     dispatch_resume(_timer);
     
 }
+-(UIImageView *)addImg:(UIImage *)img withIMGframe:(CGRect )IMGframe
+{
+    UIImageView *img_VC = [[UIImageView alloc]initWithFrame:IMGframe];
+    img_VC.image = img;
+    img_VC.contentMode = UIViewContentModeScaleAspectFit;
+    [self addSubview:img_VC];
+    
+    return img_VC;
+}
+-(void)setFrame:(CGRect)frame Title:(NSString *)title font:(UIFont *)font fontColor:(UIColor *)fontColor State:(UIControlState)state
+{
+    self.frame = frame;
+    [self setTitle:title forState:state];
+    [self setTitleColor:fontColor forState:state];
+    [self.titleLabel setFont:font];
+}
 
 @end

@@ -42,6 +42,7 @@
 		36410B901DC0786300231AF5 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B8F1DC0786300231AF5 /* NSDate+Extension.m */; };
 		36410B931DC07AB000231AF5 /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */; };
 		36410B961DC0812D00231AF5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B951DC0812D00231AF5 /* UIButton+Extension.m */; };
+		364A895B1DCB017800832E62 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 364A895A1DCB017800832E62 /* UITextField+Extension.m */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
 		364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA58C1D6584F400F6F424 /* UIView+Extension.m */; };
@@ -131,6 +132,8 @@
 		36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		36410B941DC0812D00231AF5 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		36410B951DC0812D00231AF5 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		364A89591DCB017800832E62 /* UITextField+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extension.h"; sourceTree = "<group>"; };
+		364A895A1DCB017800832E62 /* UITextField+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5541D65849300F6F424 /* BasicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5581D65849300F6F424 /* BasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicFrameworkTests.m; sourceTree = "<group>"; };
@@ -577,6 +580,8 @@
 				36410B921DC07AB000231AF5 /* MBProgressHUD+Extension.m */,
 				36410B941DC0812D00231AF5 /* UIButton+Extension.h */,
 				36410B951DC0812D00231AF5 /* UIButton+Extension.m */,
+				364A89591DCB017800832E62 /* UITextField+Extension.h */,
+				364A895A1DCB017800832E62 /* UITextField+Extension.m */,
 			);
 			name = "Category(分类)";
 			path = Category;
@@ -960,6 +965,7 @@
 				36410B751DC0533D00231AF5 /* NSObject+Extension.m in Sources */,
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,
 				36410B7E1DC053EB00231AF5 /* UIDevice+Extension.m in Sources */,
+				364A895B1DCB017800832E62 /* UITextField+Extension.m in Sources */,
 				364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */,
 				36410B841DC0553800231AF5 /* UIImageView+Extension.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,

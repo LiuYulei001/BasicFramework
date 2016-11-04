@@ -97,8 +97,42 @@
     effectView.frame = self.bounds;
     [self addSubview:effectView];
 }
++(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing
+{
+    
+    UIView *view = [[UIView alloc]initWithFrame:frame];
+    
+    
+    CGRect rect = CGRectMake(0, 0, view.Sw/Number - spacing, view.Sh/Number - spacing);
+    
+    
+    
+    for (int i = 1 ; i <= Number; i++ ) {
+        for (int j = 1; j <= Number; j++) {
+            UIButton *button = [[UIButton alloc]initWithFrame:rect];
+            [view addSubview:button];
+            [button setBackgroundColor:[UIColor brownColor]];
+            rect = CGRectOffset(rect, view.Sw/Number , 0);
+            if (j == Number) {
+                
+                button.Sw += view.Sw - CGRectGetMaxX(button.frame);
+            }
+            
+            if (i == Number) {
+                
+                button.Sh += view.Sh - CGRectGetMaxY(button.frame);
+            }
+        }
+        
+        rect.origin.x = 0;
+        rect.origin.y = rect.origin.y + view.Sh/Number;
+        
+        
+    }
 
-
+    
+    return view;
+}
 
 
 @end

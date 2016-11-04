@@ -15,4 +15,7 @@
 
 -(void)setBlurStyle:(UIBlurEffectStyle)style;
 
+#pragma mark - Create Table
++(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing;
+
 @end

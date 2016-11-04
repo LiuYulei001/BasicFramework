@@ -20,7 +20,8 @@
 - (UIImage *)imageWithColor:(UIColor *)color;
 #pragma mark - Set the image rotation Angle
 - (UIImage*)image_RotatedByAngle:(CGFloat)Angle;
-
+#pragma mark - image from view
+- (UIImage *)imageFromView:(UIView *)theView;
 /**
  *  @brief  取图片某一点的颜色
  *
@@ -64,4 +65,6 @@
             saturationDeltaFactor:(CGFloat)saturationDeltaFactor
                         maskImage:(UIImage *)maskImage;
 
+#pragma mark - Blur
+- (UIImage *)blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
 @end

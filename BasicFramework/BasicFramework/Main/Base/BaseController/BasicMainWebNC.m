@@ -21,7 +21,7 @@
 {
     self.shouldPopItemAfterPopViewController = NO;
     
-    [[UINavigationBar appearance]setBackgroundImage:[UIImage createImageWithColor:kThemeColor] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance]setBackgroundImage:[UIImage createImageWithColor:ThemeColor] forBarMetrics:UIBarMetricsDefault];
     NSDictionary *dic = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:dic];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];

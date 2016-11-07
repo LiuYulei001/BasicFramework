@@ -13,23 +13,28 @@
 /**
  *  默认页面背景色
  */
-#define kBackGroundColor UIColorFromRGBValue(0Xf5f7fa)
+#define DefaultBackGroundColor UIColorFromRGBValue(0Xf5f7fa)
 /**
  *  默认白色
  */
-#define kWhiteColor UIColorFromRGBValue(0Xffffff)
+#define WhiteColor UIColorFromRGBValue(0Xffffff)
+/**
+ *  主题颜色
+ */
+#define ThemeColor UIColorFromRGBValue(0X0096f4)
+/**
+ *  主题辅助颜色（状态，提示等...）
+ */
+#define OrangeColor UIColorFromRGBValue(0Xef5a50)
+/**
+ *  遮盖半透明色
+ */
+#define kCoverColor [UIColorFromRGBValue(0X000000)colorWithAlphaComponent:0.3]
+
 /**
  *  分割线灰色等...
  */
 #define kBackDefaultGrayColor UIColorFromRGBValue(0Xdbdfe8)
-/**
- *  主题颜色
- */
-#define kThemeColor UIColorFromRGBValue(0X0096f4)
-/**
- *  主题辅助颜色（状态，提示等...）
- */
-#define kMarkedColor UIColorFromRGBValue(0Xef5a50)
 /**
  *  主要字体颜色
  */
@@ -42,27 +47,43 @@
  *  辅助字体颜色
  */
 #define kAuxiliaryFontColor UIColorFromRGBValue(0Xcccccc)
-/**
- *  遮盖半透明色
- */
-#define kCoverColor [UIColorFromRGBValue(0X000000)colorWithAlphaComponent:0.3]
 
+
+
+#pragma mark -  * * * * * * * * * * * * * * set Font * * * * * * * * * * * * * *
 /**
- *  导航栏title 按钮
+ *  10号字体
  */
-#define kMaxmumFontSize [UIFont systemFontOfSize:18]
+#define TenFontSize [UIFont systemFontOfSize:10]
 /**
- *  底部菜单栏，部分小标签文字
+ *  12号字体
  */
-#define kMinimumFontSize [UIFont systemFontOfSize:10]
+#define TwelveFontSize [UIFont systemFontOfSize:12]
 /**
- *  主要字体大小（key）
+ *  13号字体
  */
-#define kMainFontSize [UIFont systemFontOfSize:14]
+#define ThirteenFontSize [UIFont systemFontOfSize:13]
 /**
- *  辅助字体大小（value）
+ *  14号字体
  */
-#define kAuxiliaryFontSize [UIFont systemFontOfSize:12]
+#define FourteenFontSize [UIFont systemFontOfSize:14]
+/**
+ *  15号字体
+ */
+#define FifteenFontSize [UIFont systemFontOfSize:15]
+/**
+ *  17号字体
+ */
+#define SeventeenFontSize [UIFont systemFontOfSize:17]
+/**
+ *  18号字体
+ */
+#define EighteenFontSize [UIFont systemFontOfSize:18]
+/**
+ *  20号字体
+ */
+#define TwentyFontSize [UIFont systemFontOfSize:20]
+
 
 
 

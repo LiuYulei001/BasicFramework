@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E054F1DD029B700E7C6C1 /* MainHelper.m */; };
+		360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */; };
+		360E05661DD042A100E7C6C1 /* GraphicBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E055E1DD042A100E7C6C1 /* GraphicBT.m */; };
+		360E056A1DD043CA00E7C6C1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05691DD043CA00E7C6C1 /* UIColor+Extension.m */; };
+		360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -25,7 +30,6 @@
 		36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABA1D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABC1D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABE1D6EE58C00A03BF4 /* Placeholder */; };
-		36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AC01D6EE58C00A03BF4 /* Placeholder */; };
 		36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADB1D6EE63200A03BF4 /* Assets.xcassets */; };
 		36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADC1D6EE63200A03BF4 /* Info.plist */; };
 		36111AE01D6EE63200A03BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36111ADD1D6EE63200A03BF4 /* main.m */; };
@@ -86,6 +90,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360E054E1DD029B700E7C6C1 /* MainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHelper.h; sourceTree = "<group>"; };
+		360E054F1DD029B700E7C6C1 /* MainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHelper.m; sourceTree = "<group>"; };
+		360E05511DD02E5300E7C6C1 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
+		360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
+		360E055D1DD042A100E7C6C1 /* GraphicBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicBT.h; sourceTree = "<group>"; };
+		360E055E1DD042A100E7C6C1 /* GraphicBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicBT.m; sourceTree = "<group>"; };
+		360E05681DD043CA00E7C6C1 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		360E05691DD043CA00E7C6C1 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		360E056B1DD05A3900E7C6C1 /* TextView_Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView_Placeholder.h; sourceTree = "<group>"; };
+		360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView_Placeholder.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -104,7 +118,6 @@
 		36111ABA1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ABC1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ABE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AC01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ADB1D6EE63200A03BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		36111ADC1D6EE63200A03BF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		36111ADD1D6EE63200A03BF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
@@ -225,6 +238,33 @@
 				A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		360E054D1DD0298B00E7C6C1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				360E054E1DD029B700E7C6C1 /* MainHelper.h */,
+				360E054F1DD029B700E7C6C1 /* MainHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		360E055C1DD042A100E7C6C1 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				360E055D1DD042A100E7C6C1 /* GraphicBT.h */,
+				360E055E1DD042A100E7C6C1 /* GraphicBT.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		360E055F1DD042A100E7C6C1 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				360E056B1DD05A3900E7C6C1 /* TextView_Placeholder.h */,
+				360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */,
+			);
+			path = TextView;
 			sourceTree = "<group>";
 		};
 		36111A911D6EE4FC00A03BF4 /* BaseModel */ = {
@@ -431,7 +471,8 @@
 		36111ABF1D6EE58C00A03BF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36111AC01D6EE58C00A03BF4 /* Placeholder */,
+				360E055C1DD042A100E7C6C1 /* Button */,
+				360E055F1DD042A100E7C6C1 /* TextView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -558,6 +599,8 @@
 		364DA5721D6584F400F6F424 /* Category(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				360E05681DD043CA00E7C6C1 /* UIColor+Extension.h */,
+				360E05691DD043CA00E7C6C1 /* UIColor+Extension.m */,
 				36410B731DC0533D00231AF5 /* NSObject+Extension.h */,
 				36410B741DC0533D00231AF5 /* NSObject+Extension.m */,
 				364DA58B1D6584F400F6F424 /* UIView+Extension.h */,
@@ -633,6 +676,7 @@
 		364DA59F1D6584F400F6F424 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				360E054D1DD0298B00E7C6C1 /* Helper */,
 				364DA5A01D6584F400F6F424 /* AppDelegate(入口) */,
 				364DA5A31D6584F400F6F424 /* Base(基类) */,
 				36111A9D1D6EE58C00A03BF4 /* Home(首页) */,
@@ -648,6 +692,8 @@
 			children = (
 				364DA6571D65851C00F6F424 /* AppDelegate.h */,
 				364DA6581D65851C00F6F424 /* AppDelegate.m */,
+				360E05511DD02E5300E7C6C1 /* AppDelegate+Extension.h */,
+				360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */,
 			);
 			name = "AppDelegate(入口)";
 			path = AppDelegate;
@@ -855,7 +901,6 @@
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
 				36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */,
-				36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -947,6 +992,7 @@
 				36410B901DC0786300231AF5 /* NSDate+Extension.m in Sources */,
 				364DA6531D6584F400F6F424 /* UIScrollView+MJExtension.m in Sources */,
 				364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */,
+				360E056A1DD043CA00E7C6C1 /* UIColor+Extension.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
@@ -956,13 +1002,17 @@
 				36410B7B1DC053B900231AF5 /* UIBarButtonItem+Extension.m in Sources */,
 				364DA6541D6584F400F6F424 /* UIScrollView+MJRefresh.m in Sources */,
 				364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */,
+				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
+				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
+				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
 				36410B811DC054E700231AF5 /* UIImage+Extension.m in Sources */,
 				36410B871DC0558300231AF5 /* UIScrollView+Extension.m in Sources */,
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
 				364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */,
 				36410B751DC0533D00231AF5 /* NSObject+Extension.m in Sources */,
+				360E05661DD042A100E7C6C1 /* GraphicBT.m in Sources */,
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,
 				36410B7E1DC053EB00231AF5 /* UIDevice+Extension.m in Sources */,
 				364A895B1DCB017800832E62 /* UITextField+Extension.m in Sources */,

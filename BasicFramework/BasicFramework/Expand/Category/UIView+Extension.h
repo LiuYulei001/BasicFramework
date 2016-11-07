@@ -18,4 +18,8 @@
 #pragma mark - Create Table
 +(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing;
 
+#pragma mark - TapAction LongPressAction
+- (void)setTapActionWithBlock:(void (^)(void))block;
+- (void)setLongPressActionWithBlock:(void (^)(void))block;
+
 @end

@@ -16,6 +16,8 @@
 #pragma mark - nil NULL "space"
 + (BOOL)isBlankString:(NSString *)string;
 
+- (NSString *)pinyin;
+- (NSString *)pinyinInitial;
 
 - (BOOL)isEmail;
 - (BOOL)isPhoneNumber;

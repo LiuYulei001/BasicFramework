@@ -50,6 +50,14 @@
 
 
 
+//聊天的文字气泡拉伸
++ (UIImage *)resizedImage:(NSString *)name;
+//调整图片大小
++ (UIImage *)resizedImage:(NSString *)name left:(CGFloat)left top:(CGFloat)top;
+
+/* 裁剪圆形图片 例如：头像 */
++ (UIImage *)clipImage:(UIImage *)image;
+
 
 
 #pragma mark - blur image

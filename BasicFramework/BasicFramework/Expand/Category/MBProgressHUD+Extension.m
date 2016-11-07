@@ -38,7 +38,7 @@
     hud.mode=MBProgressHUDModeText;
     hud.labelText=message;
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelFont=kMainFontSize;
+    hud.labelFont=FifteenFontSize;
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     //代表需要蒙版效果
@@ -60,7 +60,7 @@
     if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText=text;
-    hud.labelFont=kMainFontSize;
+    hud.labelFont=FifteenFontSize;
     // 代表需要蒙版效果
     hud.dimBackground = YES;
     return hud;
@@ -95,7 +95,7 @@
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText=message;
-    hud.labelFont=kMainFontSize;
+    hud.labelFont=FifteenFontSize;
     //模式
     hud.mode = model;
     // 隐藏时候从父控件中移除
@@ -115,7 +115,7 @@
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText=title;
-    hud.labelFont=kMainFontSize;
+    hud.labelFont=FifteenFontSize;
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     

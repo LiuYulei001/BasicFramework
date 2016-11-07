@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomePageVC.h"
-
+#import "AppDelegate+Extension.h"
 @interface AppDelegate ()
 
 @end
@@ -25,6 +25,8 @@
     [self setMyWindowAndRootViewController];
     
     [self.window makeKeyAndVisible];
+    
+    [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
 }

@@ -15,7 +15,16 @@
 - (CGSize)sizeWithFont:(UIFont *)font andMaxW:(CGFloat)maxW;
 #pragma mark - nil NULL "space"
 + (BOOL)isBlankString:(NSString *)string;
+/**
+ *  字符串添加图片
+ */
+-(NSMutableAttributedString *)insertImg:(UIImage *)Img atIndex:(NSInteger )index IMGrect:(CGRect )IMGrect;
+/**
+ *  不同颜色不同字体大小字符串
+ */
+-(NSMutableAttributedString *)setOtherColor:(UIColor *)Color font:(CGFloat)font forStr:(NSString *)forStr;
 
+- (BOOL)isChinese;
 - (NSString *)pinyin;
 - (NSString *)pinyinInitial;
 

@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
+
+
 #import "HomePageVC.h"
 
 
@@ -18,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
 
 }
 - (void)didReceiveMemoryWarning {

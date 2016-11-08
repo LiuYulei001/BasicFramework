@@ -33,6 +33,7 @@
 
 #pragma mark - H file
 
+#import "IMGNAME.h"
 #import "Theme.h"
 #import "CommonDefine.h"
 #import "HTTPURLDefine.h"
@@ -50,11 +51,11 @@
 #import "UIImageView+Extension.h"
 #import "UIScrollView+Extension.h"
 #import "NSDate+Extension.h"
-#import "MBProgressHUD+Extension.h"
+#import "UIViewController+Extension.h"
 #import "UIButton+Extension.h"
 #import "UIColor+Extension.h"
-
-
+#import "UIImageView+GIF.h"
+#import "NSMutableAttributedString+Extension.h"
 
 
 

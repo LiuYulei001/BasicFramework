@@ -51,14 +51,6 @@
  *  删除value
  */
 -(void)DeleteValueInMyLocalStoreForKey:(NSString *)key;
-/**
- *  添加圆角边框
- */
--(void)addBorderOnView:(UIView *)view cornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth;
-/**
- *  不同颜色不同字体大小字符串
- */
--(NSMutableAttributedString *)getOtherColorString:(NSString *)string Color:(UIColor *)Color font:(CGFloat)font inStr:(NSString *)instr;
 
 
 @end

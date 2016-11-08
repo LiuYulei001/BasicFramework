@@ -21,36 +21,6 @@
     }
     return self;
 }
--(NSMutableAttributedString *)getOtherColorString:(NSString *)string Color:(UIColor *)Color font:(CGFloat)font inStr:(NSString *)instr
-{
-    
-    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]init];
-    
-    if (![NSString isBlankString:instr]) {
-        
-        NSMutableString *temp = [NSMutableString stringWithString:instr];
-        
-        NSRange range = [temp rangeOfString:string];
-        
-        str = [[NSMutableAttributedString alloc] initWithString:temp];
-        [str addAttribute:NSForegroundColorAttributeName value:Color range:range];
-        if (font) {
-            
-            [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:range];
-        }
-        
-    }
-    return str;
-    
-    
-}
--(void)addBorderOnView:(UIView *)view cornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth
-{
-    view.layer.borderWidth = lineWidth;
-    view.cornerRad = cornerRad;
-    view.layer.borderColor = collor.CGColor;
-    
-}
 -(void)saveInMyLocalStoreForValue:(id)value atKey:(NSString *)key
 {
     [kSaveStatic setValue:value forKey:key];
@@ -166,4 +136,22 @@
     [reach startNotifier];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityAction) name:kReachabilityChangedNotification object:nil];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

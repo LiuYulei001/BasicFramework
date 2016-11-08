@@ -9,6 +9,54 @@
 #import "NSString+Extension.h"
 
 @implementation NSString (Extension)
+-(NSMutableAttributedString *)setOtherColor:(UIColor *)Color font:(CGFloat)font forStr:(NSString *)forStr
+{
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]init];
+    
+    if (![NSString isBlankString:self]) {
+        
+        NSMutableString *temp = [NSMutableString stringWithString:self];
+        
+        NSRange range = [temp rangeOfString:forStr];
+        
+        str = [[NSMutableAttributedString alloc] initWithString:temp];
+        [str addAttribute:NSForegroundColorAttributeName value:Color range:range];
+        if (font) {
+            
+            [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:range];
+        }
+        
+    }
+    return str;
+    
+    
+}
+
+-(NSMutableAttributedString *)insertImg:(UIImage *)Img atIndex:(NSInteger )index IMGrect:(CGRect )IMGrect
+{
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self];
+    
+    if (![NSString isBlankString:self] && index <= self.length - 1) {
+        
+        NSTextAttachment *attatchment = [[NSTextAttachment alloc] init];
+        attatchment.image = Img;
+        attatchment.bounds = IMGrect;
+        [attributedText insertAttributedString:[NSAttributedString attributedStringWithAttachment:attatchment] atIndex:index];
+    }
+    
+    return attributedText;
+
+    
+}
+
+- (BOOL)isChinese
+{
+    NSString *match = @"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
+}
 - (NSString *)pinyin
 {
     NSMutableString *str = [self mutableCopy];

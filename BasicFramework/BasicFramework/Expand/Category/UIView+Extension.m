@@ -10,6 +10,15 @@ static char kDTActionHandlerLongPressGestureKey;
 
 @implementation UIView (Extension)
 
+
+-(void)addBorderWithcornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth
+{
+    self.layer.borderWidth = lineWidth;
+    self.cornerRad = cornerRad;
+    self.layer.borderColor = collor.CGColor;
+    
+}
+
 - (void)setTapActionWithBlock:(void (^)(void))block
 {
     UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &kDTActionHandlerTapGestureKey);

@@ -22,4 +22,9 @@
 - (void)setTapActionWithBlock:(void (^)(void))block;
 - (void)setLongPressActionWithBlock:(void (^)(void))block;
 
+/**
+ *  添加圆角边框
+ */
+-(void)addBorderWithcornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth;
+
 @end

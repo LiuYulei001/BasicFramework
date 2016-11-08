@@ -13,5 +13,7 @@ typedef NS_ENUM(NSUInteger, GraphicBT_Type) {
 - (instancetype)initWithFrame:(CGRect)frame withIMG:(UIImage *)img title:(NSString *)title type:(GraphicBT_Type)type;
 
 @property(nonatomic,strong)UIFont *font;
+@property(nonatomic,strong)UIImage *image;
+
 
 @end

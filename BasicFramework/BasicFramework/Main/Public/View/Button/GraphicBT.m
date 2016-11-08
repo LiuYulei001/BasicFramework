@@ -30,6 +30,13 @@
     }
     return self;
 }
+-(void)setImage:(UIImage *)image
+{
+    _image = image;
+    _img = image;
+    [self setImage:image forState:UIControlStateNormal];
+    [self setNeedsLayout];
+}
 -(void)setFont:(UIFont *)font
 {
     _font = font;

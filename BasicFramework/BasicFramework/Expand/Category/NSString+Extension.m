@@ -9,6 +9,14 @@
 #import "NSString+Extension.h"
 
 @implementation NSString (Extension)
+
+
+- (NSString *)MD5string
+{
+    return [MyMD5 md5:self];
+}
+
+
 -(NSMutableAttributedString *)setOtherColor:(UIColor *)Color font:(CGFloat)font forStr:(NSString *)forStr
 {
     

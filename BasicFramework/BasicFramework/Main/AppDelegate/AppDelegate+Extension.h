@@ -13,4 +13,11 @@
 - (void)easemobApplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
+/**
+ *  获取启动页
+ *
+ *  @return UIImageView
+ */
+-(UIImageView *)GetPortraitIMG;
+
 @end

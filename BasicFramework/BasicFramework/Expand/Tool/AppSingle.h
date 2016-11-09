@@ -4,7 +4,10 @@
 @interface AppSingle : NSObject
 
 +(instancetype)Shared;
-
+/**
+ *  手机唯一标示
+ */
+-(NSString *)getUUID;
 /**
  *  网络监控
  */

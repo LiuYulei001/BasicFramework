@@ -15,6 +15,8 @@
 - (CGSize)sizeWithFont:(UIFont *)font andMaxW:(CGFloat)maxW;
 #pragma mark - nil NULL "space"
 + (BOOL)isBlankString:(NSString *)string;
+#pragma md5
+- (NSString *)MD5string;
 /**
  *  字符串添加图片
  */

@@ -9,9 +9,10 @@
 
 
 #import "HomePageVC.h"
+#import "LoginVC.h"
 
 
-@interface HomePageVC ()
+@interface HomePageVC ()<UIWebViewDelegate>
 
 @end
 
@@ -21,9 +22,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -15,6 +15,8 @@
 		360E05701DD17D4C00E7C6C1 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E056F1DD17D4C00E7C6C1 /* UIViewController+Extension.m */; };
 		360E057A1DD1A39500E7C6C1 /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05791DD1A39500E7C6C1 /* UIImageView+GIF.m */; };
 		360E057D1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E057C1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m */; };
+		360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05821DD1D52600E7C6C1 /* LoginVC.m */; };
+		360E05871DD2C62500E7C6C1 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05861DD2C62500E7C6C1 /* MyMD5.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -22,7 +24,6 @@
 		36111AC21D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA11D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC41D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA51D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA71D6EE58C00A03BF4 /* Placeholder */; };
-		36111AC61D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAA1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC71D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAC1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAE1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB01D6EE58C00A03BF4 /* Placeholder */; };
@@ -37,7 +38,6 @@
 		36111AE01D6EE63200A03BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36111ADD1D6EE63200A03BF4 /* main.m */; };
 		36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE11D6EE63700A03BF4 /* LaunchScreen.storyboard */; };
 		36111AE61D6EE67500A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE51D6EE67500A03BF4 /* Placeholder */; };
-		36410B751DC0533D00231AF5 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B741DC0533D00231AF5 /* NSObject+Extension.m */; };
 		36410B781DC0536400231AF5 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B771DC0536400231AF5 /* NSString+Extension.m */; };
 		36410B7B1DC053B900231AF5 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B7A1DC053B800231AF5 /* UIBarButtonItem+Extension.m */; };
 		36410B7E1DC053EB00231AF5 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B7D1DC053EB00231AF5 /* UIDevice+Extension.m */; };
@@ -108,6 +108,10 @@
 		360E057B1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
 		360E057C1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Extension.m"; sourceTree = "<group>"; };
 		360E05801DD1CA0A00E7C6C1 /* IMGNAME.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMGNAME.h; sourceTree = "<group>"; };
+		360E05811DD1D52600E7C6C1 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		360E05821DD1D52600E7C6C1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		360E05851DD2C62500E7C6C1 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
+		360E05861DD2C62500E7C6C1 /* MyMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMD5.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -115,7 +119,6 @@
 		36111AA11D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AA51D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AA71D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AAA1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAC1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -130,8 +133,6 @@
 		36111ADD1D6EE63200A03BF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
 		36111AE21D6EE63700A03BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36111AE51D6EE67500A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36410B731DC0533D00231AF5 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
-		36410B741DC0533D00231AF5 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		36410B761DC0536400231AF5 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		36410B771DC0536400231AF5 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		36410B791DC053B800231AF5 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -272,6 +273,15 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
+		360E05841DD2C62500E7C6C1 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				360E05851DD2C62500E7C6C1 /* MyMD5.h */,
+				360E05861DD2C62500E7C6C1 /* MyMD5.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
 		36111A911D6EE4FC00A03BF4 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,7 +384,8 @@
 		36111AA91D6EE58C00A03BF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36111AAA1D6EE58C00A03BF4 /* Placeholder */,
+				360E05811DD1D52600E7C6C1 /* LoginVC.h */,
+				360E05821DD1D52600E7C6C1 /* LoginVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -606,8 +617,6 @@
 			children = (
 				360E05681DD043CA00E7C6C1 /* UIColor+Extension.h */,
 				360E05691DD043CA00E7C6C1 /* UIColor+Extension.m */,
-				36410B731DC0533D00231AF5 /* NSObject+Extension.h */,
-				36410B741DC0533D00231AF5 /* NSObject+Extension.m */,
 				364DA58B1D6584F400F6F424 /* UIView+Extension.h */,
 				364DA58C1D6584F400F6F424 /* UIView+Extension.m */,
 				36410B761DC0536400231AF5 /* NSString+Extension.h */,
@@ -737,6 +746,7 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				360E05841DD2C62500E7C6C1 /* MD5 */,
 				364DA6031D6584F400F6F424 /* IMGBrowse */,
 				364DA60A1D6584F400F6F424 /* MJRefresh */,
 				364DA61B1D6584F400F6F424 /* NSCoding */,
@@ -922,7 +932,6 @@
 				36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC21D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */,
-				36111AC61D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACC1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */,
 			);
@@ -1003,6 +1012,7 @@
 				360E056A1DD043CA00E7C6C1 /* UIColor+Extension.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
+				360E05871DD2C62500E7C6C1 /* MyMD5.m in Sources */,
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
@@ -1011,6 +1021,7 @@
 				364DA6541D6584F400F6F424 /* UIScrollView+MJRefresh.m in Sources */,
 				360E05701DD17D4C00E7C6C1 /* UIViewController+Extension.m in Sources */,
 				364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */,
+				360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */,
 				360E057D1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m in Sources */,
 				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
 				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
@@ -1021,7 +1032,6 @@
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
 				364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */,
-				36410B751DC0533D00231AF5 /* NSObject+Extension.m in Sources */,
 				360E05661DD042A100E7C6C1 /* GraphicBT.m in Sources */,
 				360E057A1DD1A39500E7C6C1 /* UIImageView+GIF.m in Sources */,
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,

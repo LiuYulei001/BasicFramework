@@ -1,9 +1,13 @@
 
 
+#define  KEY_USERNAME_PASSWORD @"KEY_USERNAME_PASSWORD"
+
 #define kSaveStatic [NSUserDefaults standardUserDefaults]
 
 #import "AppSingle.h"
 #import "MJRefresh.h"
+#import <MyUUID/SPIMyUUID.h>
+
 @implementation AppSingle
 +(instancetype)Shared
 {
@@ -137,6 +141,21 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityAction) name:kReachabilityChangedNotification object:nil];
 }
 
+-(NSString *)getUUID
+{
+    NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_USERNAME_PASSWORD];
+    
+    if ([strUUID isEqualToString:@""] || !strUUID)
+    {
+        CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+        
+        strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
+        
+        [SPIMyUUID save:KEY_USERNAME_PASSWORD data:strUUID];
+        
+    }
+    return strUUID;
+}
 
 
 

@@ -1,10 +1,10 @@
-# BasicFramework 下载记得给个星啊！谢谢支持！
+# BasicFramework 将持续更新！ 下载记得给个星啊！谢谢支持！
 
 https://github.com/LiuYulei001/BasicFramework.git
 
-BasicFramework是一个以MVC模式搭建的开源功能集合，基于Objective-C上面进行编写，意在解决新项目对于常见功能模块 的重复开发，代码支持iOS7以后版本；
+BasicFramework是一个新工程基础框架，包含了日常积累的分类、方法、工具等，模块化清晰，基于Objective-C的ARC进行编写，意在解决新项目对于常见功能模块的重复开发，代码支持iOS7以后版本；
 
-超小内存，绝无垃圾文件及无用集成，方便实用，轻量级框架！
+超小内存，绝无垃圾文件及无用集成，简单、方便、实用，轻量级框架！
 
 模块简介
 主项目中的分层主要包含四个模块，Main(主要)、Expand(扩展)、Resource(资源)、Vender(第三方)等；
@@ -31,3 +31,4 @@ Global用于存放项目一些全局的内容，包含启动项的内容LaunchSc
 Image用于存放图片资源，可以根据功能模块进行再分不同的xcassets文件；
 
 Plist用于存放plist文件，统一存放方便管理；
+

@@ -2,7 +2,7 @@
 
 https://github.com/LiuYulei001/BasicFramework.git
 
-BasicFramework是一个新工程框架，包含了日常积累的分类方法及工具，模块化清晰，基于Objective-C的ARC进行编写，意在解决新项目对于常见功能模块的重复开发，代码支持iOS7以后版本；
+BasicFramework是一个新工程基础框架，包含了日常积累的分类方法及工具，模块化清晰，基于Objective-C的ARC进行编写，意在解决新项目对于常见功能模块的重复开发，代码支持iOS7以后版本；
 
 超小内存，绝无垃圾文件及无用集成，方便实用，轻量级框架！
 

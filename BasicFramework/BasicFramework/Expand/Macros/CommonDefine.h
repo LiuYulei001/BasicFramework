@@ -8,6 +8,8 @@
  *  获取mainScreen的bounds
  */
 #define kScreenBounds [[UIScreen mainScreen] bounds]
+#define kScreenWidth kScreenBounds.size.width
+#define kScreenHeight kScreenBounds.size.height
 /**
  *  版本号
  *

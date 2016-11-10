@@ -14,9 +14,13 @@
 - (CGSize)sizeWithFont:(UIFont *)font;
 - (CGSize)sizeWithFont:(UIFont *)font andMaxW:(CGFloat)maxW;
 #pragma mark - nil NULL "space"
-+ (BOOL)isBlankString:(NSString *)string;
+-(BOOL)isNULL;
 #pragma md5
 - (NSString *)MD5string;
+/*
+   把JSON格式的字符串转换成字典
+ */
+- (NSDictionary *)StringOfJsonConversionDictionary;
 /**
  *  字符串添加图片
  */

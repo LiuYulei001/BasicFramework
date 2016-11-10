@@ -10,6 +10,30 @@
 
 @implementation NSString (Extension)
 
+- (NSDictionary *)StringOfJsonConversionDictionary {
+    
+    if ([self isNULL]) {
+        
+        return nil;
+        
+    }
+    
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *parseError;
+    
+    NSDictionary *Dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&parseError];
+    
+    if(parseError) {
+        
+        return nil;
+    }
+    
+    return Dictionary;
+    
+}
+
+
 
 - (NSString *)MD5string
 {
@@ -22,7 +46,7 @@
     
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc]init];
     
-    if (![NSString isBlankString:self]) {
+    if (![self isNULL]) {
         
         NSMutableString *temp = [NSMutableString stringWithString:self];
         
@@ -46,7 +70,7 @@
     
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self];
     
-    if (![NSString isBlankString:self] && index <= self.length - 1) {
+    if (![self isNULL] && index <= self.length - 1) {
         
         NSTextAttachment *attatchment = [[NSTextAttachment alloc] init];
         attatchment.image = Img;
@@ -108,18 +132,18 @@
     
 }
 
-+(BOOL)isBlankString:(NSString *)string{
+-(BOOL)isNULL{
     
-    if (string == nil) {
+    if (self == nil) {
         return YES;
     }
-    if (string == NULL) {
+    if (self == NULL) {
         return YES;
     }
-    if ([string isKindOfClass:[NSNull class]]) {
+    if ([self isKindOfClass:[NSNull class]]) {
         return YES;
     }
-    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0) {
+    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0) {
         return YES;
     }
     return NO;

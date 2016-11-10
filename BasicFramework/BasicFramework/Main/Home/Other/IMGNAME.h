@@ -6,8 +6,6 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#ifndef IMGNAME_h
-#define IMGNAME_h
 
 #pragma mark * * * * * * * * * * * * * * * * IMG NAME * * * * * * * * * * * * * * * *
 
@@ -15,4 +13,4 @@
 #define kTest2 @"part"
 #define kTest3 @"task"
 
-#endif /* IMGNAME_h */
+

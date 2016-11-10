@@ -17,6 +17,7 @@
 		360E057D1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E057C1DD1BFE700E7C6C1 /* NSMutableAttributedString+Extension.m */; };
 		360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05821DD1D52600E7C6C1 /* LoginVC.m */; };
 		360E05871DD2C62500E7C6C1 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05861DD2C62500E7C6C1 /* MyMD5.m */; };
+		360E058E1DD3185200E7C6C1 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E058D1DD3185200E7C6C1 /* NSDictionary+Extension.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -112,6 +113,8 @@
 		360E05821DD1D52600E7C6C1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		360E05851DD2C62500E7C6C1 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
 		360E05861DD2C62500E7C6C1 /* MyMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMD5.m; sourceTree = "<group>"; };
+		360E058C1DD3185200E7C6C1 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		360E058D1DD3185200E7C6C1 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -643,6 +646,8 @@
 				364A895A1DCB017800832E62 /* UITextField+Extension.m */,
 				360E056E1DD17D4C00E7C6C1 /* UIViewController+Extension.h */,
 				360E056F1DD17D4C00E7C6C1 /* UIViewController+Extension.m */,
+				360E058C1DD3185200E7C6C1 /* NSDictionary+Extension.h */,
+				360E058D1DD3185200E7C6C1 /* NSDictionary+Extension.m */,
 			);
 			name = "Category(分类)";
 			path = Category;
@@ -1016,6 +1021,7 @@
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
+				360E058E1DD3185200E7C6C1 /* NSDictionary+Extension.m in Sources */,
 				364DA6511D6584F400F6F424 /* MJRefreshFooterView.m in Sources */,
 				36410B7B1DC053B900231AF5 /* UIBarButtonItem+Extension.m in Sources */,
 				364DA6541D6584F400F6F424 /* UIScrollView+MJRefresh.m in Sources */,

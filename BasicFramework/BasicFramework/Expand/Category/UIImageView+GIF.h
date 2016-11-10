@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (GIF)
+//帧视图合集
+@property (nonatomic,strong)NSArray *image_array;
 
 - (void)showGifImageWithData:(NSData *)data;
 - (void)showGifImageWithURL:(NSURL *)url;

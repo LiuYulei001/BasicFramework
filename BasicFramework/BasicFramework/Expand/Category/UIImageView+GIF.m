@@ -8,6 +8,7 @@
 
 #import "UIImageView+GIF.h"
 #import <ImageIO/ImageIO.h>
+#import <objc/runtime.h>
 
 #if __has_feature(objc_arc)
 #define toCF (__bridge CFTypeRef)
@@ -33,6 +34,7 @@
         [images addObject:[UIImage imageWithCGImage:cgImage]];
         CGImageRelease(cgImage);
     }
+    self.image_array = images;
     [self setAnimationImages:images];
     [self setAnimationDuration:duration];
     [self startAnimating];
@@ -43,10 +45,8 @@
     double duration=0;
     NSRange dataSearchLeftRange = NSMakeRange(0, data.length);
     while(YES){
-        NSRange frameDescriptorRange = [data rangeOfData:[NSData dataWithBytes:graphicControlExtensionStartBytes
-                                                                        length:3]
-                                                 options:NSDataSearchBackwards
-                                                   range:dataSearchLeftRange];
+        NSRange frameDescriptorRange = [data rangeOfData:[NSData dataWithBytes:graphicControlExtensionStartBytes length:3] options:NSDataSearchBackwards range:dataSearchLeftRange];
+        
         if(frameDescriptorRange.location!=NSNotFound){
             NSData *durationData = [data subdataWithRange:NSMakeRange(frameDescriptorRange.location+4, 2)];
             unsigned char buffer[2];
@@ -72,5 +72,15 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     [self showGifImageWithData:data];
 }
+// 在分类里添加属性
+static char AddressKey;
 
+-(void)setImage_array:(NSArray *)image_array
+{
+    objc_setAssociatedObject(self, &AddressKey, image_array, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+-(NSArray *)image_array
+{
+    return objc_getAssociatedObject(self, &AddressKey);
+}
 @end

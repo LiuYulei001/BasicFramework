@@ -1,13 +1,3 @@
-//
-//  PrefixHeader.pch
-//  BasicFramework
-//
-//  Created by Rainy on 16/8/18.
-//  Copyright © 2016年 Rainy. All rights reserved.
-//
-
-#ifndef PrefixHeader_pch
-#define PrefixHeader_pch
 
 #pragma mark - system api
 
@@ -56,13 +46,5 @@
 #import "UIColor+Extension.h"
 #import "UIImageView+GIF.h"
 #import "NSMutableAttributedString+Extension.h"
+#import "NSDictionary+Extension.h"
 
-
-
-
-
-
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-#endif /* PrefixHeader_pch */

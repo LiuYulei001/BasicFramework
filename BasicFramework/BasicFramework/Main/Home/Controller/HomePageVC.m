@@ -6,13 +6,10 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-
-
 #import "HomePageVC.h"
-#import "LoginVC.h"
 
+@interface HomePageVC ()
 
-@interface HomePageVC ()<UIWebViewDelegate>
 
 @end
 
@@ -21,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

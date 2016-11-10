@@ -57,9 +57,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
 
 -(void)FaultTolerance
 {
+    
+#if !DEBUG
+    
     [AvoidCrash becomeEffective];
     //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
     [kNotificationCenter addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
+#endif
     
 }
 -(void)dealwithCrashMessage:(NSNotification *)notification

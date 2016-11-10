@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HomePageVC.h"
 #import "AppDelegate+Extension.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,7 +20,9 @@
     // Override point for customization after application launch.
     
 #pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
-    [[AppSingle Shared]setReachability];
+    [self setReachability];
+#pragma mark 容错开启
+    [self FaultTolerance];
     
     [self setMyWindowAndRootViewController];
     
@@ -28,14 +30,11 @@
     
     [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
     
+    
     return YES;
 }
--(void)setMyWindowAndRootViewController
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[HomePageVC alloc]init];
-}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

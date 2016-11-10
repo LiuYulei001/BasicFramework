@@ -9,6 +9,7 @@
 #import "ProgressHUD.h"
 #import "AppSingle.h"
 #import "NetWorkManager.h"
+#import "GlobalConstants.h"
 
 #pragma mark - The three parties
 
@@ -28,8 +29,6 @@
 #import "Theme.h"
 #import "CommonDefine.h"
 #import "HTTPURLDefine.h"
-#import "Constants.h"
-#import "CommonAppKey.h"
 
 #pragma mark - categories
 

@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AvoidCrash (1.5.1)
   - Bugly (2.4.2)
   - JSONModel (1.2.0)
   - Masonry (1.0.1)
@@ -27,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - AvoidCrash
   - Bugly
   - JSONModel (~> 1.2.0)
   - Masonry (~> 1.0.1)
@@ -38,6 +40,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AvoidCrash: 767acec95c5d684ec024ed9f21a439d13fbc06f3
   Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
@@ -47,6 +50,6 @@ SPEC CHECKSUMS:
   SBJson: 16404e557ff6346b506e9e12f2d83e6782f37f6f
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: 850e115fddd306e754488fd808256e7500dc9d2e
+PODFILE CHECKSUM: 87b1dafb6370fd1f89bb34018d94dea6696da34b
 
 COCOAPODS: 1.2.0.beta.1

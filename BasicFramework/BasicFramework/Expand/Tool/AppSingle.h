@@ -9,10 +9,6 @@
  */
 -(NSString *)getUUID;
 /**
- *  网络监控
- */
--(void)setReachability;
-/**
  *  上拉加载
  */
 -(void)addFooderPullOnView:(UIScrollView *)View waitTime:(CGFloat)waitTime action:(void (^)())action;

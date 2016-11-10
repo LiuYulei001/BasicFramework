@@ -32,13 +32,13 @@
 		36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB51D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACC1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB81D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABA1D6EE58C00A03BF4 /* Placeholder */; };
-		36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABC1D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111ABE1D6EE58C00A03BF4 /* Placeholder */; };
 		36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADB1D6EE63200A03BF4 /* Assets.xcassets */; };
 		36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36111ADC1D6EE63200A03BF4 /* Info.plist */; };
 		36111AE01D6EE63200A03BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36111ADD1D6EE63200A03BF4 /* main.m */; };
 		36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE11D6EE63700A03BF4 /* LaunchScreen.storyboard */; };
 		36111AE61D6EE67500A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE51D6EE67500A03BF4 /* Placeholder */; };
+		3620324A1DD450D300F15494 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032491DD450D300F15494 /* GlobalConstants.m */; };
 		36410B781DC0536400231AF5 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B771DC0536400231AF5 /* NSString+Extension.m */; };
 		36410B7B1DC053B900231AF5 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B7A1DC053B800231AF5 /* UIBarButtonItem+Extension.m */; };
 		36410B7E1DC053EB00231AF5 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B7D1DC053EB00231AF5 /* UIDevice+Extension.m */; };
@@ -129,13 +129,14 @@
 		36111AB51D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB81D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ABA1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111ABC1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ABE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111ADB1D6EE63200A03BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		36111ADC1D6EE63200A03BF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		36111ADD1D6EE63200A03BF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
 		36111AE21D6EE63700A03BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36111AE51D6EE67500A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
+		362032481DD450D300F15494 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		362032491DD450D300F15494 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		36410B761DC0536400231AF5 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		36410B771DC0536400231AF5 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		36410B791DC053B800231AF5 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		364DA5651D65849300F6F424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364DA58B1D6584F400F6F424 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		364DA58C1D6584F400F6F424 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		364DA5901D6584F400F6F424 /* CommonAppKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAppKey.h; sourceTree = "<group>"; };
 		364DA5911D6584F400F6F424 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		364DA5921D6584F400F6F424 /* HTTPURLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPURLDefine.h; sourceTree = "<group>"; };
 		364DA5941D6584F400F6F424 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
@@ -207,7 +207,6 @@
 		364DA6581D65851C00F6F424 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364DA65A1D65857200F6F424 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
-		36A1BFED1D65B62600B67BF6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -474,7 +473,8 @@
 		36111ABB1D6EE58C00A03BF4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				36111ABC1D6EE58C00A03BF4 /* Placeholder */,
+				362032481DD450D300F15494 /* GlobalConstants.h */,
+				362032491DD450D300F15494 /* GlobalConstants.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -606,7 +606,6 @@
 			isa = PBXGroup;
 			children = (
 				364DA5721D6584F400F6F424 /* Category(分类) */,
-				364DA58D1D6584F400F6F424 /* Const(常量) */,
 				364DA58F1D6584F400F6F424 /* Macros(宏) */,
 				364DA5931D6584F400F6F424 /* Network(网络) */,
 				364DA5961D6584F400F6F424 /* Tool(工具类) */,
@@ -653,19 +652,9 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		364DA58D1D6584F400F6F424 /* Const(常量) */ = {
-			isa = PBXGroup;
-			children = (
-				36A1BFED1D65B62600B67BF6 /* Constants.h */,
-			);
-			name = "Const(常量)";
-			path = Const;
-			sourceTree = "<group>";
-		};
 		364DA58F1D6584F400F6F424 /* Macros(宏) */ = {
 			isa = PBXGroup;
 			children = (
-				364DA5901D6584F400F6F424 /* CommonAppKey.h */,
 				364DA5911D6584F400F6F424 /* CommonDefine.h */,
 				364DA5921D6584F400F6F424 /* HTTPURLDefine.h */,
 				36A1BFEC1D65B01500B67BF6 /* Theme.h */,
@@ -919,7 +908,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
-				36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
@@ -1035,6 +1023,7 @@
 				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
 				36410B811DC054E700231AF5 /* UIImage+Extension.m in Sources */,
 				36410B871DC0558300231AF5 /* UIScrollView+Extension.m in Sources */,
+				3620324A1DD450D300F15494 /* GlobalConstants.m in Sources */,
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
 				364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */,

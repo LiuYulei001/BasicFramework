@@ -21,12 +21,6 @@
     self.window.rootViewController = [[HomePageVC alloc]init];
 }
 
-- (void)easemobApplication:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    
-    [[MainHelper shareHelper]easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
-}
-
 -(UIImageView *)GetPortraitIMG
 {
     CGSize viewSize = kWindow.bounds.size;
@@ -54,83 +48,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
 }
 
 
-
--(void)FaultTolerance
-{
-    
-#if !DEBUG
-    
-    [AvoidCrash becomeEffective];
-    //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
-    [kNotificationCenter addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
-#endif
-    
-}
--(void)dealwithCrashMessage:(NSNotification *)notification
-{
-    //注意:所有的信息都在userInfo中
-    //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
-    NSLog(@"%@",notification.userInfo);
-}
-
-
-
--(void)reachabilityAction
-{
-    
-    UIApplication *application = [UIApplication sharedApplication];
-    
-    NSArray *chlidrenArray = [[[application valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
-    
-    NSInteger netType =0;
-    
-    for (id  child in chlidrenArray) {
-        
-        if ([child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]) {
-            
-            netType = [[child valueForKeyPath:@"dataNetworkType"] integerValue];
-            
-        }
-    }
-    
-    switch (netType) {
-        case 0:
-            
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"0" atKey:kReachability];
-            
-            break;
-        case 1:
-            
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"2G" atKey:kReachability];
-            
-            break;
-        case 2:
-            
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"3G" atKey:kReachability];
-            
-            break;
-        case 3:
-            
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"4G" atKey:kReachability];
-            
-            break;
-        case 5:
-            
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"WIFE" atKey:kReachability];
-            
-            break;
-            
-        default:
-            break;
-    }
-    
-}
--(void)setReachability
-{
-    Reachability * reach = [Reachability reachabilityWithHostname:@"www.baidu.com"];
-    [reach startNotifier];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityAction) name:kReachabilityChangedNotification object:nil];
-}
 
 
 

@@ -19,17 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-#pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
-    [self setReachability];
-#pragma mark 容错开启
-    [self FaultTolerance];
     
     [self setMyWindowAndRootViewController];
     
     [self.window makeKeyAndVisible];
-    
-    [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
-    
+        
     
     return YES;
 }

@@ -10,9 +10,5 @@
 
 @interface MainHelper : NSObject
 
-+(instancetype)shareHelper;
-
-- (void)easemobApplication:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
 @end

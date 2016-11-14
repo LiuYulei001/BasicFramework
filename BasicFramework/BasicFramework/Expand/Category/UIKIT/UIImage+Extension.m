@@ -14,7 +14,14 @@ static UIImage *_img = nil;
 @implementation UIImage (Extension)
 
 
-
++(UIImage *)imageNamed:(NSString *)IMGName InBundleNamed:(NSString *)BundleName
+{
+    
+    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: BundleName ofType:@"bundle"];
+    NSString *imgPath= [bundlePath stringByAppendingPathComponent:IMGName];
+    return [UIImage imageWithContentsOfFile:imgPath];
+    
+}
 + (UIImage *)resizedImage:(NSString *)name
 {
     return [self resizedImage:name left:0.5 top:0.5];

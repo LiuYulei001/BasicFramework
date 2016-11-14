@@ -49,6 +49,9 @@
 + (UIImage*)covertToGrayImageFromImage:(UIImage*)sourceImage;
 
 
+// 获取BundleIMG
++(UIImage *)imageNamed:(NSString *)IMGName InBundleNamed:(NSString *)BundleName;
+
 
 //聊天的文字气泡拉伸
 + (UIImage *)resizedImage:(NSString *)name;

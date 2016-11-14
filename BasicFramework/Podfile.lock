@@ -17,7 +17,7 @@ PODS:
   - AvoidCrash (1.5.1)
   - Bugly (2.4.2)
   - JSONModel (1.2.0)
-  - LYLDataBase (1.0.4)
+  - LYLDataBase (1.0.5)
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.2)
   - MyUUID (1.0.1)
@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   AvoidCrash: 767acec95c5d684ec024ed9f21a439d13fbc06f3
   Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
-  LYLDataBase: b0ef8066be0cc1ddaf9129a5a15e0c6141ea2369
+  LYLDataBase: 801adba25a32274a85a745db61796c879b329b28
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MyUUID: 640928dcab11d78044d210834071eef71aaa6db7

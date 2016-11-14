@@ -68,5 +68,14 @@
  *
  */
 + (NSString *)deleteUserInfoInDataBase:(NSString *)dataBaseName WithUserID:(NSString *)userId;
+/*
+ ********** Delete all userInfo with specific dataBaseName **********
+ *
+ * @param   dataBaseName    tableNameString
+ *
+ * @return  the result of deleting all userInfo
+ *
+ */
++ (NSString *)deleteAllUserInfoTableInDataBase:(NSString *)dataBaseName;
 
 @end

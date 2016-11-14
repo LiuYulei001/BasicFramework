@@ -337,5 +337,34 @@
     
     return exist;
 }
-
++ (NSString *)deleteAllUserInfoTableInDataBase:(NSString *)dataBaseName
+{
+    NSString *result = @"";
+    
+    if ([self needCreateDateBaseWithDataBaseName:dataBaseName]) {
+        
+        result = @"This dataBase not exists!";
+        
+    }else{
+        
+        NSString * path = [self dataBaseFilePathWithDataBaseName:[NSString stringWithFormat:@"%@.sqlite",dataBaseName]];
+        FMDatabase * db = [FMDatabase databaseWithPath:path];
+        
+        if ([db open]) {
+            BOOL suc = [db executeUpdate:[NSString stringWithFormat:@"DELETE FROM %@",dataBaseName]];
+            
+            [db close];
+            if (suc) {
+                result = @"Delete all Successfully";
+            }else{
+                result = @"Delete all Failed";
+            }
+            
+        }
+        
+        
+    }
+    
+    return result;
+}
 @end

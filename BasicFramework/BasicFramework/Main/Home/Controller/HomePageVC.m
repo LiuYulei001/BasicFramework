@@ -8,8 +8,6 @@
 
 #import "HomePageVC.h"
 
-
-
 @interface HomePageVC ()
 
 
@@ -19,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

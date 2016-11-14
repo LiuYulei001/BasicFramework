@@ -30,23 +30,6 @@ static NetWorkManager *network = nil;
     });
     return network;
 }
--(NSString *)getUUID
-{
-    NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_DEVICE_UUID];
-    
-    if ([strUUID isEqualToString:@""] || !strUUID)
-    {
-        CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-        
-        strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
-        
-        [SPIMyUUID save:KEY_DEVICE_UUID data:strUUID];
-        
-    }
-    return strUUID;
-    
-    
-}
 - (void)SynchronizationForRequestType:(NSString *)RequestType WithURL:(NSString *)URL parameters:(NSString *)parametersStr Controller:(UIViewController *)Controller success:(void(^)(id response,id data))success
 {
     
@@ -58,7 +41,7 @@ static NetWorkManager *network = nil;
     
     [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
     [request setValue:kVersion forHTTPHeaderField:@"version"];
-    [request setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+    [request setValue:[APPSINGLE getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
 //    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
 //    NSData *basicAuthCredentials = [[NSString stringWithFormat:@"%@:%@", temp_array[0], temp_array[1]] dataUsingEncoding:NSUTF8StringEncoding];
 //    NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
@@ -254,7 +237,7 @@ static NetWorkManager *network = nil;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
-    [manager.requestSerializer setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+    [manager.requestSerializer setValue:[APPSINGLE getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
     [manager.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
 //    if (USER_TOKENID) {
 //        

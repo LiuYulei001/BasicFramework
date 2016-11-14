@@ -1,1 +1,1 @@
-../../../SBJson/src/main/objc/SBJson4.h
+../../../SBJson/Classes/SBJson4.h

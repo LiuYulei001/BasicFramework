@@ -1,1 +1,1 @@
-../../../SBJson/src/main/objc/SBJson4Writer.h
+../../../SBJson/Classes/SBJson4Writer.h

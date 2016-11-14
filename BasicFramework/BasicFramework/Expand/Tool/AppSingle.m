@@ -100,6 +100,14 @@
     }
     return strUUID;
 }
+-(NSArray *)getFilePathsFromMainBundleForFileType:(NSString *)fileType
+{
+    NSString *bundlePath = [[NSBundle mainBundle]resourcePath];
+    
+    NSArray *arrMp3 = [NSBundle pathsForResourcesOfType:fileType inDirectory:bundlePath];
+    
+    return arrMp3;
+}
 
 
 

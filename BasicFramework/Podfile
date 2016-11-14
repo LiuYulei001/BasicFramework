@@ -12,5 +12,6 @@ target ‘BasicFramework’ do
   pod 'Masonry', '~> 1.0.1'
   pod 'MyUUID'
   pod 'AvoidCrash'
+  pod 'LYLDataBase'
 
 end

@@ -9,6 +9,10 @@
  */
 -(NSString *)getUUID;
 /**
+ *  获取本地相关类型的所有文件路径
+ */
+-(NSArray *)getFilePathsFromMainBundleForFileType:(NSString *)fileType;
+/**
  *  上拉加载
  */
 -(void)addFooderPullOnView:(UIScrollView *)View waitTime:(CGFloat)waitTime action:(void (^)())action;

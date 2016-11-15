@@ -25,7 +25,7 @@
 @interface MainModel : JSONModel
 
 @property(nonatomic,copy)NSString *team;
-@property(nonatomic,copy)NSString *teamID;
+@property(nonatomic,copy)NSString *dataBase_ID;
 @property(nonatomic,strong)NSArray<ProductModel>* mans;
 
 

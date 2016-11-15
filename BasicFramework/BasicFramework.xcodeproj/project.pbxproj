@@ -17,7 +17,6 @@
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A981D6EE4FC00A03BF4 /* Placeholder */; };
-		36111AC41D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA51D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA71D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC71D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAC1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAE1D6EE58C00A03BF4 /* Placeholder */; };
@@ -73,6 +72,7 @@
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
 		3679AA0E1DD9846700169DFF /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA0D1DD9846700169DFF /* MainModel.m */; };
 		3679AA141DD99BA000169DFF /* IMG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3679AA131DD99BA000169DFF /* IMG.bundle */; };
+		3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +111,6 @@
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A981D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AA51D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AA71D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAC1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -214,6 +213,8 @@
 		3679AA0C1DD9846700169DFF /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		3679AA0D1DD9846700169DFF /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		3679AA131DD99BA000169DFF /* IMG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMG.bundle; sourceTree = "<group>"; };
+		3679AA201DDAB91000169DFF /* ObjectDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDataBaseManager.h; sourceTree = "<group>"; };
+		3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDataBaseManager.m; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -366,7 +367,7 @@
 		36111AA41D6EE58C00A03BF4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				36111AA51D6EE58C00A03BF4 /* Placeholder */,
+				3679AA1F1DDAB8EF00169DFF /* Model_DataBase */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -821,6 +822,15 @@
 			path = NSCoding;
 			sourceTree = "<group>";
 		};
+		3679AA1F1DDAB8EF00169DFF /* Model_DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				3679AA201DDAB91000169DFF /* ObjectDataBaseManager.h */,
+				3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */,
+			);
+			path = Model_DataBase;
+			sourceTree = "<group>";
+		};
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,7 +961,6 @@
 				36111AC71D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */,
-				36111AC41D6EE58C00A03BF4 /* Placeholder in Resources */,
 				3679AA141DD99BA000169DFF /* IMG.bundle in Resources */,
 				36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -1058,6 +1067,7 @@
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				3620327B1DD4748700F15494 /* UIDevice+Extension.m in Sources */,
 				362032731DD4748700F15494 /* NSDate+Extension.m in Sources */,
+				3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
 				362032771DD4748700F15494 /* NSString+Extension.m in Sources */,
 				362032821DD4748700F15494 /* UIViewController+Extension.m in Sources */,

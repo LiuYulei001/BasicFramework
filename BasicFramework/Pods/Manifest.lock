@@ -20,6 +20,7 @@ PODS:
   - LYLDataBase (1.0.5)
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.12)
   - MyUUID (1.0.1)
   - Reachability (3.2)
   - SBJson (4.0.4)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - LYLDataBase
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 0.9.2)
+  - MJRefresh
   - MyUUID
   - Reachability (~> 3.2)
   - SBJson (~> 4.0.2)
@@ -48,11 +50,12 @@ SPEC CHECKSUMS:
   LYLDataBase: 801adba25a32274a85a745db61796c879b329b28
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MyUUID: 640928dcab11d78044d210834071eef71aaa6db7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SBJson: 0abb2b193491f0c4e0de6e7ba48bb460b84b480b
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 641c8d06b722ecbc1561ddb16a318a973132e7bc
+PODFILE CHECKSUM: afa2cd11a2d06f032baba0c3b8788652023227ce
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.2.0.beta.1

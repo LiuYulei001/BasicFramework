@@ -1,5 +1,5 @@
 
-#define  KEY_DEVICE_UUID @"KEY_DEVICE_UUID"
+#define  KEY_USERNAME_PASSWORD @"KEY_USERNAME_PASSWORD"
 
 #import <MyUUID/SPIMyUUID.h>
 
@@ -30,10 +30,28 @@ static NetWorkManager *network = nil;
     });
     return network;
 }
+
+-(NSString *)getUUID
+{
+    NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_USERNAME_PASSWORD];
+    
+    if ([strUUID isEqualToString:@""] || !strUUID)
+    {
+        CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+        
+        strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
+        
+        [SPIMyUUID save:KEY_USERNAME_PASSWORD data:strUUID];
+        
+    }
+    return strUUID;
+}
+
+
 - (void)SynchronizationForRequestType:(NSString *)RequestType WithURL:(NSString *)URL parameters:(NSString *)parametersStr Controller:(UIViewController *)Controller success:(void(^)(id response,id data))success
 {
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",YGBaseURL,URL]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",_Environment_Domain,URL]];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
@@ -41,7 +59,7 @@ static NetWorkManager *network = nil;
     
     [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
     [request setValue:kVersion forHTTPHeaderField:@"version"];
-    [request setValue:[APPSINGLE getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+    [request setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
 //    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
 //    NSData *basicAuthCredentials = [[NSString stringWithFormat:@"%@:%@", temp_array[0], temp_array[1]] dataUsingEncoding:NSUTF8StringEncoding];
 //    NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
@@ -80,7 +98,7 @@ static NetWorkManager *network = nil;
 
 -(void)UploadPicturesToServerPic:(UIImage *)image url:(NSString *)url uiserid:(NSString *)userid success:(void (^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
-    NSString *str = [NSString stringWithFormat:@"%@%@?version=%@&userId=%@",YGBaseURL,url,kVersion,userid];
+    NSString *str = [NSString stringWithFormat:@"%@%@?version=%@&userId=%@",_Environment_Domain,url,kVersion,userid];
     
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
@@ -118,7 +136,7 @@ static NetWorkManager *network = nil;
 {
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
-    URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
+    URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
     
     [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -133,7 +151,7 @@ static NetWorkManager *network = nil;
 //                /**
 //                 *   登录先存储用于比对相应的headerfile
 //                 */
-//                [[AppSingle Shared]saveInMyLocalStoreForValue:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]] atKey:KEY_USER_TOKENID];
+//                [FileCacheManager saveInMyLocalStoreForValue:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]] atKey:KEY_USER_TOKENID];
 //                
 //            }else
 //            {
@@ -169,7 +187,7 @@ static NetWorkManager *network = nil;
     
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
-    URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
+    URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
     
     
     [manager GET:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -237,7 +255,7 @@ static NetWorkManager *network = nil;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
-    [manager.requestSerializer setValue:[APPSINGLE getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+    [manager.requestSerializer setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
     [manager.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
 //    if (USER_TOKENID) {
 //        
@@ -381,7 +399,7 @@ static UIViewController *tempVC = nil;
 }
 -(void)clearUserCaches
 {
-    [APPSINGLE DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
-    [APPSINGLE DeleteValueInMyLocalStoreForKey:kReachability];
+    [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
+    [FileCacheManager DeleteValueInMyLocalStoreForKey:kReachability];
 }
 @end

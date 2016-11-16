@@ -21,11 +21,11 @@
 /**
  *  当前网络状态
  */
-#define kNetworkType [[AppSingle Shared]getValueInMyLocalStoreForKey:kReachability]
+#define kNetworkType [FileCacheManager getValueInMyLocalStoreForKey:kReachability]
 /**
  *  用户惟一标示
  */
-#define USER_ID [[AppSingle Shared]getValueInMyLocalStoreForKey:KEY_USER_ID]
+#define USER_ID [FileCacheManager getValueInMyLocalStoreForKey:KEY_USER_ID]
 
 
 /**
@@ -36,7 +36,6 @@
 /**
  *  懒人简化书写宏
  */
-#define APPSINGLE [AppSingle Shared]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 #define kNetWorkManager [NetWorkManager sharedInstance]
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;

@@ -11,6 +11,10 @@
 
 #pragma mark -  * * * * * * * * * * * * * * 主题 * * * * * * * * * * * * * *
 /**
+ *  无色
+ */
+#define kClearColor [UIColor clearColor]
+/**
  *  默认页面背景色
  */
 #define DefaultBackGroundColor UIColorFromRGBValue(0Xf5f7fa)

@@ -66,27 +66,27 @@ static MainHelper *helper = nil;
     switch (netType) {
         case 0:
             
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"0" atKey:kReachability];
+            [FileCacheManager saveInMyLocalStoreForValue:@"0" atKey:kReachability];
             
             break;
         case 1:
             
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"2G" atKey:kReachability];
+            [FileCacheManager saveInMyLocalStoreForValue:@"2G" atKey:kReachability];
             
             break;
         case 2:
             
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"3G" atKey:kReachability];
+            [FileCacheManager saveInMyLocalStoreForValue:@"3G" atKey:kReachability];
             
             break;
         case 3:
             
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"4G" atKey:kReachability];
+            [FileCacheManager saveInMyLocalStoreForValue:@"4G" atKey:kReachability];
             
             break;
         case 5:
             
-            [[AppSingle Shared]saveInMyLocalStoreForValue:@"WIFE" atKey:kReachability];
+            [FileCacheManager saveInMyLocalStoreForValue:@"WIFE" atKey:kReachability];
             
             break;
             

@@ -13,5 +13,6 @@ target ‘BasicFramework’ do
   pod 'MyUUID'
   pod 'AvoidCrash'
   pod 'LYLDataBase'
+  pod 'MJRefresh'
 
 end

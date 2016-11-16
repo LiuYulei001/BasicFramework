@@ -9,6 +9,24 @@
 #import "NSDate+Extension.h"
 
 @implementation NSDate (Extension)
+//时间戳转时间 YYYY-MM-dd HH:mm:ss
+-(NSString *)DateStringFromDateStamp:(NSTimeInterval)DateStamp styleFormatter:(NSString *)styleFormatter
+{
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:styleFormatter];
+    
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:DateStamp];
+    return [formatter stringFromDate:confromTimesp];
+}
+//时间转时间戳
+-(NSString *)DateStampFromDate:(NSDate *)date
+{
+    
+    NSString *DateStamp = [NSString stringWithFormat:@"%ld", (long)[date timeIntervalSince1970]];
+    return DateStamp;
+}
 
 - (NSString *)compareCurrentTime {
     NSTimeInterval  timeInterval = [self timeIntervalSinceNow];

@@ -7,9 +7,11 @@
 #pragma mark - encapsulation public
 
 #import "ProgressHUD.h"
-#import "AppSingle.h"
+#import "AppUtility.h"
 #import "NetWorkManager.h"
 #import "GlobalConstants.h"
+#import "URLConstants.h"
+#import "FileCacheManager.h"
 
 #pragma mark - The three parties
 
@@ -29,7 +31,6 @@
 #import "IMGNAME.h"
 #import "Theme.h"
 #import "CommonDefine.h"
-#import "HTTPURLDefine.h"
 
 #pragma mark - categories
 
@@ -48,11 +49,3 @@
 #import "NSMutableAttributedString+Extension.h"
 #import "NSDictionary+Extension.h"
 #import "NSObject+Release.h"
-
-
-
-
-
-
-
-

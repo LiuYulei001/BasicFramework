@@ -5,6 +5,11 @@
 @interface NetWorkManager : NSObject
 + (instancetype)sharedInstance;
 
+/**
+ *  手机唯一标示
+ */
+-(NSString *)getUUID;
+
 
 /**
  *  同步请求

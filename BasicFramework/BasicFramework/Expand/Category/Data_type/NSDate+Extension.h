@@ -10,6 +10,13 @@
 
 @interface NSDate (Extension)
 
+//时间戳转时间 YYYY-MM-dd HH:mm:ss
+-(NSString *)DateStringFromDateStamp:(NSTimeInterval)DateStamp styleFormatter:(NSString *)styleFormatter;
+//时间转时间戳
+-(NSString *)DateStampFromDate:(NSDate *)date;
+/**
+ * 刚刚、几分钟前、几个小时前、几天前、几月前...
+ */
 - (NSString *)compareCurrentTime;
 
 

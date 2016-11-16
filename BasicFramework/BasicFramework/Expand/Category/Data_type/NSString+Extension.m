@@ -10,6 +10,17 @@
 
 @implementation NSString (Extension)
 
+-(NSString *)EncodingString
+{
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
+}
+-(NSString *)RemovingEncoding
+{
+    return [self stringByRemovingPercentEncoding];
+
+}
+
 - (NSDictionary *)StringOfJsonConversionDictionary {
     
     if ([self isNULL]) {

@@ -73,6 +73,8 @@
 		3679AA0E1DD9846700169DFF /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA0D1DD9846700169DFF /* MainModel.m */; };
 		3679AA141DD99BA000169DFF /* IMG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3679AA131DD99BA000169DFF /* IMG.bundle */; };
 		3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */; };
+		3679AA251DDAEA2700169DFF /* UIView+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA241DDAEA2700169DFF /* UIView+Rotate.m */; };
+		3679AA281DDAFDB500169DFF /* UIView+DragAndReset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA271DDAFDB500169DFF /* UIView+DragAndReset.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -215,6 +217,10 @@
 		3679AA131DD99BA000169DFF /* IMG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMG.bundle; sourceTree = "<group>"; };
 		3679AA201DDAB91000169DFF /* ObjectDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDataBaseManager.h; sourceTree = "<group>"; };
 		3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDataBaseManager.m; sourceTree = "<group>"; };
+		3679AA231DDAEA2700169DFF /* UIView+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rotate.h"; sourceTree = "<group>"; };
+		3679AA241DDAEA2700169DFF /* UIView+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rotate.m"; sourceTree = "<group>"; };
+		3679AA261DDAFDB500169DFF /* UIView+DragAndReset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DragAndReset.h"; sourceTree = "<group>"; };
+		3679AA271DDAFDB500169DFF /* UIView+DragAndReset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DragAndReset.m"; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -572,6 +578,10 @@
 		3620325C1DD4748700F15494 /* UIKIT */ = {
 			isa = PBXGroup;
 			children = (
+				3679AA231DDAEA2700169DFF /* UIView+Rotate.h */,
+				3679AA241DDAEA2700169DFF /* UIView+Rotate.m */,
+				3679AA261DDAFDB500169DFF /* UIView+DragAndReset.h */,
+				3679AA271DDAFDB500169DFF /* UIView+DragAndReset.m */,
 				3620325D1DD4748700F15494 /* UIBarButtonItem+Extension.h */,
 				3620325E1DD4748700F15494 /* UIBarButtonItem+Extension.m */,
 				3620325F1DD4748700F15494 /* UIButton+Extension.h */,
@@ -1063,6 +1073,8 @@
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
+				3679AA251DDAEA2700169DFF /* UIView+Rotate.m in Sources */,
+				3679AA281DDAFDB500169DFF /* UIView+DragAndReset.m in Sources */,
 				3620324A1DD450D300F15494 /* GlobalConstants.m in Sources */,
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				3620327B1DD4748700F15494 /* UIDevice+Extension.m in Sources */,

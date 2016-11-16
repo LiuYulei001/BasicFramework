@@ -7,8 +7,4 @@
 //
 #pragma mark - 全局常量
 
-extern NSString * const _NotificationCenterName;
-
-extern NSString * const _cellIdentifierName;
-
-extern NSString * const _APIKey;
+extern NSString * const _NotificationNameForAppDelegateBackOff;

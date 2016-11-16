@@ -6,8 +6,4 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-NSString *const _NotificationCenterName = @"NotificationCenterName";
-
-NSString *const _cellIdentifierName = @"cellIdentifierName";
-
-NSString *const _APIKey = @"****************";
+NSString *const _NotificationNameForAppDelegateBackOff = @"NotificationNameForAppDelegateBackOff";

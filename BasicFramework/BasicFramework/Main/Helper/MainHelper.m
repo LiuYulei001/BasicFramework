@@ -139,6 +139,19 @@ static MainHelper *helper = nil;
                                              selector:@selector(appWillEnterForeground:)
                                                  name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(application_OpenURL_SourceApplication_Annotation:) name:_NotificationNameForAppDelegateBackOff object:nil];
+    
+}
+//app-app or web-app互调-回调
+- (void)application_OpenURL_SourceApplication_Annotation:(NSNotification *)notif
+{
+    
+    NSString *urlStr = [notif.object absoluteString];
+    if ([urlStr hasPrefix:@"basicframework://"]) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:urlStr delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
+    }
 }
 - (void)appDidEnterBackgroundNotif:(NSNotification*)notif
 {

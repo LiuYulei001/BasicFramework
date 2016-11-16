@@ -10,6 +10,10 @@
 
 @interface NSString (Extension)
 
+//编码反编码
+-(NSString *)EncodingString;
+-(NSString *)RemovingEncoding;
+
 #pragma mark - string of size
 - (CGSize)sizeWithFont:(UIFont *)font;
 - (CGSize)sizeWithFont:(UIFont *)font andMaxW:(CGFloat)maxW;

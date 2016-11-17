@@ -43,7 +43,6 @@
 #import "NSDate+Extension.h"
 #import "UIViewController+Extension.h"
 #import "UIButton+Extension.h"
-#import "UIColor+Extension.h"
 #import "UIImageView+GIF.h"
 #import "NSMutableAttributedString+Extension.h"
 #import "NSDictionary+Extension.h"

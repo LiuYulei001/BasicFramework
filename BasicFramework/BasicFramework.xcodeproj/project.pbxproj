@@ -12,7 +12,6 @@
 		360E05661DD042A100E7C6C1 /* GraphicBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E055E1DD042A100E7C6C1 /* GraphicBT.m */; };
 		360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */; };
 		360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05821DD1D52600E7C6C1 /* LoginVC.m */; };
-		360E05871DD2C62500E7C6C1 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05861DD2C62500E7C6C1 /* MyMD5.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -69,6 +68,10 @@
 		3679AA861DDC482300169DFF /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA831DDC482300169DFF /* GlobalConstants.m */; };
 		3679AA871DDC482300169DFF /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA851DDC482300169DFF /* URLConstants.m */; };
 		3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA891DDC521F00169DFF /* FileCacheManager.m */; };
+		3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */; };
+		3679AA901DDDA79A00169DFF /* UINavigationBar+SetElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA8F1DDDA79A00169DFF /* UINavigationBar+SetElement.m */; };
+		3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3679AA921DDDACF300169DFF /* WMPlayer.bundle */; };
+		3679AA961DDDACF300169DFF /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA941DDDACF300169DFF /* WMPlayer.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -101,8 +104,6 @@
 		360E05801DD1CA0A00E7C6C1 /* IMGNAME.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMGNAME.h; sourceTree = "<group>"; };
 		360E05811DD1D52600E7C6C1 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		360E05821DD1D52600E7C6C1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		360E05851DD2C62500E7C6C1 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
-		360E05861DD2C62500E7C6C1 /* MyMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMD5.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -202,6 +203,13 @@
 		3679AA851DDC482300169DFF /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
 		3679AA881DDC521F00169DFF /* FileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCacheManager.h; sourceTree = "<group>"; };
 		3679AA891DDC521F00169DFF /* FileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheManager.m; sourceTree = "<group>"; };
+		3679AA8B1DDD534200169DFF /* NSArray+RemoveDuplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RemoveDuplicate.h"; sourceTree = "<group>"; };
+		3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RemoveDuplicate.m"; sourceTree = "<group>"; };
+		3679AA8E1DDDA79A00169DFF /* UINavigationBar+SetElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SetElement.h"; sourceTree = "<group>"; };
+		3679AA8F1DDDA79A00169DFF /* UINavigationBar+SetElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SetElement.m"; sourceTree = "<group>"; };
+		3679AA921DDDACF300169DFF /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		3679AA931DDDACF300169DFF /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		3679AA941DDDACF300169DFF /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,15 +277,6 @@
 				360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */,
 			);
 			path = TextView;
-			sourceTree = "<group>";
-		};
-		360E05841DD2C62500E7C6C1 /* MD5 */ = {
-			isa = PBXGroup;
-			children = (
-				360E05851DD2C62500E7C6C1 /* MyMD5.h */,
-				360E05861DD2C62500E7C6C1 /* MyMD5.m */,
-			);
-			path = MD5;
 			sourceTree = "<group>";
 		};
 		36111A911D6EE4FC00A03BF4 /* BaseModel */ = {
@@ -547,6 +546,8 @@
 				362032591DD4748700F15494 /* NSObject+Release.m */,
 				3620325A1DD4748700F15494 /* NSString+Extension.h */,
 				3620325B1DD4748700F15494 /* NSString+Extension.m */,
+				3679AA8B1DDD534200169DFF /* NSArray+RemoveDuplicate.h */,
+				3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */,
 			);
 			path = Data_type;
 			sourceTree = "<group>";
@@ -580,6 +581,8 @@
 				362032701DD4748700F15494 /* UIView+Extension.m */,
 				362032711DD4748700F15494 /* UIViewController+Extension.h */,
 				362032721DD4748700F15494 /* UIViewController+Extension.m */,
+				3679AA8E1DDDA79A00169DFF /* UINavigationBar+SetElement.h */,
+				3679AA8F1DDDA79A00169DFF /* UINavigationBar+SetElement.m */,
 			);
 			path = UIKIT;
 			sourceTree = "<group>";
@@ -756,7 +759,7 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
-				360E05841DD2C62500E7C6C1 /* MD5 */,
+				3679AA911DDDACF300169DFF /* WMPlayer */,
 				364DA6031D6584F400F6F424 /* IMGBrowse */,
 				364DA61B1D6584F400F6F424 /* NSCoding */,
 			);
@@ -804,6 +807,16 @@
 			);
 			name = "Constants(常量)";
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		3679AA911DDDACF300169DFF /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3679AA921DDDACF300169DFF /* WMPlayer.bundle */,
+				3679AA931DDDACF300169DFF /* WMPlayer.h */,
+				3679AA941DDDACF300169DFF /* WMPlayer.m */,
+			);
+			path = WMPlayer;
 			sourceTree = "<group>";
 		};
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
@@ -927,6 +940,7 @@
 				36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
+				3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */,
 				36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -1015,7 +1029,7 @@
 				364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
-				360E05871DD2C62500E7C6C1 /* MyMD5.m in Sources */,
+				3679AA961DDDACF300169DFF /* WMPlayer.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				3679AA0E1DD9846700169DFF /* MainModel.m in Sources */,
 				3620327D1DD4748700F15494 /* UIImageView+Extension.m in Sources */,
@@ -1030,6 +1044,7 @@
 				3620327C1DD4748700F15494 /* UIImage+Extension.m in Sources */,
 				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
 				362032811DD4748700F15494 /* UIView+Extension.m in Sources */,
+				3679AA901DDDA79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
@@ -1040,6 +1055,7 @@
 				362032731DD4748700F15494 /* NSDate+Extension.m in Sources */,
 				3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
+				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,
 				362032771DD4748700F15494 /* NSString+Extension.m in Sources */,
 				362032821DD4748700F15494 /* UIViewController+Extension.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,

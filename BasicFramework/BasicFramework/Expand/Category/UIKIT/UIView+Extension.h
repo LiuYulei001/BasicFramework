@@ -10,12 +10,12 @@
 @property(nonatomic,assign)CGFloat X;
 @property(nonatomic,assign)CGFloat Y;
 @property(nonatomic,assign)CGFloat Sh;
-@property (nonatomic, assign)CGSize size;
+@property (nonatomic,assign)CGSize size;
 @property(nonatomic,assign)CGFloat Sw;
 
 -(void)setBlurStyle:(UIBlurEffectStyle)style;
 
-#pragma mark - Create Table
+#pragma mark - Create Table for button
 +(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing;
 
 #pragma mark - TapAction LongPressAction
@@ -26,5 +26,6 @@
  *  添加圆角边框
  */
 -(void)addBorderWithcornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth;
+
 
 @end

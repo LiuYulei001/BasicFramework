@@ -14,7 +14,10 @@
  *  获取本地相关类型的所有文件路径
  */
 +(NSArray *)getFilePathsFromMainBundleForFileType:(NSString *)fileType;
-
+/**
+ *  获取本地文件内容的大小
+ */
++ (NSInteger)fileSizeOfPath:(NSString *)filePath;
 
 #pragma mark - * * * * * * * * * * * * * * File Manager * * * * * * * * * * * * * *
 

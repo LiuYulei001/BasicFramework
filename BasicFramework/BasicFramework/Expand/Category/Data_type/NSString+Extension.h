@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Extension)
-
+/**
+ *  @brief  掉头反转字符串
+ */
+- (NSString *)StringReverse;
 //编码反编码
 -(NSString *)EncodingString;
 -(NSString *)RemovingEncoding;

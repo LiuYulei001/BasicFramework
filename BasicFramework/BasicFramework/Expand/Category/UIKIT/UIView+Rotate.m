@@ -248,6 +248,30 @@ CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
     
 }
 
+/**
+ *  抖动某一视图的方法
+ */
+- (void)viewToShake {
+    
+    CGFloat t = 0.07;
+    CGAffineTransform translateRight  =CGAffineTransformMakeRotation(t);
+    CGAffineTransform translateLeft  =CGAffineTransformMakeRotation(-t);
+    
+//    CGFloat t = 4.0;
+//    CGAffineTransform translateRight  =CGAffineTransformTranslate(CGAffineTransformIdentity, t,0.0);
+//    CGAffineTransform translateLeft =CGAffineTransformTranslate(CGAffineTransformIdentity,-t,0.0);
+    self.transform = translateLeft;
+    [UIView animateWithDuration:0.08 delay:0.0 options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:2.0];
+        self.transform = translateRight;
+    } completion:^(BOOL finished){
+        if(finished){
+            [UIView animateWithDuration:0.08 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                self.transform =CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+}
 
 
 @end

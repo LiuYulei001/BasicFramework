@@ -14,7 +14,9 @@
 
 
 @implementation FileCacheManager
-
+/**
+ *  获取本地相关类型的所有文件路径
+ */
 +(NSArray *)getFilePathsFromMainBundleForFileType:(NSString *)fileType
 {
     NSString *bundlePath = [[NSBundle mainBundle]resourcePath];
@@ -23,6 +25,37 @@
     
     return resource_array;
 }
+
++ (NSInteger)fileSizeOfPath:(NSString *)filePath
+{
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    // 判断是否为文件
+    BOOL dir = NO;
+    BOOL exists = [mgr fileExistsAtPath:filePath isDirectory:&dir];
+    // 文件\文件夹不存在
+    if (exists == NO) return 0;
+    
+    if (dir) { // self是一个文件夹
+        // 遍历caches里面的所有内容 --- 直接和间接内容
+        NSArray *subpaths = [mgr subpathsAtPath:filePath];
+        NSInteger totalByteSize = 0;
+        for (NSString *subpath in subpaths) {
+            // 获得全路径
+            NSString *fullSubpath = [filePath stringByAppendingPathComponent:subpath];
+            // 判断是否为文件
+            BOOL dir = NO;
+            [mgr fileExistsAtPath:fullSubpath isDirectory:&dir];
+            if (dir == NO) { // 文件
+                totalByteSize += [[mgr attributesOfItemAtPath:fullSubpath error:nil][NSFileSize] integerValue];
+            }
+        }
+        return totalByteSize;
+    } else { // self是一个文件
+        return [[mgr attributesOfItemAtPath:filePath error:nil][NSFileSize] integerValue];
+    }
+}
+
+
 
 #pragma mark - * * * * * * * * * * * * * * File Manager * * * * * * * * * * * * * *
 

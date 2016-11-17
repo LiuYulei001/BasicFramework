@@ -23,7 +23,6 @@
 #import <MyObjectCoding/NSObject+NSCoding.h>
 #import <JSONModel/JSONModel.h>
 #import <Masonry/Masonry.h>
-#import "MyMD5.h"
 #import "LYLDataBaseManager.h"
 
 #pragma mark - H file
@@ -49,3 +48,6 @@
 #import "NSMutableAttributedString+Extension.h"
 #import "NSDictionary+Extension.h"
 #import "NSObject+Release.h"
+#import "UIView+Rotate.h"
+#import "NSArray+RemoveDuplicate.h"
+#import "UINavigationBar+SetElement.h"

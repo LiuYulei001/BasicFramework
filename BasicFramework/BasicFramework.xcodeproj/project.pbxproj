@@ -71,6 +71,7 @@
 		3679AAC31DDDB7C000169DFF /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AAC11DDDB7C000169DFF /* UIImageView+GIF.m */; };
 		3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AAC51DDDB7C700169DFF /* UIDevice+Extension.m */; };
 		3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AAC81DDDB7CF00169DFF /* UIButton+Extension.m */; };
+		3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +208,8 @@
 		3679AAC51DDDB7C700169DFF /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		3679AAC71DDDB7CF00169DFF /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		3679AAC81DDDB7CF00169DFF /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		3679AACA1DDEC2A800169DFF /* NSTimer+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Extension.h"; sourceTree = "<group>"; };
+		3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 				3620325B1DD4748700F15494 /* NSString+Extension.m */,
 				3679AA8B1DDD534200169DFF /* NSArray+RemoveDuplicate.h */,
 				3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */,
+				3679AACA1DDEC2A800169DFF /* NSTimer+Extension.h */,
+				3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */,
 			);
 			path = Data_type;
 			sourceTree = "<group>";
@@ -1139,6 +1144,7 @@
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 				3679AA871DDC482300169DFF /* URLConstants.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
+				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				3679AA9E1DDDB5E400169DFF /* UIView+DragAndReset.m in Sources */,
 				3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */,
 				364DA62C1D6584F400F6F424 /* ProgressHUD.m in Sources */,

@@ -10,6 +10,6 @@
 
 @interface UITextField (Extension)
 
--(void)setLeftimageName:(NSString *)imageName size:(CGSize)size;
+-(void)LeftImageNamed:(NSString *)Named IMG_size:(CGSize)IMG_size;
 
 @end

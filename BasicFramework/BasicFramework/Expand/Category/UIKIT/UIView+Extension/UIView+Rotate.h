@@ -45,11 +45,6 @@ typedef UIView *(^RotateAnimationBlock)(NSInteger,FinishedAnima);
 - (RotateBlock)rotateX;
 - (RotateBlock)rotateY;
 - (RotateAnimationBlock)animationRotate;
-/**
- *  让某一个视图抖动
- *
- *  @param viewToShake 需要抖动的视图
- */
-- (void)viewToShake;
+
 @end
 

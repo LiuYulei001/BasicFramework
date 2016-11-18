@@ -33,5 +33,11 @@
  *  `-viewDidLayoutSubviews` directly instead of update snap point.
  */
 - (void)updateSnapPoint;
+/**
+ *  让某一个视图抖动
+ *
+ *  @param viewToShake 需要抖动的视图
+ */
+- (void)viewToShake;
 
 @end

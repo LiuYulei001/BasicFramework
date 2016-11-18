@@ -50,3 +50,4 @@
 #import "UIView+Rotate.h"
 #import "NSArray+RemoveDuplicate.h"
 #import "UINavigationBar+SetElement.h"
+#import "NSTimer+Extension.h"

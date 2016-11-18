@@ -10,12 +10,12 @@
 
 @implementation UITextField (Extension)
 
--(void)setLeftimageName:(NSString *)imageName size:(CGSize)size
+-(void)LeftImageNamed:(NSString *)Named IMG_size:(CGSize)IMG_size
 {
     
     UIImageView *rightView = [[UIImageView alloc]init];
-    rightView.image = [UIImage imageNamed:imageName];
-    rightView.size = size;
+    rightView.image = [UIImage imageNamed:Named];
+    rightView.size = IMG_size;
     rightView.contentMode = UIViewContentModeCenter;
     self.leftView = rightView;
     self.leftViewMode = UITextFieldViewModeAlways;

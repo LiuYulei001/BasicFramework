@@ -35,6 +35,9 @@
 		362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032571DD4748700F15494 /* NSMutableAttributedString+Extension.m */; };
 		362032761DD4748700F15494 /* NSObject+Release.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032591DD4748700F15494 /* NSObject+Release.m */; };
 		362032771DD4748700F15494 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3620325B1DD4748700F15494 /* NSString+Extension.m */; };
+		3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091391DE2CD60005A9C31 /* WSShiningLabel.m */; };
+		3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3630913D1DE2D233005A9C31 /* LGScrollLabel.m */; };
+		363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091411DE2D7E8005A9C31 /* BasicTouchID.m */; };
 		36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B891DC05C9300231AF5 /* HomePageVC.m */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
@@ -134,6 +137,13 @@
 		362032591DD4748700F15494 /* NSObject+Release.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Release.m"; sourceTree = "<group>"; };
 		3620325A1DD4748700F15494 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		3620325B1DD4748700F15494 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		363091381DE2CD60005A9C31 /* WSShiningLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSShiningLabel.h; sourceTree = "<group>"; };
+		363091391DE2CD60005A9C31 /* WSShiningLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSShiningLabel.m; sourceTree = "<group>"; };
+		3630913C1DE2D233005A9C31 /* LGScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGScrollLabel.h; sourceTree = "<group>"; };
+		3630913D1DE2D233005A9C31 /* LGScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGScrollLabel.m; sourceTree = "<group>"; };
+		363091401DE2D7E8005A9C31 /* BasicTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTouchID.h; sourceTree = "<group>"; };
+		363091411DE2D7E8005A9C31 /* BasicTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTouchID.m; sourceTree = "<group>"; };
+		363091431DE2EE26005A9C31 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		36410B881DC05C9300231AF5 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		36410B891DC05C9300231AF5 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -571,6 +581,36 @@
 			path = UIKIT;
 			sourceTree = "<group>";
 		};
+		363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */ = {
+			isa = PBXGroup;
+			children = (
+				363091381DE2CD60005A9C31 /* WSShiningLabel.h */,
+				363091391DE2CD60005A9C31 /* WSShiningLabel.m */,
+			);
+			name = "ShimmerLable(闪光文字)";
+			path = ShimmerLable;
+			sourceTree = "<group>";
+		};
+		3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */ = {
+			isa = PBXGroup;
+			children = (
+				3630913C1DE2D233005A9C31 /* LGScrollLabel.h */,
+				3630913D1DE2D233005A9C31 /* LGScrollLabel.m */,
+			);
+			name = "LGScrollLabel(滚动字条)";
+			path = LGScrollLabel;
+			sourceTree = "<group>";
+		};
+		3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */ = {
+			isa = PBXGroup;
+			children = (
+				363091401DE2D7E8005A9C31 /* BasicTouchID.h */,
+				363091411DE2D7E8005A9C31 /* BasicTouchID.m */,
+			);
+			name = "TouchID(指纹验证)";
+			path = TouchID;
+			sourceTree = "<group>";
+		};
 		364DA5321D65849300F6F424 = {
 			isa = PBXGroup;
 			children = (
@@ -743,15 +783,18 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
-				3679AA911DDDACF300169DFF /* WMPlayer */,
-				364DA6031D6584F400F6F424 /* IMGBrowse */,
-				364DA61B1D6584F400F6F424 /* NSCoding */,
+				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
+				3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */,
+				363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */,
+				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
+				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
+				364DA61B1D6584F400F6F424 /* NSCoding(对象Coding) */,
 			);
 			name = "Vender(第三方)";
 			path = Vender;
 			sourceTree = "<group>";
 		};
-		364DA6031D6584F400F6F424 /* IMGBrowse */ = {
+		364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */ = {
 			isa = PBXGroup;
 			children = (
 				364DA6041D6584F400F6F424 /* LYLIMGBrowse.h */,
@@ -761,14 +804,16 @@
 				364DA6081D6584F400F6F424 /* LYLPageControl.h */,
 				364DA6091D6584F400F6F424 /* LYLPageControl.m */,
 			);
+			name = "IMGBrowse(图片浏览)";
 			path = IMGBrowse;
 			sourceTree = "<group>";
 		};
-		364DA61B1D6584F400F6F424 /* NSCoding */ = {
+		364DA61B1D6584F400F6F424 /* NSCoding(对象Coding) */ = {
 			isa = PBXGroup;
 			children = (
 				364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */,
 			);
+			name = "NSCoding(对象Coding)";
 			path = NSCoding;
 			sourceTree = "<group>";
 		};
@@ -793,13 +838,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		3679AA911DDDACF300169DFF /* WMPlayer */ = {
+		3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */ = {
 			isa = PBXGroup;
 			children = (
 				3679AA921DDDACF300169DFF /* WMPlayer.bundle */,
 				3679AA931DDDACF300169DFF /* WMPlayer.h */,
 				3679AA941DDDACF300169DFF /* WMPlayer.m */,
 			);
+			name = "WMPlayer(视频播放器)";
 			path = WMPlayer;
 			sourceTree = "<group>";
 		};
@@ -902,6 +948,7 @@
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				363091431DE2EE26005A9C31 /* LocalAuthentication.framework */,
 				361EE65E1DD5BF6600406C89 /* libsqlite3.tbd */,
 				361EE65C1DD5BF3A00406C89 /* libsqlite3.0.tbd */,
 				46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */,
@@ -1121,6 +1168,7 @@
 				3679AABA1DDDB7B100169DFF /* UIImage+Extension.m in Sources */,
 				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
 				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
+				363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
@@ -1131,6 +1179,7 @@
 				3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
+				3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
 				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,
 				3679AAB41DDDB7A100169DFF /* UIViewController+Extension.m in Sources */,
@@ -1144,6 +1193,7 @@
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 				3679AA871DDC482300169DFF /* URLConstants.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
+				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,
 				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				3679AA9E1DDDB5E400169DFF /* UIView+DragAndReset.m in Sources */,
 				3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */,
@@ -1285,6 +1335,7 @@
 			baseConfigurationReference = BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",
@@ -1305,6 +1356,7 @@
 			baseConfigurationReference = A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",

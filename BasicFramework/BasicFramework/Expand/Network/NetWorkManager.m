@@ -35,7 +35,7 @@ static NetWorkManager *network = nil;
 {
     NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_USERNAME_PASSWORD];
     
-    if ([strUUID isEqualToString:@""] || !strUUID)
+    if ([strUUID isNULL])
     {
         CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
         

@@ -10,7 +10,7 @@
 #import "MainHelper.h"
 #import "AvoidCrash.h"
 #import "HomePageVC.h"
-
+#import "BasicMainNC.h"
 
 @implementation AppDelegate (Extension)
 
@@ -18,7 +18,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[HomePageVC alloc]init];
+    self.window.rootViewController = [[BasicMainNC alloc]initWithRootViewController:[[HomePageVC alloc]init]];
 }
 
 -(UIImageView *)GetPortraitIMG

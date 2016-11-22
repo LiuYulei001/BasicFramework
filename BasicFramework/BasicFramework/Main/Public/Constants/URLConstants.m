@@ -8,6 +8,8 @@
 
 #pragma mark -  * * * * * * * * * * * * * * 域名切换 * * * * * * * * * * * * * *
 
+#define ENVIRONMENT 0
+
 #if ENVIRONMENT == 0
 /**
  *  @param 开发环境

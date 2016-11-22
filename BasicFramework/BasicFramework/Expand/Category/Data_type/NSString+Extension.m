@@ -5,11 +5,22 @@
 //  Created by Rainy on 16/10/26.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
+#if TARGET_IPHONE_SIMULATOR
+#define kAppleLanguages(Chinese,English) [[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"zh-Hans-US"] ? Chinese : English
+#elif TARGET_OS_IPHONE
+#define kAppleLanguages(Chinese,English) [[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"zh-Hans-CN"] ? Chinese : English
+#endif
 
 #import "NSString+Extension.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Extension)
+
++(NSString *)LanguageInternationalizationCH:(NSString *)Chinese EN:(NSString *)English
+{
+    return kAppleLanguages(Chinese, English);
+}
+
 /**
  *  @brief  反转字符串
  *
@@ -42,7 +53,7 @@
 
 - (NSDictionary *)StringOfJsonConversionDictionary {
     
-    if ([self isNULL]) {
+    if ([NSString isNULL:self]) {
         
         return nil;
         
@@ -67,7 +78,7 @@
 
 - (NSString *)MD5string
 {
-    if ([self isNULL]) {
+    if ([NSString isNULL:self]) {
         return @"";
     }
     const char *value = [self UTF8String];
@@ -89,7 +100,7 @@
     
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc]init];
     
-    if (![self isNULL]) {
+    if (![NSString isNULL:self]) {
         
         NSMutableString *temp = [NSMutableString stringWithString:self];
         
@@ -113,7 +124,7 @@
     
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self];
     
-    if (![self isNULL] && index <= self.length - 1) {
+    if (![NSString isNULL:self] && index <= self.length - 1) {
         
         NSTextAttachment *attatchment = [[NSTextAttachment alloc] init];
         attatchment.image = Img;
@@ -175,18 +186,18 @@
     
 }
 
--(BOOL)isNULL{
-    
-    if (self == nil) {
++(BOOL)isNULL:(id)string{
+
+    if (string == nil) {
         return YES;
     }
-    if (self == NULL) {
+    if (string == NULL) {
         return YES;
     }
-    if ([self isKindOfClass:[NSNull class]]) {
+    if ([string isKindOfClass:[NSNull class]]) {
         return YES;
     }
-    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0) {
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0) {
         return YES;
     }
     return NO;

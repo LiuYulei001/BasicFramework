@@ -41,14 +41,19 @@ static char overlayKey;
 - (void)setElementsAlpha:(CGFloat)alpha {
     [[self valueForKey:@"_leftViews"] enumerateObjectsUsingBlock:^(UIView *view, NSUInteger i, BOOL *stop) {
         view.alpha = alpha;
+        [self bringSubviewToFront:view];
     }];
     
     [[self valueForKey:@"_rightViews"] enumerateObjectsUsingBlock:^(UIView *view, NSUInteger i, BOOL *stop) {
         view.alpha = alpha;
+        [self bringSubviewToFront:view];
+
     }];
     
     UIView *titleView = [self valueForKey:@"_titleView"];
     titleView.alpha = alpha;
+    [self bringSubviewToFront:titleView];
+
 }
 
 - (void)reset {

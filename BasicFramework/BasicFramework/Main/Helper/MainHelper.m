@@ -34,7 +34,7 @@ static MainHelper *helper = nil;
 #pragma mark 容错开启
         [[MainHelper shareHelper] FaultTolerance];
 #pragma mark AppDelegate
-        [[MainHelper shareHelper]ListeningLifeCycleAndRegisteredAPNS];
+        [[MainHelper shareHelper] ListeningLifeCycleAndRegisteredAPNS];
         
     });
     
@@ -129,18 +129,9 @@ static MainHelper *helper = nil;
 // 监听系统生命周期回调，以便将需要的事件传给SDK
 - (void)_setupAppDelegateNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(appDidEnterBackgroundNotif:)
-                                                 name:UIApplicationDidEnterBackgroundNotification
-                                               object:nil];
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(appWillEnterForeground:)
-                                                 name:UIApplicationWillEnterForegroundNotification
-                                               object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(appDidEnterBackgroundNotif:)name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(appWillEnterForeground:)name:UIApplicationWillEnterForegroundNotification object:nil];
     [kNotificationCenter addObserver:self selector:@selector(application_OpenURL_SourceApplication_Annotation:) name:_NotificationNameForAppDelegateBackOff object:nil];
-    
 }
 //app-app or web-app互调-回调
 - (void)application_OpenURL_SourceApplication_Annotation:(NSNotification *)notif

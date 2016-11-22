@@ -7,8 +7,6 @@
 //
 #pragma mark -  * * * * * * * * * * * * * * 域名切换 * * * * * * * * * * * * * *
 
-#define ENVIRONMENT 0
-
 extern NSString * const _Environment_Domain;
 
 #pragma mark * * * * * * * * * * * * * * URLs * * * * * * * * * * * * * *

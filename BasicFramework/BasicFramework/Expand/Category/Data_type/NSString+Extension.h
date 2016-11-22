@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Extension)
+/*
+    根据当前语言国际化
+ */
++(NSString *)LanguageInternationalizationCH:(NSString *)Chinese EN:(NSString *)English;
 /**
  *  @brief  掉头反转字符串
  */
@@ -21,7 +25,7 @@
 - (CGSize)sizeWithFont:(UIFont *)font;
 - (CGSize)sizeWithFont:(UIFont *)font andMaxW:(CGFloat)maxW;
 #pragma mark - nil NULL "space"
--(BOOL)isNULL;
++(BOOL)isNULL:(id)string;
 #pragma md5
 - (NSString *)MD5string;
 /*

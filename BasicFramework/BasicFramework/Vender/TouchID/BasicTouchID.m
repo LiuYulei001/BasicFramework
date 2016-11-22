@@ -16,8 +16,8 @@ static char const touchIDkey;
     
     LAContext *context = [[LAContext alloc]init];
     
-    context.localizedFallbackTitle = fallbackTitle;
-    
+    context.localizedFallbackTitle = [NSString isNULL:fallbackTitle] ? [NSString LanguageInternationalizationCH:@"输入密码" EN:@"Enter the password"] : fallbackTitle;
+    message = [NSString isNULL:message] ? [NSString LanguageInternationalizationCH:@"通过Home键验证已有指纹" EN:@"Existing fingerprint are verified through the Home button"] : message;
     NSError *error = nil;
     
     BasicTouchID *touchID = objc_getAssociatedObject(self, &touchIDkey);
@@ -31,11 +31,11 @@ static char const touchIDkey;
     
     __block TouchID_AuthorizeState _AuthorizeState;
     
-    NSAssert(touchID.delegate != nil, kAppleLanguages(@"BasicTouchIDDelegate 不能为空", @"BasicTouchIDDelegate must be non-nil"));
+    NSAssert(touchID.delegate != nil, [NSString LanguageInternationalizationCH:@"BasicTouchIDDelegate 不能为空" EN:@"BasicTouchIDDelegate must be non-nil"]);
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:message == nil ? kAppleLanguages(@"默认提示信息", @"The Default Message") : message reply:^(BOOL success, NSError * _Nullable error) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:message reply:^(BOOL success, NSError * _Nullable error) {
             
             if (success) {
                 

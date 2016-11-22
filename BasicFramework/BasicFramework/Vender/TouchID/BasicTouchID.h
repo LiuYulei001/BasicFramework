@@ -9,13 +9,6 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 
 
-#if TARGET_IPHONE_SIMULATOR
-#define kAppleLanguages(Chinese,English) [[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"zh-Hans-US"] ? Chinese : English
-#elif TARGET_OS_IPHONE
-#define kAppleLanguages(Chinese,English) [[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"zh-Hans-CN"] ? Chinese : English
-#endif
-
-
 typedef NS_ENUM(NSUInteger, TouchID_AuthorizeState) {
     /**
      *  TouchID验证成功

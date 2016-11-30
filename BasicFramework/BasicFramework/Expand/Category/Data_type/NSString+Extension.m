@@ -16,6 +16,15 @@
 
 @implementation NSString (Extension)
 
+-(NSAttributedString *)AddRemoveLineOnStringRange:(NSRange )range lineWidth:(NSInteger )lineWidth {
+    
+    NSMutableAttributedString *temp_attributedStr = [[NSMutableAttributedString alloc]initWithString:self];
+    [temp_attributedStr addAttribute:NSStrikethroughStyleAttributeName value:[NSString stringWithFormat:@"%ld",lineWidth] range:range];
+    return temp_attributedStr;
+}
+/*
+ 根据当前语言国际化
+ */
 +(NSString *)LanguageInternationalizationCH:(NSString *)Chinese EN:(NSString *)English
 {
     return kAppleLanguages(Chinese, English);

@@ -40,6 +40,10 @@
  *  不同颜色不同字体大小字符串
  */
 -(NSMutableAttributedString *)setOtherColor:(UIColor *)Color font:(CGFloat)font forStr:(NSString *)forStr;
+/*
+    在文字上添加删除线（例如过去的价格）
+ */
+-(NSAttributedString *)AddRemoveLineOnStringRange:(NSRange )range lineWidth:(NSInteger )lineWidth;
 
 - (BOOL)isChinese;
 - (NSString *)pinyin;

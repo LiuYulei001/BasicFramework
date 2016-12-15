@@ -46,5 +46,8 @@ typedef UIView *(^RotateAnimationBlock)(NSInteger,FinishedAnima);
 - (RotateBlock)rotateY;
 - (RotateAnimationBlock)animationRotate;
 
+//以X轴为中心3D旋转
+-(void)rotated:(CGFloat )Angle;
+
 @end
 

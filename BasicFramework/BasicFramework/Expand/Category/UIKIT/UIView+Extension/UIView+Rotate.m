@@ -248,6 +248,15 @@ CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
     
 }
 
+-(void)rotated:(CGFloat )Angle
+{
+    CALayer *layer = self.layer;
+    CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+    rotationAndPerspectiveTransform.m34 = 1.0 / -500;
+    rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, Angle * M_PI / 180.0f, 0.0f, 1.0f, 0.0f);
+    layer.transform = rotationAndPerspectiveTransform;
+}
+
 
 
 @end

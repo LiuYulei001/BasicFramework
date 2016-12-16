@@ -8,7 +8,40 @@ static char kDTActionHandlerTapGestureKey;
 static char kDTActionHandlerLongPressBlockKey;
 static char kDTActionHandlerLongPressGestureKey;
 
+@interface UIView ()
+
+@property(nonatomic,strong)UIActivityIndicatorView *activity;
+
+@end
+
 @implementation UIView (Extension)
+
+-(void)startLoading
+{
+    UIActivityIndicatorView *temp_activity = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    temp_activity.frame = CGRectMake(0, 0, 20, 20);
+    temp_activity.center = CGPointMake(self.Sw/2, self.Sh/2);
+    
+    [temp_activity startAnimating];
+    self.activity = temp_activity;
+    [self addSubview:self.activity];
+}
+-(void)stopLoding
+{
+    [self.activity stopAnimating];
+    [self.activity removeFromSuperview];
+    self.activity = nil;
+}
+// 在分类里添加属性
+static char AddressKey;
+-(void)setActivity:(UIActivityIndicatorView *)activity
+{
+    objc_setAssociatedObject(self, &AddressKey, activity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+-(UIActivityIndicatorView *)activity
+{
+    return objc_getAssociatedObject(self, &AddressKey);
+}
 
 
 -(void)addBorderWithcornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth

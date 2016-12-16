@@ -26,6 +26,10 @@
  *  添加圆角边框
  */
 -(void)addBorderWithcornerRad:(CGFloat)cornerRad lineCollor:(UIColor *)collor lineWidth:(CGFloat)lineWidth;
-
+/**
+ *  加载
+ */
+-(void)startLoading;
+-(void)stopLoding;
 
 @end

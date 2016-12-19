@@ -67,8 +67,8 @@
             loadMoreCallBackBlock();
         }
     }];
-    [footer setTitle:@"" forState:MJRefreshStateIdle];
-    [footer setTitle:@"内涵正在为您加载数据" forState:MJRefreshStateRefreshing];
+    [footer setTitle:@"释放加载更多" forState:MJRefreshStateIdle];
+    [footer setTitle:@"Rainy正在为您加载数据" forState:MJRefreshStateRefreshing];
     [footer setTitle:@"没有更多了~" forState:MJRefreshStateNoMoreData];
     footer.stateLabel.textColor = stateLabelTextColor;
     footer.stateLabel.font = ThirteenFontSize;
@@ -99,6 +99,7 @@
     [header setTitle:@"释放更新" forState:MJRefreshStatePulling];
     [header setTitle:@"正在更新" forState:MJRefreshStateRefreshing];
     [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"没有发现数据" forState:MJRefreshStateNoMoreData];
     header.stateLabel.font = ThirteenFontSize;
     header.stateLabel.textColor = stateLabelTextColor;
     header.lastUpdatedTimeLabel.hidden = YES;

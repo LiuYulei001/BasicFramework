@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import "UserModel.h"
 
 @interface LoginVC ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+-(void)logining{
+    
+    [UserModel loginWithName:@"" PW:@"" FinishedLogin:^(UserModel *model) {
+        
+    }];
     
 }
 - (void)didReceiveMemoryWarning {

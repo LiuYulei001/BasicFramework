@@ -37,7 +37,7 @@ NSString *const _Environment_Domain = @"_NULL_";
 
 #pragma mark -  * * * * * * * * * * * * * * URLs * * * * * * * * * * * * * *
 
-
+NSString * const _Login_URL = @"/Login/";
 NSString * const _URL_PageDetail = @"/pageDetail/";
 NSString * const _URL_HomeList   = @"/homeList/";
 

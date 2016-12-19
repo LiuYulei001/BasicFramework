@@ -11,6 +11,7 @@ extern NSString * const _Environment_Domain;
 
 #pragma mark * * * * * * * * * * * * * * URLs * * * * * * * * * * * * * *
 
+extern NSString * const _Login_URL;
 extern NSString * const _URL_PageDetail;
 extern NSString * const _URL_HomeList;
 

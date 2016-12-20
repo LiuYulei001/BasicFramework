@@ -29,8 +29,6 @@ static MainHelper *helper = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-#pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
-        [[MainHelper shareHelper] setReachability];
 #pragma mark 容错开启
         [[MainHelper shareHelper] FaultTolerance];
 #pragma mark AppDelegate
@@ -39,63 +37,6 @@ static MainHelper *helper = nil;
     });
     
 }
--(void)setReachability
-{
-    Reachability * reach = [Reachability reachabilityWithHostname:@"www.baidu.com"];
-    [reach startNotifier];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityAction) name:kReachabilityChangedNotification object:nil];
-}
--(void)reachabilityAction
-{
-    
-    UIApplication *application = [UIApplication sharedApplication];
-    
-    NSArray *chlidrenArray = [[[application valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
-    
-    NSInteger netType =0;
-    
-    for (id  child in chlidrenArray) {
-        
-        if ([child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]) {
-            
-            netType = [[child valueForKeyPath:@"dataNetworkType"] integerValue];
-            
-        }
-    }
-    
-    switch (netType) {
-        case 0:
-            
-            [FileCacheManager saveInMyLocalStoreForValue:@"0" atKey:kReachability];
-            
-            break;
-        case 1:
-            
-            [FileCacheManager saveInMyLocalStoreForValue:@"2G" atKey:kReachability];
-            
-            break;
-        case 2:
-            
-            [FileCacheManager saveInMyLocalStoreForValue:@"3G" atKey:kReachability];
-            
-            break;
-        case 3:
-            
-            [FileCacheManager saveInMyLocalStoreForValue:@"4G" atKey:kReachability];
-            
-            break;
-        case 5:
-            
-            [FileCacheManager saveInMyLocalStoreForValue:@"WIFE" atKey:kReachability];
-            
-            break;
-            
-        default:
-            break;
-    }
-    
-}
-
 
 -(void)FaultTolerance
 {

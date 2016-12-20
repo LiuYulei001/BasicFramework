@@ -51,7 +51,7 @@
     } failure:^(NSError *error) {
         
         [ProgressHUD hideProgressHUDAfterDelay:0];
-        [ProgressHUD showProgressHUDWithMode:ProgressHUDModeOnlyText withText:LoginErrorString afterDelay:1.5 isTouched:YES inView:kWindow];
+        [ProgressHUD showProgressHUDWithMode:ProgressHUDModeOnlyText withText:!error ? Request_NoNetwork : LoginErrorString afterDelay:1.5 isTouched:YES inView:kWindow];
     }];
     
     

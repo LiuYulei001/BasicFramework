@@ -6,6 +6,9 @@ typedef void(^RefreshAndLoadMoreHandle)(void);
 
 @interface AppUtility : NSObject
 
+
+/** 获取当前网络 */
++ (NSString *)getNetworkType;
 /** 开始下拉刷新 */
 + (void)beginPullRefreshForScrollView:(UIScrollView *)scrollView;
 

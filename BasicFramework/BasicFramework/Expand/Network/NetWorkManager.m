@@ -134,6 +134,10 @@ static NetWorkManager *network = nil;
 
 -(void)requestDataForPOSTWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
+    if ([kNetworkType isEqualToString:kNoNetwork]) {
+        failure(nil);
+        return;
+    }
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
     URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
@@ -185,6 +189,10 @@ static NetWorkManager *network = nil;
 -(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
     
+    if ([kNetworkType isEqualToString:kNoNetwork]) {
+        failure(nil);
+        return;
+    }
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
     URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
@@ -400,6 +408,6 @@ static UIViewController *tempVC = nil;
 -(void)clearUserCaches
 {
     [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
-    [FileCacheManager DeleteValueInMyLocalStoreForKey:kReachability];
 }
+
 @end

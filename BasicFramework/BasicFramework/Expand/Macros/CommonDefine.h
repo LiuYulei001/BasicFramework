@@ -21,17 +21,16 @@
 /**
  *  当前网络状态
  */
-#define kNetworkType [FileCacheManager getValueInMyLocalStoreForKey:kReachability]
+#define kNetworkType [AppUtility getNetworkType]
 /**
  *  用户惟一标示
  */
 #define USER_ID [FileCacheManager getValueInMyLocalStoreForKey:KEY_USER_ID]
 
-
 /**
  *  持久化 KEY 值
  */
-#define kReachability @"myReachability"
+#define kNoNetwork @"no network"
 #define KEY_USER_ID @"USER_ID"
 /**
  *  懒人简化书写宏
@@ -46,6 +45,7 @@
 #define Request_Failure @"失败"
 #define Request_Success @"成功"
 #define Request_NOMore @"已加载全部"
+#define Request_NoNetwork @"请检查网络链接"
 /**
  *  iPhone or iPad
  */

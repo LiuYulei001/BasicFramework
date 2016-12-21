@@ -1054,6 +1054,6 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     
 }
 - (NSString *)version{
-    return @"2.0.0";
+    return kVersion;
 }
 @end

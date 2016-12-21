@@ -16,7 +16,6 @@
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A981D6EE4FC00A03BF4 /* Placeholder */; };
-		36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AA71D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAE1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB01D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB31D6EE58C00A03BF4 /* Placeholder */; };
@@ -53,11 +52,12 @@
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
 		36650FAC1E0791E50099CD92 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36650FAB1E0791E50099CD92 /* UserModel.m */; };
 		36650FAF1E0792BB0099CD92 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36650FAE1E0792BB0099CD92 /* LoginConstants.m */; };
+		366787F31E0A46BC0044CE85 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 366787EF1E0A46BC0044CE85 /* GlobalConstants.m */; };
+		366787F41E0A46BC0044CE85 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 366787F21E0A46BC0044CE85 /* URLConstants.m */; };
+		366787FC1E0A4BAF0044CE85 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 366787FB1E0A4BAF0044CE85 /* Placeholder */; };
 		3679AA0E1DD9846700169DFF /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA0D1DD9846700169DFF /* MainModel.m */; };
 		3679AA141DD99BA000169DFF /* IMG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3679AA131DD99BA000169DFF /* IMG.bundle */; };
 		3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */; };
-		3679AA861DDC482300169DFF /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA831DDC482300169DFF /* GlobalConstants.m */; };
-		3679AA871DDC482300169DFF /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA851DDC482300169DFF /* URLConstants.m */; };
 		3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA891DDC521F00169DFF /* FileCacheManager.m */; };
 		3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */; };
 		3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3679AA921DDDACF300169DFF /* WMPlayer.bundle */; };
@@ -112,7 +112,6 @@
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A981D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111AA71D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB31D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -180,15 +179,16 @@
 		36650FAB1E0791E50099CD92 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		36650FAD1E0792BB0099CD92 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
 		36650FAE1E0792BB0099CD92 /* LoginConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginConstants.m; sourceTree = "<group>"; };
+		366787EE1E0A46BC0044CE85 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		366787EF1E0A46BC0044CE85 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
+		366787F11E0A46BC0044CE85 /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
+		366787F21E0A46BC0044CE85 /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
+		366787FB1E0A4BAF0044CE85 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		3679AA0C1DD9846700169DFF /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		3679AA0D1DD9846700169DFF /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		3679AA131DD99BA000169DFF /* IMG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMG.bundle; sourceTree = "<group>"; };
 		3679AA201DDAB91000169DFF /* ObjectDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDataBaseManager.h; sourceTree = "<group>"; };
 		3679AA211DDAB91000169DFF /* ObjectDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDataBaseManager.m; sourceTree = "<group>"; };
-		3679AA821DDC482300169DFF /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
-		3679AA831DDC482300169DFF /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
-		3679AA841DDC482300169DFF /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
-		3679AA851DDC482300169DFF /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
 		3679AA881DDC521F00169DFF /* FileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCacheManager.h; sourceTree = "<group>"; };
 		3679AA891DDC521F00169DFF /* FileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheManager.m; sourceTree = "<group>"; };
 		3679AA8B1DDD534200169DFF /* NSArray+RemoveDuplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RemoveDuplicate.h"; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 		36111AA61D6EE58C00A03BF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36111AA71D6EE58C00A03BF4 /* Placeholder */,
+				366787FB1E0A4BAF0044CE85 /* Placeholder */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -824,6 +824,24 @@
 			path = NSCoding;
 			sourceTree = "<group>";
 		};
+		366787ED1E0A46BC0044CE85 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				366787EE1E0A46BC0044CE85 /* GlobalConstants.h */,
+				366787EF1E0A46BC0044CE85 /* GlobalConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		366787F01E0A46BC0044CE85 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				366787F11E0A46BC0044CE85 /* URLConstants.h */,
+				366787F21E0A46BC0044CE85 /* URLConstants.m */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
 		3679AA1F1DDAB8EF00169DFF /* Model_DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,10 +854,8 @@
 		3679AA811DDC482300169DFF /* Constants(常量) */ = {
 			isa = PBXGroup;
 			children = (
-				3679AA821DDC482300169DFF /* GlobalConstants.h */,
-				3679AA831DDC482300169DFF /* GlobalConstants.m */,
-				3679AA841DDC482300169DFF /* URLConstants.h */,
-				3679AA851DDC482300169DFF /* URLConstants.m */,
+				366787ED1E0A46BC0044CE85 /* Constants */,
+				366787F01E0A46BC0044CE85 /* URL */,
 			);
 			name = "Constants(常量)";
 			path = Constants;
@@ -1076,8 +1092,8 @@
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
 				3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */,
+				366787FC1E0A4BAF0044CE85 /* Placeholder in Resources */,
 				36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */,
-				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
@@ -1172,12 +1188,12 @@
 				3679AABD1DDDB7B800169DFF /* UIScrollView+Extension.m in Sources */,
 				3679AAA41DDDB62F00169DFF /* UIBarButtonItem+Extension.m in Sources */,
 				362032761DD4748700F15494 /* NSObject+Release.m in Sources */,
-				3679AA861DDC482300169DFF /* GlobalConstants.m in Sources */,
 				360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */,
 				3679AABA1DDDB7B100169DFF /* UIImage+Extension.m in Sources */,
 				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
 				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
 				363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */,
+				366787F31E0A46BC0044CE85 /* GlobalConstants.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
@@ -1200,8 +1216,8 @@
 				3679AAB71DDDB7A800169DFF /* UITextField+Extension.m in Sources */,
 				3679AAC31DDDB7C000169DFF /* UIImageView+GIF.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
-				3679AA871DDC482300169DFF /* URLConstants.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
+				366787F41E0A46BC0044CE85 /* URLConstants.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,
 				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				3679AA9E1DDDB5E400169DFF /* UIView+DragAndReset.m in Sources */,

@@ -1,6 +1,14 @@
 
 
 /**
+ *  提醒消失时间
+ */
+#define HUD_DismisTime 0.5
+/**
+ *  透明度
+ */
+#define kAlpha 0.3
+/**
  *  获取Window
  */
 #define kWindow [UIApplication sharedApplication].keyWindow

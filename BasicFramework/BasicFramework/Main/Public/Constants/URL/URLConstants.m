@@ -12,7 +12,7 @@
 /**
  *  @param 开发环境
  */
-NSString *const _Environment_Domain = @"http://172.24.132.60/";
+NSString *const _Environment_Domain = @"_API_Domain_开发环境";
 
 #elif ENVIRONMENT ==1
 /**
@@ -35,8 +35,8 @@ NSString *const _Environment_Domain = @"'ENVIRONMENT'-(0/1/2)";
 
 #pragma mark -  * * * * * * * * * * * * * * URLs * * * * * * * * * * * * * *
 
-NSString * const _Login_URL = @"Account/Login";
+NSString * const _Login_URL = @"/_Login_URL/";
 NSString * const _URL_PageDetail = @"/pageDetail/";
-NSString * const _URL_HomeList   = @"Task/Load";
+NSString * const _URL_HomeList   = @"/_URL_HomeList/";
 
 

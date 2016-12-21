@@ -1,5 +1,5 @@
 
-#define  KEY_USERNAME_PASSWORD @"KEY_USERNAME_PASSWORD"
+
 #define kNetWorkManager [NetWorkManager sharedInstance]
 
 #import "NetWorkManager.h"
@@ -11,11 +11,6 @@
 
 #define kTimeoutInterval  15
 
-
-/**
- *  取
- */
-#define kCookieID_KEY @"Cookie_key"
 
 @interface NetWorkManager ()<UIAlertViewDelegate>
 
@@ -70,14 +65,13 @@ static NetWorkManager *network = nil;
         [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
         [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
         [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
-        //    if (USER_TOKENID) {
-        //
-        //        [manager.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
-        //    }
-        //    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
-        //    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:temp_array[0] password:temp_array[1]];
+//    if (USER_TOKENID) {
+//
+//        [self.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
+//    }
+//    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
+//    [self.requestSerializer setAuthorizationHeaderFieldWithUsername:temp_array[0] password:temp_array[1]];
         
-        //    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         self.operationQueue.maxConcurrentOperationCount = 2;
     }
     return self;
@@ -85,6 +79,7 @@ static NetWorkManager *network = nil;
 /**
  *  手机唯一标示
  */
+#define  KEY_USERNAME_PASSWORD @"KEY_USERNAME_PASSWORD"
 +(NSString *)getUUID
 {
     NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_USERNAME_PASSWORD];
@@ -565,9 +560,6 @@ static UIViewController *tempVC = nil;
 {
     //例如 ：JSESSIONID=25F6DBC6AB286542F37D58B8EDBB84BD; Path=/pad, cookie_user=fsdf#~#sdfs.com; Expires=Tue, 26-Nov-2013 06:31:33 GMT, cookie_pwd=123465; Expires=Tue, 26-Nov-2013 06:31:33 GMT
     NSString *basic_str = @"";
-//    
-//    NSMutableArray *cookisArray=[NSMutableArray arrayWithCapacity:20];
-//    NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
     
     NSArray *theArray = [theCookie componentsSeparatedByString:@"; "];
     
@@ -579,49 +571,6 @@ static UIViewController *tempVC = nil;
             basic_str = val;
         }
     }
-    
-    
-//    for (int i =0 ; i<[theArray count]; i++) {
-//        NSString *val=theArray[i];
-//        if ([val rangeOfString:@"="].length>0)
-//        {
-//            NSArray *subArray = [val componentsSeparatedByString:@"="];
-//            for (int i =0 ; i<[subArray count]; i++) {
-//                NSString *subVal=subArray[i];
-//                if ([subVal rangeOfString:@","].length>0)
-//                {
-//                    NSArray *subArray2 = [subVal componentsSeparatedByString:@","];
-//                    for (int i =0 ; i<[subArray2 count]; i++) {
-//                        NSString *subVal2=subArray2[i];
-//                        [cookisArray addObject:subVal2];
-//                    }
-//                }
-//                else
-//                {
-//                    [cookisArray addObject:subVal];
-//                }
-//            }
-//        }
-//        else
-//        {
-//            [cookisArray addObject:val];
-//        }
-//    }
-//    for (int idx=0; idx<cookisArray.count; idx+=2) {
-//        NSString *key=cookisArray[idx];
-//        NSString *value;
-//        if ([key isEqualToString:@"JSESSIONID"])
-//        {
-//            value=[NSString stringWithFormat:@"%@,%@",cookisArray[idx+1],cookisArray[idx+2]];
-//            idx+=1;
-//        }
-//        else
-//        {
-//            value=cookisArray[idx+1];
-//        }
-//        NSLog(@"cookie value:%@=%@",key,value);
-//        [cookieProperties setObject:value forKey:key];
-//    }
     
     
     return basic_str;

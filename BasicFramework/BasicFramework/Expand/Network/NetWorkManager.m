@@ -305,13 +305,8 @@ static NetWorkManager *network = nil;
             
             NSData * imgData = UIImageJPEGRepresentation(resizedImage, .5);
             
-            
-            NSDate *now = [NSDate dateWithTimeIntervalSinceNow:8 * 60 * 60];
-            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-            [formatter setDateFormat:@"yyyy_MM_dd_hh_mm_ss_"];
-            NSString *picname = [formatter stringFromDate:now];
             //拼接data
-            [formData appendPartWithFileData:imgData name:[NSString stringWithFormat:@"picflie%ld",(long)i] fileName:[NSString stringWithFormat:@"%@.png",picname] mimeType:@"image/jpeg"];
+            [formData appendPartWithFileData:imgData name:[NSString stringWithFormat:@"picflie%ld",(long)i] fileName:[NSString stringWithFormat:@"%@.png",[NetWorkManager randomString]] mimeType:@"image/jpeg"];
             
             i++;
         }
@@ -364,15 +359,9 @@ static NetWorkManager *network = nil;
     
     AVAssetExportSession  *  avAssetExport = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPreset640x480];
     
-    /**创建日期格式化器*/
-    
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-    
-    [formatter setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
-    
     /**转化后直接写入Library---caches*/
     
-    NSString *  videoWritePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:[NSString stringWithFormat:@"/output-%@.mp4",[formatter stringFromDate:[NSDate date]]]];
+    NSString *  videoWritePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:[NSString stringWithFormat:@"/output-%@.mp4",[NetWorkManager randomString]]];
     
     
     avAssetExport.outputURL = [NSURL URLWithString:videoWritePath];
@@ -514,7 +503,15 @@ static NetWorkManager *network = nil;
 {
     [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
 }
-
+/**
+ *  创建日期字符串防止重复命名
+ */
++(NSString *)randomString
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy_MM_dd_hh_mm_ss_"];
+    return [formatter stringFromDate:[NSDate date]];
+}
 
 
 

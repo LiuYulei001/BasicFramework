@@ -36,7 +36,6 @@
  *  懒人简化书写宏
  */
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
-#define kNetWorkManager [NetWorkManager sharedInstance]
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 /**
  *  请求提示文字

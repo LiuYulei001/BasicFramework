@@ -23,6 +23,15 @@
 #pragma mark - image from view
 - (UIImage *)imageFromView:(UIView *)theView;
 /**
+ *  图片的压缩方法
+ *
+ *  @param sourceImg   要被压缩的图片
+ *  @param defineWidth 要被压缩的尺寸(宽)
+ *
+ *  @return 被压缩的图片
+ */
++(UIImage *)IMGCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
+/**
  *  @brief  取图片某一点的颜色
  *
  *  @param point 某一点

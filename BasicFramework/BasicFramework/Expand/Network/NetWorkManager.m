@@ -1,9 +1,14 @@
 
 #define  KEY_USERNAME_PASSWORD @"KEY_USERNAME_PASSWORD"
-
-#import <MyUUID/SPIMyUUID.h>
+#define kNetWorkManager [NetWorkManager sharedInstance]
 
 #import "NetWorkManager.h"
+#import <MyUUID/SPIMyUUID.h>
+
+#import <AVFoundation/AVAsset.h>
+#import <AVFoundation/AVAssetExportSession.h>
+#import <AVFoundation/AVMediaFormat.h>
+
 #define kTimeoutInterval  15
 
 
@@ -25,13 +30,62 @@ static NetWorkManager *network = nil;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        network = [[super allocWithZone:NULL] init];
+        network = [[NetWorkManager alloc]initWithBaseURL:[NSURL URLWithString:_Environment_Domain]];
         
     });
     return network;
 }
-
--(NSString *)getUUID
+-(instancetype)initWithBaseURL:(NSURL *)url
+{
+    if (self = [super initWithBaseURL:url]) {
+        
+        /**
+         *  先删除cookies
+         */
+        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        
+        NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
+        
+        for (NSHTTPCookie *cookie in cookies) {
+            [cookieJar deleteCookie:cookie];
+        }
+        
+        self.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        self.responseSerializer.stringEncoding = NSUTF8StringEncoding;//默认 NSUTF8StringEncoding
+        
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+        securityPolicy.allowInvalidCertificates = YES;
+        self.securityPolicy = securityPolicy;
+        
+        [self.responseSerializer willChangeValueForKey:@"timeoutInterval"];
+        [self.requestSerializer setTimeoutInterval:kTimeoutInterval];
+        [self.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+        
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml", @"image/*"]];
+        
+        self.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        self.requestSerializer = [AFJSONRequestSerializer serializer];
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
+        [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+        [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
+        //    if (USER_TOKENID) {
+        //
+        //        [manager.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
+        //    }
+        //    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
+        //    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:temp_array[0] password:temp_array[1]];
+        
+        //    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        self.operationQueue.maxConcurrentOperationCount = 2;
+    }
+    return self;
+}
+/**
+ *  手机唯一标示
+ */
++(NSString *)getUUID
 {
     NSString * strUUID = (NSString *)[SPIMyUUID load:KEY_USERNAME_PASSWORD];
     
@@ -47,8 +101,17 @@ static NetWorkManager *network = nil;
     return strUUID;
 }
 
-
-- (void)SynchronizationForRequestType:(NSString *)RequestType WithURL:(NSString *)URL parameters:(NSString *)parametersStr Controller:(UIViewController *)Controller success:(void(^)(id response,id data))success
+/**
+ *  同步请求
+ *
+ *  @param RequestType POST or GET
+ *  @param URL        地址
+ *  @param parameters 参数
+ *  @param Controller 控制器
+ *  @param success
+ *
+ */
++(void)SynchronizationForRequestType:(NSString *)RequestType WithURL:(NSString *)URL parameters:(NSString *)parametersStr Controller:(UIViewController *)Controller success:(void(^)(id response,id data))success
 {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",_Environment_Domain,URL]];
@@ -59,7 +122,7 @@ static NetWorkManager *network = nil;
     
     [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
     [request setValue:kVersion forHTTPHeaderField:@"version"];
-    [request setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+    [request setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
 //    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
 //    NSData *basicAuthCredentials = [[NSString stringWithFormat:@"%@:%@", temp_array[0], temp_array[1]] dataUsingEncoding:NSUTF8StringEncoding];
 //    NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
@@ -91,58 +154,30 @@ static NetWorkManager *network = nil;
     dispatch_semaphore_wait(disp, DISPATCH_TIME_FOREVER);
 }
 
-
-
-
-
-
--(void)UploadPicturesToServerPic:(UIImage *)image url:(NSString *)url uiserid:(NSString *)userid success:(void (^)(id responseObject))success failure:(void (^)(NSError *  error))failure
-{
-    NSString *str = [NSString stringWithFormat:@"%@%@?version=%@&userId=%@",_Environment_Domain,url,kVersion,userid];
-    
-    AFHTTPSessionManager *manager = [self HTTPSessionManager];
-    
-    [manager POST:str parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        NSDate *now = [NSDate dateWithTimeIntervalSinceNow:8 * 60 * 60];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy_MM_dd_hh_mm_ss_"];
-        NSString *picname = [formatter stringFromDate:now];
-        
-        NSString *path = NSTemporaryDirectory();
-        NSString *file = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%d(SPI-Piles)_%@.png",arc4random()%1000,picname]];
-        
-        NSData *imageData = UIImageJPEGRepresentation(image, 0.06);
-        
-        [formData appendPartWithFileData:imageData name:@"profile" fileName:file mimeType:@"image/jpeg"];
-        
-    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        if (success) {
-            success (responseObject);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if (error) {
-            failure(error);
-        }
-        
-    }];
-    
-}
-
--(void)requestDataForPOSTWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
+/**
+ *  Post请求
+ *
+ *  @param URL        地址
+ *  @param parameters 参数
+ *  @param Controller 控制器
+ *  @param success
+ *  @param failure
+ */
++(void)requestDataForPOSTWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failure(nil);
         return;
     }
-    AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
-    URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
-    
-    [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [kNetWorkManager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        if (progress) {
+            
+            progress(uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+        }
+        
+    }success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         /**
          *  get Cookies
@@ -186,19 +221,30 @@ static NetWorkManager *network = nil;
     }];
     
 }
--(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
+/**
+ *  get请求
+ *
+ *  @param URL        地址
+ *  @param Controller 控制器
+ *  @param success
+ *  @param failure
+ */
++(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
 {
     
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failure(nil);
         return;
     }
-    AFHTTPSessionManager *manager = [self HTTPSessionManager];
     
-    URL = [NSString stringWithFormat:@"%@%@",_Environment_Domain,URL];
-    
-    
-    [manager GET:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [kNetWorkManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        if (progress) {
+            
+            progress(downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+        }
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         /**
          *  get Cookies
@@ -230,87 +276,265 @@ static NetWorkManager *network = nil;
     }];
     
 }
-- (AFHTTPSessionManager *)HTTPSessionManager{
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    /**
-     *  先删除cookies
-     */
-    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    
-    NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
-    
-    for (NSHTTPCookie *cookie in cookies) {
-        [cookieJar deleteCookie:cookie];
-    }
-    
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    manager.responseSerializer.stringEncoding = NSUTF8StringEncoding;//默认 NSUTF8StringEncoding
-    
-    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
-    securityPolicy.allowInvalidCertificates = YES;
-    manager.securityPolicy = securityPolicy;
-    
-    [manager.responseSerializer willChangeValueForKey:@"timeoutInterval"];
-    [manager.requestSerializer setTimeoutInterval:kTimeoutInterval];
-    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml", @"image/*"]];
-    
-    manager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
-    [manager.requestSerializer setValue:[self getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
-    [manager.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
-//    if (USER_TOKENID) {
-//        
-//        [manager.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
-//    }
-//    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
-//    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:temp_array[0] password:temp_array[1]];
-    
-    //    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    manager.operationQueue.maxConcurrentOperationCount = 2;
-    
-    
-    
-    return manager;
-}
 /**
- *  配置请求头
+ *  上传图片
  *
- *  @return NSString
+ *  @param parameters   上传图片预留参数---视具体情况而定 可移除
+ *  @param images   上传的图片数组
+ *  @parm width      图片要被压缩到的宽度
+ *  @param urlString    上传的url
+ *  @param success 上传成功的回调
+ *  @param failure 上传失败的回调
+ *  @param progress     上传进度
  */
-//-(NSString *)getRequestHeaderParameter
-//{
-//    return [NSString stringWithFormat:@"uid=%@;version=%@",USER_ID,kVersion];
-//}
-
-- (void)updateFile:(NSArray*)fileData url:(NSString*)url parameters:(NSMutableDictionary*)params fileName:(NSString*)fileName viewControler:(UIViewController*)vc success:(void(^)(id result))result failure:(void(^)(NSError *  error))failure;
++(void)UploadPicturesWithURL:(NSString *)URL parameters:(id)parameters images:(NSArray *)images withtargetWidth:(CGFloat )width withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
 {
-    url = [NSString stringWithFormat:@"%@%@",@"http://10.0.136.41:8080/iceland-ws/",url];
-    AFHTTPSessionManager *manager = [self HTTPSessionManager];
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        int index = 0;
-        for(UIImage *image in fileData)
-        {
-            NSString* tempFileName = [NSString stringWithFormat:@"%@%d.png",fileName,index];
-            NSData *imageData = UIImageJPEGRepresentation(image, 1);
-            [formData appendPartWithFileData:imageData name:@"file" fileName:tempFileName mimeType:@"image/png"];
-            index ++;
+    if ([kNetworkType isEqualToString:kNoNetwork]) {
+        failure(nil);
+        return;
+    }
+    [kNetWorkManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSUInteger i = 0 ;
+        
+        /**出于性能考虑,将上传图片进行压缩*/
+        for (UIImage * image in images) {
+            
+            //image设置指定宽度
+            UIImage *  resizedImage =  [UIImage IMGCompressed:image targetWidth:width];
+            
+            NSData * imgData = UIImageJPEGRepresentation(resizedImage, .5);
+            
+            
+            NSDate *now = [NSDate dateWithTimeIntervalSinceNow:8 * 60 * 60];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"yyyy_MM_dd_hh_mm_ss_"];
+            NSString *picname = [formatter stringFromDate:now];
+            //拼接data
+            [formData appendPartWithFileData:imgData name:[NSString stringWithFormat:@"picflie%ld",(long)i] fileName:[NSString stringWithFormat:@"%@.png",picname] mimeType:@"image/jpeg"];
+            
+            i++;
         }
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        result(responseObject);
+        if (progress) {
+            
+            progress(uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+        }
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        
+        success(responseObject);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
         failure(error);
+        
     }];
 }
+/**
+ *  视频上传
+ *
+ *  @param parameters   上传视频预留参数---视具体情况而定 可移除
+ *  @param videoPath    上传视频的本地沙河路径
+ *  @param urlString     上传的url
+ *  @param successBlock 成功的回调
+ *  @param failureBlock 失败的回调
+ *  @param progress     上传的进度
+ */
++(void)uploadVideoWithParameters:(NSDictionary *)parameters withVideoPath:(NSString *)videoPath withUrlString:(NSString *)urlString withUploadProgress:(uploadProgress)progress withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock
+{
+    if ([kNetworkType isEqualToString:kNoNetwork]) {
+        failureBlock(nil);
+        return;
+    }
+    
+    /**获得视频资源*/
+    
+    AVURLAsset * avAsset = [AVURLAsset assetWithURL:[NSURL URLWithString:videoPath]];
+    
+    /**压缩*/
+    
+    //    NSString *const AVAssetExportPreset640x480;
+    //    NSString *const AVAssetExportPreset960x540;
+    //    NSString *const AVAssetExportPreset1280x720;
+    //    NSString *const AVAssetExportPreset1920x1080;
+    //    NSString *const AVAssetExportPreset3840x2160;
+    
+    AVAssetExportSession  *  avAssetExport = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPreset640x480];
+    
+    /**创建日期格式化器*/
+    
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
+    
+    /**转化后直接写入Library---caches*/
+    
+    NSString *  videoWritePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:[NSString stringWithFormat:@"/output-%@.mp4",[formatter stringFromDate:[NSDate date]]]];
+    
+    
+    avAssetExport.outputURL = [NSURL URLWithString:videoWritePath];
+    
+    
+    avAssetExport.outputFileType =  AVFileTypeMPEG4;
+    
+    
+    [avAssetExport exportAsynchronouslyWithCompletionHandler:^{
+        
+        
+        switch ([avAssetExport status]) {
+                
+                
+            case AVAssetExportSessionStatusCompleted:
+            {
+                
+                
+                [kNetWorkManager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+                    
+                    //获得沙盒中的视频内容
+                    
+                    [formData appendPartWithFileURL:[NSURL fileURLWithPath:videoWritePath] name:@"write you want to writre" fileName:videoWritePath mimeType:@"video/mpeg4" error:nil];
+                    
+                } progress:^(NSProgress * _Nonnull uploadProgress) {
+                    
+                    if (progress) {
+                        
+                        progress(uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+                    }
+                    
+                } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+                    
+                    successBlock(responseObject);
+                    
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                    
+                    failureBlock(error);
+                    
+                }];
+                
+                break;
+            }
+            default:
+                break;
+        }
+        
+        
+    }];
+
+}
+/**
+ *  文件下载
+ *
+ *  @param parameters   文件下载预留参数---视具体情况而定 可移除
+ *  @param savePath     下载文件保存路径
+ *  @param urlString        请求的url
+ *  @param successBlock 下载文件成功的回调
+ *  @param failureBlock 下载文件失败的回调
+ *  @param progress     下载文件的进度显示
+ */
++(void)downLoadFileWithParameters:(NSDictionary *)parameters withSavaPath:(NSString *)savePath withUrlString:(NSString *)urlString withDownLoadProgress:(downloadProgress)progress withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock
+{
+    if ([kNetworkType isEqualToString:kNoNetwork]) {
+        failureBlock(nil);
+        return;
+    }
+    
+    
+    [kNetWorkManager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]] progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        if (progress) {
+            
+            progress(downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+        }
+        
+        
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        
+        return  [NSURL URLWithString:savePath];
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        
+        if (error) {
+            
+            failureBlock(error);
+        }
+        
+    }];
+}
+/**
+ *  取消所有的网络请求
+ */
++(void)cancelAllRequest
+{
+    [kNetWorkManager.operationQueue cancelAllOperations];
+}
+/**
+ *  取消指定的url请求
+ *
+ *  @param requestType 该请求的请求类型
+ *  @param string      该请求的url
+ */
++(void)cancelHttpRequestWithRequestType:(NSString *)requestType requestUrlString:(NSString *)string
+{
+    NSError * error;
+    
+    /**根据请求的类型 以及 请求的url创建一个NSMutableURLRequest---通过该url去匹配请求队列中是否有该url,如果有的话 那么就取消该请求*/
+    
+    NSString * urlToPeCanced = [[[kNetWorkManager.requestSerializer requestWithMethod:requestType URLString:string parameters:nil error:&error] URL] path];
+    
+    
+    for (NSOperation * operation in kNetWorkManager.operationQueue.operations) {
+        
+        //如果是请求队列
+        if ([operation isKindOfClass:[NSURLSessionTask class]]) {
+            
+            //请求的类型匹配
+            BOOL hasMatchRequestType = [requestType isEqualToString:[[(NSURLSessionTask *)operation currentRequest] HTTPMethod]];
+            
+            //请求的url匹配
+            
+            BOOL hasMatchRequestUrlString = [urlToPeCanced isEqualToString:[[[(NSURLSessionTask *)operation currentRequest] URL] path]];
+            
+            //两项都匹配的话  取消该请求
+            if (hasMatchRequestType&&hasMatchRequestUrlString) {
+                
+                [operation cancel];
+                
+            }
+        }
+        
+    }
+}
+/**
+ *  清除用户信息
+ */
++(void)clearUserCaches
+{
+    [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - alertview
 static UIViewController *tempVC = nil;
@@ -333,7 +557,7 @@ static UIViewController *tempVC = nil;
         
         tempVC = nil;
         
-        [self clearUserCaches];
+        [NetWorkManager clearUserCaches];
         [tempVC dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -405,9 +629,6 @@ static UIViewController *tempVC = nil;
     
     return basic_str;
 }
--(void)clearUserCaches
-{
-    [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
-}
+
 
 @end

@@ -5,6 +5,9 @@
 //  Created by Rainy on 2016/11/16.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
+
+#define ENVIRONMENT 0 //  0－开发/1－测试/2－正式
+
 #pragma mark -  * * * * * * * * * * * * * * 域名切换 * * * * * * * * * * * * * *
 
 extern NSString * const _Environment_Domain;

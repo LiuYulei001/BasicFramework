@@ -8,13 +8,11 @@
 
 #pragma mark -  * * * * * * * * * * * * * * 域名切换 * * * * * * * * * * * * * *
 
-#define ENVIRONMENT 0
-
 #if ENVIRONMENT == 0
 /**
  *  @param 开发环境
  */
-NSString *const _Environment_Domain = @"_API_Domain_开发环境";
+NSString *const _Environment_Domain = @"http://172.24.132.60/";
 
 #elif ENVIRONMENT ==1
 /**
@@ -30,15 +28,15 @@ NSString *const _Environment_Domain = @"_API_Domain_正式环境";
 
 #else
 
-NSString *const _Environment_Domain = @"_NULL_";
+NSString *const _Environment_Domain = @"'ENVIRONMENT'-(0/1/2)";
 
 #endif /* HTTPURLDefine_h */
 
 
 #pragma mark -  * * * * * * * * * * * * * * URLs * * * * * * * * * * * * * *
 
-NSString * const _Login_URL = @"/Login/";
+NSString * const _Login_URL = @"Account/Login";
 NSString * const _URL_PageDetail = @"/pageDetail/";
-NSString * const _URL_HomeList   = @"/homeList/";
+NSString * const _URL_HomeList   = @"Task/Load";
 
 

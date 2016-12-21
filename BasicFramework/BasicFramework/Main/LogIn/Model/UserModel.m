@@ -31,7 +31,7 @@
     [parameters_dic setValue:name forKey:LoginNameParameter_KEY];
     [parameters_dic setValue:PW forKey:LoginPWParameter_KEY];
     
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:_Login_URL  parameters:parameters_dic Controller:nil success:^(id responseObject) {
+    [NetWorkManager requestDataForPOSTWithURL:_Login_URL  parameters:parameters_dic Controller:nil withUploadProgress:nil success:^(id responseObject) {
         
         
         if ([responseObject[responseObjectSucceed_KEY] intValue] == 1) {

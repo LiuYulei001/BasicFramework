@@ -23,6 +23,10 @@
 #pragma mark - image from view
 - (UIImage *)imageFromView:(UIView *)theView;
 /**
+ *  是否包含二维码
+ */
+-(BOOL)HaveQRCode;
+/**
  *  图片的压缩方法
  *
  *  @param sourceImg   要被压缩的图片

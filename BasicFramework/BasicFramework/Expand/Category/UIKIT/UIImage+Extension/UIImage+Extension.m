@@ -13,7 +13,34 @@ static UIImage *_img = nil;
 
 @implementation UIImage (Extension)
 
-
+//是否包含二维码
+-(BOOL)HaveQRCode
+{
+    //2.初始化一个监测器
+    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
+    NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:self.CGImage]];
+    if (features.count >=1) {
+        
+//        *结果对象
+//                    CIQRCodeFeature *feature = [features objectAtIndex:0];
+//                    NSString *scannedResult = feature.messageString;
+//                    if (scannedResult) {
+//                        NSString *contents = scannedResult;
+//                        if ([contents containsString:@"http://"]) {
+//                            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:contents]];
+//                        }else{
+//                            NSLog(@"扫描结果：%@",contents);
+//                        }
+//                    }
+        
+        return YES;
+    }
+    else{
+        
+        
+        return NO;
+    }
+}
 +(UIImage *)imageNamed:(NSString *)IMGName InBundleNamed:(NSString *)BundleName
 {
     

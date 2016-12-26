@@ -23,7 +23,7 @@
 #pragma mark - image from view
 - (UIImage *)imageFromView:(UIView *)theView;
 /**
- *  是否包含二维码
+ *  识别图片中的二维码
  */
 -(BOOL)HaveQRCode;
 /**

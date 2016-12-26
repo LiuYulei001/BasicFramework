@@ -1,3 +1,10 @@
+//
+//  NetWorkManager.h
+//  BasicFramework
+//
+//  Created by Rainy on 16/10/26.
+//  Copyright © 2016年 Rainy. All rights reserved.
+//
 
 
 #define kNetWorkManager [NetWorkManager sharedInstance]

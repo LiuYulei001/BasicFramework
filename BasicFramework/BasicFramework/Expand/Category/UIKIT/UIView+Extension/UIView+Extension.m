@@ -18,13 +18,16 @@ static char kDTActionHandlerLongPressGestureKey;
 
 -(void)startLoading
 {
-    UIActivityIndicatorView *temp_activity = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    temp_activity.frame = CGRectMake(0, 0, 20, 20);
-    temp_activity.center = CGPointMake(self.Sw/2, self.Sh/2);
-    
-    [temp_activity startAnimating];
-    self.activity = temp_activity;
-    [self addSubview:self.activity];
+    if (!self.activity) {
+        
+        UIActivityIndicatorView *temp_activity = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        temp_activity.frame = CGRectMake(0, 0, 20, 20);
+        temp_activity.center = CGPointMake(self.Sw/2, self.Sh/2);
+        
+        [temp_activity startAnimating];
+        self.activity = temp_activity;
+        [self addSubview:self.activity];
+    }
 }
 -(void)stopLoding
 {

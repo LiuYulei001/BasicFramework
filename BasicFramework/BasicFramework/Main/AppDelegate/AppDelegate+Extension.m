@@ -16,6 +16,21 @@
 
 -(void)setMyWindowAndRootViewController
 {
+    [self setItems];
+    [self setViews];
+}
+-(void)setItems
+{
+    [[UINavigationBar appearance]setBackgroundImage:[UIImage createImageWithColor:WhiteColor] forBarMetrics:UIBarMetricsDefault];
+    NSDictionary *dic = @{NSForegroundColorAttributeName:kMainFontColor};
+    [[UINavigationBar appearance] setTitleTextAttributes:dic];
+    [[UINavigationBar appearance]setTintColor:kMainFontColor];
+    [[UIBarButtonItem appearance]setTitleTextAttributes:dic forState:UIControlStateNormal];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+}
+-(void)setViews
+{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[BasicMainNC alloc]initWithRootViewController:[[HomePageVC alloc]init]];

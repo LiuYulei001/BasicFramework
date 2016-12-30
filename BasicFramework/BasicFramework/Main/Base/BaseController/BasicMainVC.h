@@ -6,8 +6,6 @@
 
 @property(nonatomic,assign)CGFloat keyboarHeight;
 
-@property(nonatomic,assign)BOOL backBarTextIsBack;
-
 -(void)addNotifications;
 - (void)removeKeyboardNotification;
 

@@ -1,16 +1,46 @@
 
+#define backIMG [UIImage imageNamed:@"back"]
 
 #import "BasicMainVC.h"
 
-@interface BasicMainVC ()
+@interface BasicMainVC ()<UIGestureRecognizerDelegate>
+
+@property(nonatomic,strong)UIBarButtonItem *BarButtonItem;
+
 
 @end
 
 @implementation BasicMainVC
-
+//=============================================================================
+//在相应控制器关闭手势返回
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    
+//    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//}
+//-(void)backAction{
+//    
+//    [self.myAlertView show];
+//}
+//=============================================================================
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //打开手势返回
+    if (self.navigationController != nil && self.navigationController.viewControllers.count > 1) {
+        
+        self.navigationItem.leftBarButtonItem = self.BarButtonItem;
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES ;
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    }
+}
+-(void)backAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - removeKeyboardNotification
@@ -62,7 +92,21 @@
 
 
 
-
+#pragma mark - lazy
+-(UIBarButtonItem *)BarButtonItem
+{
+    if (!_BarButtonItem) {
+        
+        UIImageView *imgVC = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 13, 21)];
+        imgVC.image = backIMG;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backAction)];
+        imgVC.userInteractionEnabled = YES;
+        [imgVC addGestureRecognizer:tap];
+        imgVC.contentMode = UIViewContentModeScaleAspectFit;
+        _BarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:imgVC];
+    }
+    return _BarButtonItem;
+}
 
 -(void)dealloc
 {

@@ -34,7 +34,7 @@ typedef void(^downloadProgress)(float progress);
  *
  */
 +(void)SynchronizationForRequestType:(NSString *)RequestType
-                             WithURL:(NSString *)URL
+                                 URL:(NSString *)URL
                           parameters:(NSString *)parametersStr
                           Controller:(UIViewController *)Controller
                              success:(void(^)(id response,id data))success;
@@ -51,7 +51,7 @@ typedef void(^downloadProgress)(float progress);
 +(void)requestDataForPOSTWithURL:(NSString *)URL
                       parameters:(id)parameters
                       Controller:(UIViewController *)Controller
-              withUploadProgress:(uploadProgress)progress
+                  UploadProgress:(uploadProgress)progress
                          success:(requestSuccess)success
                          failure:(requestFailure)failure;
 /**
@@ -66,7 +66,7 @@ typedef void(^downloadProgress)(float progress);
 +(void)requestDataForGETWithURL:(NSString *)URL
                      parameters:(id)parameters
                      Controller:(UIViewController *)Controller
-             withUploadProgress:(uploadProgress)progress
+                 UploadProgress:(uploadProgress)progress
                         success:(requestSuccess)success
                         failure:(requestFailure)failure;
 /**
@@ -83,8 +83,8 @@ typedef void(^downloadProgress)(float progress);
 +(void)UploadPicturesWithURL:(NSString *)URL
                   parameters:(id)parameters
                       images:(NSArray *)images
-             withtargetWidth:(CGFloat )width
-          withUploadProgress:(uploadProgress)progress
+                 targetWidth:(CGFloat )width
+              UploadProgress:(uploadProgress)progress
                      success:(requestSuccess)success
                      failure:(requestFailure)failure;
 /**
@@ -98,11 +98,11 @@ typedef void(^downloadProgress)(float progress);
  *  @param progress     上传的进度
  */
 +(void)uploadVideoWithParameters:(NSDictionary *)parameters
-                   withVideoPath:(NSString *)videoPath
-                   withUrlString:(NSString *)urlString
-              withUploadProgress:(uploadProgress)progress
-                withSuccessBlock:(requestSuccess)successBlock
-                withFailureBlock:(requestFailure)failureBlock;
+                       VideoPath:(NSString *)videoPath
+                       UrlString:(NSString *)urlString
+                  UploadProgress:(uploadProgress)progress
+                    SuccessBlock:(requestSuccess)successBlock
+                    FailureBlock:(requestFailure)failureBlock;
 /**
  *  文件下载
  *
@@ -114,11 +114,11 @@ typedef void(^downloadProgress)(float progress);
  *  @param progress     下载文件的进度显示
  */
 +(void)downLoadFileWithParameters:(NSDictionary *)parameters
-                     withSavaPath:(NSString *)savePath
-                    withUrlString:(NSString *)urlString
-             withDownLoadProgress:(downloadProgress)progress
-                 withSuccessBlock:(requestSuccess)successBlock
-                 withFailureBlock:(requestFailure)failureBlock;
+                         SavaPath:(NSString *)savePath
+                        UrlString:(NSString *)urlString
+                 DownLoadProgress:(downloadProgress)progress
+                     SuccessBlock:(requestSuccess)successBlock
+                     FailureBlock:(requestFailure)failureBlock;
 /**
  *  取消指定的url请求
  *

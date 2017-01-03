@@ -113,7 +113,11 @@ static NetWorkManager *network = nil;
  *  @param success
  *
  */
-+(void)SynchronizationForRequestType:(NSString *)RequestType WithURL:(NSString *)URL parameters:(NSString *)parametersStr Controller:(UIViewController *)Controller success:(void(^)(id response,id data))success
++(void)SynchronizationForRequestType:(NSString *)RequestType
+                                 URL:(NSString *)URL
+                          parameters:(NSString *)parametersStr
+                          Controller:(UIViewController *)Controller
+                             success:(void(^)(id response,id data))success
 {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",_Environment_Domain,URL]];
@@ -165,7 +169,12 @@ static NetWorkManager *network = nil;
  *  @param success
  *  @param failure
  */
-+(void)requestDataForPOSTWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
++(void)requestDataForPOSTWithURL:(NSString *)URL
+                      parameters:(id)parameters
+                      Controller:(UIViewController *)Controller
+                  UploadProgress:(uploadProgress)progress
+                         success:(requestSuccess)success
+                         failure:(requestFailure)failure
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failure(nil);
@@ -231,7 +240,12 @@ static NetWorkManager *network = nil;
  *  @param success
  *  @param failure
  */
-+(void)requestDataForGETWithURL:(NSString *)URL parameters:(id)parameters Controller:(UIViewController *)Controller withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
++(void)requestDataForGETWithURL:(NSString *)URL
+                     parameters:(id)parameters
+                     Controller:(UIViewController *)Controller
+                 UploadProgress:(uploadProgress)progress
+                        success:(requestSuccess)success
+                        failure:(requestFailure)failure
 {
     
     if ([kNetworkType isEqualToString:kNoNetwork]) {
@@ -289,7 +303,13 @@ static NetWorkManager *network = nil;
  *  @param failure 上传失败的回调
  *  @param progress     上传进度
  */
-+(void)UploadPicturesWithURL:(NSString *)URL parameters:(id)parameters images:(NSArray *)images withtargetWidth:(CGFloat )width withUploadProgress:(uploadProgress)progress success:(requestSuccess)success failure:(requestFailure)failure
++(void)UploadPicturesWithURL:(NSString *)URL
+                  parameters:(id)parameters
+                      images:(NSArray *)images
+                 targetWidth:(CGFloat )width
+              UploadProgress:(uploadProgress)progress
+                     success:(requestSuccess)success
+                     failure:(requestFailure)failure
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failure(nil);
@@ -340,7 +360,12 @@ static NetWorkManager *network = nil;
  *  @param failureBlock 失败的回调
  *  @param progress     上传的进度
  */
-+(void)uploadVideoWithParameters:(NSDictionary *)parameters withVideoPath:(NSString *)videoPath withUrlString:(NSString *)urlString withUploadProgress:(uploadProgress)progress withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock
++(void)uploadVideoWithParameters:(NSDictionary *)parameters
+                       VideoPath:(NSString *)videoPath
+                       UrlString:(NSString *)urlString
+                  UploadProgress:(uploadProgress)progress
+                    SuccessBlock:(requestSuccess)successBlock
+                    FailureBlock:(requestFailure)failureBlock
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failureBlock(nil);
@@ -425,7 +450,12 @@ static NetWorkManager *network = nil;
  *  @param failureBlock 下载文件失败的回调
  *  @param progress     下载文件的进度显示
  */
-+(void)downLoadFileWithParameters:(NSDictionary *)parameters withSavaPath:(NSString *)savePath withUrlString:(NSString *)urlString withDownLoadProgress:(downloadProgress)progress withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock
++(void)downLoadFileWithParameters:(NSDictionary *)parameters
+                         SavaPath:(NSString *)savePath
+                        UrlString:(NSString *)urlString
+                 DownLoadProgress:(downloadProgress)progress
+                     SuccessBlock:(requestSuccess)successBlock
+                     FailureBlock:(requestFailure)failureBlock
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
         failureBlock(nil);
@@ -467,7 +497,8 @@ static NetWorkManager *network = nil;
  *  @param requestType 该请求的请求类型
  *  @param string      该请求的url
  */
-+(void)cancelHttpRequestWithRequestType:(NSString *)requestType requestUrlString:(NSString *)string
++(void)cancelHttpRequestWithRequestType:(NSString *)requestType
+                       requestUrlString:(NSString *)string
 {
     NSError * error;
     

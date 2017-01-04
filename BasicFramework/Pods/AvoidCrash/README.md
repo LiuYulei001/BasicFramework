@@ -1,3 +1,6 @@
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/chenfanfang/AvoidCrash) [![pod](https://img.shields.io/badge/pod-1.6.2-brightgreen.svg)](https://github.com/chenfanfang/AvoidCrash) [![pod](https://img.shields.io/badge/platform-iOS-ff69b4.svg)](https://github.com/chenfanfang/AvoidCrash) [![pod](https://img.shields.io/badge/about%20me-chenfanfang-blue.svg)](http://www.jianshu.com/users/80fadb71940d/latest_articles)
+
+
 前言
 ===
 一个已经发布到AppStore上的App，最忌讳的就是崩溃问题。为什么在开发阶段或者测试阶段都不会崩溃，而发布到AppStore上就崩溃了呢？究其根源，最主要的原因就是数据的错乱。特别是 服务器返回数据的错乱，将严重影响到我们的App。
@@ -16,11 +19,11 @@ Foundation框架存在许多潜在崩溃的危险
 AvoidCrash简介
 ===
 - 这个框架利用runtime技术对一些常用并且容易导致崩溃的方法进行处理，可以有效的防止崩溃。
-- 并且打印出具体是哪一行代码会导致崩溃，让你快速定位导致崩溃的代码。
+- 并且打印出具体是哪个方法会导致崩溃，让你快速定位导致崩溃的代码。
 - 你可以获取到原本导致崩溃的主要信息<由于这个框架的存在，并不会崩溃>，进行相应的处理。比如：
   - 你可以将这些崩溃信息发送到自己服务器。
   - 你若集成了第三方崩溃日志收集的SDK,比如你用了腾讯的Bugly,你可以上报自定义异常。
-
+- 或许你会问有JSPatch就可以下发补丁来修复bug,为什么要用AvoidCrash？我只能说，AvoidCrash可以有效防止部分常见崩溃，JSPatch可以快速修复bug.推荐将两者都集成到项目中去。
 
 ---
 下面先来看下防止崩溃的效果吧
@@ -34,12 +37,12 @@ AvoidCrash简介
 
 - 若没有AvoidCrash来防止崩溃，则会直接崩溃，如下图
 
-![崩溃截图.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/556cab1b9fa25c8265dd1e8a19c816db20e93c24/AvoidCrashDemo/Screenshot/%E5%B4%A9%E6%BA%83%E6%88%AA%E5%9B%BE.png)
+![崩溃截图.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/66b631627443490776f964d5f6cdc0d9215d7b09/AvoidCrashDemo/Screenshot/%E5%B4%A9%E6%BA%83%E6%88%AA%E5%9B%BE.png)
 
 
 - 若有AvoidCrash来防止崩溃，则不会崩溃，并且会将原本会崩溃情况的详细信息打印出来，如下图
 
-![防止崩溃输出日志.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/556cab1b9fa25c8265dd1e8a19c816db20e93c24/AvoidCrashDemo/Screenshot/%E9%98%B2%E6%AD%A2%E5%B4%A9%E6%BA%83%E7%9A%84%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97.png)
+![防止崩溃输出日志.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/66b631627443490776f964d5f6cdc0d9215d7b09/AvoidCrashDemo/Screenshot/%E9%98%B2%E6%AD%A2%E5%B4%A9%E6%BA%83%E7%9A%84%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97.png)
 
 
 ---
@@ -54,6 +57,11 @@ pod  AvoidCrash
 
 ### Manually【手动导入】
 - Drag all source files under floder `AvoidCrash` to your project.【将`AvoidCrash`文件夹中的所有源代码拽入项目中】
+- 对 NSMutableArray+AvoidCrash.m 文件进行 -fno-objc-arc 设置(若使用CocoaPods集成则无需手动配置)，配置过程如下图：
+
+
+![](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/e955af927c5ed57f783a71eaca19cb3f028377d0/AvoidCrashDemo/Screenshot/%E9%85%8D%E7%BD%AEmutableArray.png)
+
 
 
 ---
@@ -63,7 +71,14 @@ pod  AvoidCrash
 
 ```
 //这句代码会让AvoidCrash生效，若没有如下代码，则AvoidCrash就不起作用
-[AvoidCrash becomeEffective];
+[AvoidCrash becomeEffective]; 
+   /*
+    *  [AvoidCrash becomeEffective]，是全局生效。若你只需要部分生效，你可以单个进行处理，比如:
+    *  [NSArray avoidCrashExchangeMethod];
+    *  [NSMutableArray avoidCrashExchangeMethod];
+    *  .................
+    *  .................
+    */
 ```
 
 - 若你想要获取崩溃日志的所有详细信息，只需添加通知的监听，监听的通知名为:AvoidCrashNotification
@@ -87,7 +102,7 @@ pod  AvoidCrash
 
 - 下面通过打断点的形式来看下userInfo中的信息结构，看下包含了哪些信息
 
-![userInfo信息结构.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/556cab1b9fa25c8265dd1e8a19c816db20e93c24/AvoidCrashDemo/Screenshot/userInfo%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png)
+![userInfo信息结构.png](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/66b631627443490776f964d5f6cdc0d9215d7b09/AvoidCrashDemo/Screenshot/userInfo%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png)
 
 - 再看下控制台输出日志来看下userInfo中的包含了哪些信息
 
@@ -104,15 +119,22 @@ pod  AvoidCrash
    -  `1. NSArray的快速创建方式 NSArray *array = @[@"chenfanfang", @"AvoidCrash"];  //这种创建方式其实调用的是2中的方法`
    -  `2. +(instancetype)arrayWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt`
    
-   - `3. - (id)objectAtIndex:(NSUInteger)index`
+   - `3. 通过下标获取元素 array[100]、[array objectAtIndex:100]`
+     - `- (id)objectAtIndex:(NSUInteger)index`
+     
+   - `4. - (NSArray *)objectsAtIndexes:(NSIndexSet *)indexes`
+   - `5. - (void)getObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range`
   
 ---
 
 - NSMutableArray 
-  - `1. - (id)objectAtIndex:(NSUInteger)index`
+  - `1. 通过下标获取元素 array[100]、[array objectAtIndex:100] `
+      - `- (id)objectAtIndex:(NSUInteger)index`
   - `2. - (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx`
   - `3. - (void)removeObjectAtIndex:(NSUInteger)index`
   - `4. - (void)insertObject:(id)anObject atIndex:(NSUInteger)index`
+  - `5. - (NSArray *)objectsAtIndexes:(NSIndexSet *)indexes`
+  - `6. - (void)getObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range`
   
 ---
 
@@ -175,7 +197,31 @@ pod  AvoidCrash
 - 增加对NSMutableAttributedString防止崩溃的处理
 
 
+#### 2016-11-29
+- 修复在键盘弹出状态下，按Home键进入后台会导致崩溃的bug。
+- 新增防止崩溃（NSArray、NSMutableArray） `- (NSArray *)objectsAtIndexes:(NSIndexSet *)indexes`
 
+
+#### 2016-12-1
+- 处理数组的类簇问题，提高兼容性，不论是由于array[100]方式，还是[array objectAtIndex:100]方式 获取数组中的某个元素操作不当而导致的crash,都能被拦截防止崩溃。
+ - 上一个版本只能防止array[100]导致的崩溃，不能防止[array objectAtIndex:100]导致的崩溃。
+
+- 统一对线程进行处理，监听通知AvoidCrashNotification后，不论是在主线程导致的crash还是在子线程导致的crash，监听通知的方法统一在"主线程"中。
+ - 上一个版本中，在哪个线程导致的crash, 则监听通知的方法就在哪个线程中。
+
+- 新增防止崩溃 （NSArray、NSMutableArray） `- (void)getObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range`
+
+#### 2016-12-19
+- Release环境下取消控制台的输出。
+
+
+提示
+===
+- 1、由于@try @catch的原因，如果防止了你项目中将要crash的代码，有些方法将导致些许的内存泄漏。若你的代码不会导致crash，当然就不存在内存泄漏的问题,crash和些许内存泄漏的选择当然取决于你自己。目前发现的内存泄漏的方法如下图所示，没有显示在下图中的方法，不论是否会导致crash，都不会有内存泄漏。
+  
+  ![](https://raw.githubusercontent.com/chenfanfang/AvoidCrash/fdad9c8808559c0b20c8672b2cb6e901d4e4f006/AvoidCrashDemo/Screenshot/Leaks.png)
+  
+- 2、有朋友提出，AvoidCraah和[RegexKitLite](https://github.com/wezm/RegexKitLite)有冲突，毕竟代码不在同一个时代上的（RegexKitLite最后一次提交时在2011年）。同时也说明AvoidCrash的健壮性不够，大家若有什么意见可以提出。
 
 期待
 ===
@@ -187,3 +233,15 @@ pod  AvoidCrash
 
 
 ##[About me -- 简书](http://www.jianshu.com/users/80fadb71940d/latest_articles)
+
+
+
+
+
+
+
+
+
+
+
+

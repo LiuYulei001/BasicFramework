@@ -8,22 +8,6 @@
 
 #import "AvoidCrash.h"
 
-//category
-#import "NSObject+AvoidCrash.h"
-
-#import "NSArray+AvoidCrash.h"
-#import "NSMutableArray+AvoidCrash.h"
-
-#import "NSDictionary+AvoidCrash.h"
-#import "NSMutableDictionary+AvoidCrash.h"
-
-#import "NSString+AvoidCrash.h"
-#import "NSMutableString+AvoidCrash.h"
-
-#import "NSAttributedString+AvoidCrash.h"
-#import "NSMutableAttributedString+AvoidCrash.h"
-
-
 
 #define AvoidCrashSeparator         @"================================================================"
 #define AvoidCrashSeparatorWithFlag @"========================AvoidCrash Log=========================="
@@ -80,14 +64,31 @@
  *  对象方法的交换
  *
  *  @param anClass    哪个类
- *  @param method1Sel 方法1
- *  @param method2Sel 方法2
+ *  @param method1Sel 方法1(原本的方法)
+ *  @param method2Sel 方法2(要替换成的方法)
  */
 + (void)exchangeInstanceMethod:(Class)anClass method1Sel:(SEL)method1Sel method2Sel:(SEL)method2Sel {
-    Method method1 = class_getInstanceMethod(anClass, method1Sel);
-    Method method2 = class_getInstanceMethod(anClass, method2Sel);
-    method_exchangeImplementations(method1, method2);
     
+    
+    Method originalMethod = class_getInstanceMethod(anClass, method1Sel);
+    Method swizzledMethod = class_getInstanceMethod(anClass, method2Sel);
+    
+    BOOL didAddMethod =
+    class_addMethod(anClass,
+                    method1Sel,
+                    method_getImplementation(swizzledMethod),
+                    method_getTypeEncoding(swizzledMethod));
+    
+    if (didAddMethod) {
+        class_replaceMethod(anClass,
+                            method2Sel,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+    }
+    
+    else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
     
 }
 
@@ -173,7 +174,10 @@
     NSString *errorPlace = [NSString stringWithFormat:@"Error Place:%@",mainCallStackSymbolMsg];
     
     NSString *logErrorMessage = [NSString stringWithFormat:@"\n\n%@\n\n%@\n%@\n%@\n%@\n\n%@\n\n",AvoidCrashSeparatorWithFlag, errorName, errorReason, errorPlace, defaultToDo, AvoidCrashSeparator];
-    NSLog(@"%@", logErrorMessage);
+    AvoidCrashLog(@"%@",logErrorMessage);
+    
+    //请忽略下面的赋值，目的只是为了能顺利上传cocoapods
+    logErrorMessage = logErrorMessage;
     
     NSDictionary *errorInfoDic = @{
                                    key_errorName        : errorName,
@@ -185,7 +189,11 @@
                                    };
     
     //将错误信息放在字典里，用通知的形式发送出去
-    [[NSNotificationCenter defaultCenter] postNotificationName:AvoidCrashNotification object:nil userInfo:errorInfoDic];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:AvoidCrashNotification object:nil userInfo:errorInfoDic];
+    });
+    
+    
 }
 
 

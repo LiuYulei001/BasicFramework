@@ -10,7 +10,7 @@ BasicFramework是一个新工程基础框架，包含了日常积累的分类、
 主项目中的分层主要包含四个模块，Main(主要)、Expand(扩展)、Resource(资源)、Vender(第三方)等；
 
 Main(主要)模块的内容
-此模块主要目的是为了存放项目的页面内容，比如MVC的内容模块的提取，方便继承调用；
+此模块主要目的是为了存放项目的页面内容及程序入口，比如MVC的内容模块的提取，方便继承调用；
 
 Expand(扩展)模块的内容
 此模块主要包含Const、Macros、Tool、NetWork、Category、DataBase六个子模块；
@@ -23,6 +23,8 @@ Network(网络)主要是根据需求对afnetworking进行二次封装；
 
 Category(分类)主要用于存放平时要扩展的分类；
 
+Vender(第三方)用于存放第三方类库
+
 Resource(资源)模块的内容：
 资源模块主要包含三方面，Global(全局)、Image(图片)、Plist(配置文件)；
 
@@ -32,3 +34,4 @@ Image用于存放图片资源，可以根据功能模块进行再分不同的xca
 
 Plist用于存放plist文件，统一存放方便管理；
 
+SDKFile(集成)用于存放三方的SDK，例：高德，融云，友盟......

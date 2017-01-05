@@ -15,6 +15,37 @@
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Extension)
++(NSString *)ResetAmount:(NSString *)Amount_str segmentation_index:(int)segmentation_index segmentation_str:(NSString *)segmentation_str
+{
+    if ([NSString isNULL:Amount_str]) {
+        return Amount_str;
+    }
+    
+    NSArray *array_str = [Amount_str componentsSeparatedByString:@"."];
+    
+    NSString *num_str = array_str.count > 1 ? array_str[0] : Amount_str;
+    
+    int count = 0;
+    long long int a = num_str.longLongValue;
+    while (a != 0)
+    {
+        count++;
+        a /= 10;
+    }
+    NSMutableString *string = [NSMutableString stringWithString:num_str];
+    NSMutableString *newstring = [NSMutableString string];
+    while (count > segmentation_index) {
+        count -= segmentation_index;
+        NSRange rang = NSMakeRange(string.length - segmentation_index, segmentation_index);
+        NSString *str = [string substringWithRange:rang];
+        [newstring insertString:str atIndex:0];
+        [newstring insertString:segmentation_str atIndex:0];
+        [string deleteCharactersInRange:rang];
+    }
+    [newstring insertString:string atIndex:0];
+    
+    return array_str.count > 1 ? [NSString stringWithFormat:@"%@.%@",newstring,array_str[1]] : newstring;
+}
 
 -(NSAttributedString *)AddRemoveLineOnStringRange:(NSRange )range lineWidth:(NSInteger )lineWidth {
     

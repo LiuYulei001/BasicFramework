@@ -10,6 +10,10 @@
 
 @interface NSString (Extension)
 /*
+    给金额字符串添加分割标示，例：33，345，434.98
+ */
++(NSString *)ResetAmount:(NSString *)Amount_str segmentation_index:(int)segmentation_index segmentation_str:(NSString *)segmentation_str;
+/*
     根据当前语言国际化
  */
 +(NSString *)LanguageInternationalizationCH:(NSString *)Chinese EN:(NSString *)English;

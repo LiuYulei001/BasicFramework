@@ -117,7 +117,7 @@ static NetWorkManager *network = nil;
                                  URL:(NSString *)URL
                           parameters:(NSString *)parametersStr
                           Controller:(UIViewController *)Controller
-                             success:(void(^)(id response,id data))success
+                             success:(void(^)(id response,id data,NSError *error))success
 {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",_Environment_Domain,URL]];
@@ -148,7 +148,7 @@ static NetWorkManager *network = nil;
         
         
         
-        success (response,data);
+        success (response,data,error);
         
         
         

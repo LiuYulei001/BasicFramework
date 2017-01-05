@@ -37,7 +37,7 @@ typedef void(^downloadProgress)(float progress);
                                  URL:(NSString *)URL
                           parameters:(NSString *)parametersStr
                           Controller:(UIViewController *)Controller
-                             success:(void(^)(id response,id data))success;
+                             success:(void(^)(id response,id data,NSError *error))success;
 /**
  *  Post请求
  *

@@ -2,6 +2,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 typedef NS_ENUM(NSInteger, ProgressHUDMode) {
     //菊花、文字显示
@@ -49,5 +50,17 @@ typedef NS_ENUM(NSInteger, ProgressHUDMode) {
  */
 + (void)setProgress:(CGFloat)progress;
 
+
+// * =====================================================================================
+// * 同一个view中多个subview同时使用HUD
+// * =====================================================================================
+/**
+ *  图片上传进度
+ */
++ (MBProgressHUD *)UpIMGShowProgressHUDWithText:(NSString *)text isTouched:(BOOL)touched inView:(UIView *)view progressTintColor:(UIColor *)progressTintColor;
+/**
+ *  纯文字提示
+ */
++ (void)showProgressHUDInView:(UIView *)view withText:(NSString *)text afterDelay:(NSTimeInterval)delay;
 
 @end

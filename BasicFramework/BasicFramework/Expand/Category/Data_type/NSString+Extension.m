@@ -50,7 +50,7 @@
 -(NSAttributedString *)AddRemoveLineOnStringRange:(NSRange )range lineWidth:(NSInteger )lineWidth {
     
     NSMutableAttributedString *temp_attributedStr = [[NSMutableAttributedString alloc]initWithString:self];
-    [temp_attributedStr addAttribute:NSStrikethroughStyleAttributeName value:[NSString stringWithFormat:@"%ld",lineWidth] range:range];
+    [temp_attributedStr addAttribute:NSStrikethroughStyleAttributeName value:[NSString stringWithFormat:@"%ld",(long)lineWidth] range:range];
     return temp_attributedStr;
 }
 /*

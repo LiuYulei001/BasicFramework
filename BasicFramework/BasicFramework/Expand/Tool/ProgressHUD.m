@@ -87,5 +87,48 @@
 }
 
 
++ (void)showProgressHUDInView:(UIView *)view withText:(NSString *)text afterDelay:(NSTimeInterval)delay
+{
+    [[ProgressHUD sharedHUD]showProgressHUDInView:view withText:text afterDelay:delay];
+}
++ (MBProgressHUD *)UpIMGShowProgressHUDWithText:(NSString *)text isTouched:(BOOL)touched inView:(UIView *)view progressTintColor:(UIColor *)progressTintColor
+{
+    return [[ProgressHUD sharedHUD]UpIMGShowProgressHUDWithText:text isTouched:touched inView:view progressTintColor:progressTintColor];
+}
+- (MBProgressHUD *)UpIMGShowProgressHUDWithText:(NSString *)text isTouched:(BOOL)touched inView:(UIView *)view progressTintColor:(UIColor *)progressTintColor {
+    if (view == nil) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
+    MBProgressHUD *progressHUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    progressHUD.userInteractionEnabled = !touched;
+    if (!touched) {
+        progressHUD.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1f];
+    }
+    progressHUD.labelText = text;
+    progressHUD.removeFromSuperViewOnHide = YES;
+    progressHUD.mode = MBProgressHUDModeCustomView;
+    //MBRoundProgressView
+    progressHUD.opacity = 0;
+    MBRoundProgressView *ProgressView = [[MBRoundProgressView alloc]init];
+    ProgressView.progressTintColor = progressTintColor;
+    ProgressView.backgroundTintColor = WhiteColor;
+    progressHUD.customView = ProgressView;
+    ProgressView.annular = YES;
+    return progressHUD;
+}
+- (void)showProgressHUDInView:(UIView *)view withText:(NSString *)text afterDelay:(NSTimeInterval)delay{
+    if (view == nil) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
+    MBProgressHUD *progressHUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    progressHUD.userInteractionEnabled = NO;
+    progressHUD.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1f];
+    progressHUD.labelText = text;
+    progressHUD.removeFromSuperViewOnHide = YES;
+    progressHUD.mode = MBProgressHUDModeText;
+    [progressHUD hide:YES afterDelay:delay];
+}
+
+
 
 @end

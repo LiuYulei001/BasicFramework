@@ -50,6 +50,7 @@
 		364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6091D6584F400F6F424 /* LYLPageControl.m */; };
 		364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */; };
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
+		3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652A44F1E28C22500F79333 /* NSObject+Extension.m */; };
 		36650FAC1E0791E50099CD92 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36650FAB1E0791E50099CD92 /* UserModel.m */; };
 		36650FAF1E0792BB0099CD92 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36650FAE1E0792BB0099CD92 /* LoginConstants.m */; };
 		366787F31E0A46BC0044CE85 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 366787EF1E0A46BC0044CE85 /* GlobalConstants.m */; };
@@ -175,6 +176,8 @@
 		364DA6571D65851C00F6F424 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		364DA6581D65851C00F6F424 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364DA65A1D65857200F6F424 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3652A44E1E28C22500F79333 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		3652A44F1E28C22500F79333 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		36650FAA1E0791E50099CD92 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		36650FAB1E0791E50099CD92 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		36650FAD1E0792BB0099CD92 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				3679AA8C1DDD534200169DFF /* NSArray+RemoveDuplicate.m */,
 				3679AACA1DDEC2A800169DFF /* NSTimer+Extension.h */,
 				3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */,
+				3652A44E1E28C22500F79333 /* NSObject+Extension.h */,
+				3652A44F1E28C22500F79333 /* NSObject+Extension.m */,
 			);
 			path = Data_type;
 			sourceTree = "<group>";
@@ -1202,6 +1207,7 @@
 				362032731DD4748700F15494 /* NSDate+Extension.m in Sources */,
 				3679AA9F1DDDB5E400169DFF /* UIView+Extension.m in Sources */,
 				3679AA221DDAB91000169DFF /* ObjectDataBaseManager.m in Sources */,
+				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
 				3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */,

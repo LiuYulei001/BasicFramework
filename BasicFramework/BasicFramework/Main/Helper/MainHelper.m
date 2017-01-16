@@ -7,6 +7,7 @@
 //
 
 #import "MainHelper.h"
+
 static MainHelper *helper = nil;
 
 @implementation MainHelper
@@ -73,6 +74,7 @@ static MainHelper *helper = nil;
     [kNotificationCenter addObserver:self selector:@selector(appDidEnterBackgroundNotif:)name:UIApplicationDidEnterBackgroundNotification object:nil];
     [kNotificationCenter addObserver:self selector:@selector(appWillEnterForeground:)name:UIApplicationWillEnterForegroundNotification object:nil];
     [kNotificationCenter addObserver:self selector:@selector(application_OpenURL_SourceApplication_Annotation:) name:_NotificationNameForAppDelegateBackOff object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(userDidTakeScreenshot:)name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
 //app-app or web-app互调-回调
 - (void)application_OpenURL_SourceApplication_Annotation:(NSNotification *)notif
@@ -93,6 +95,16 @@ static MainHelper *helper = nil;
 - (void)appWillEnterForeground:(NSNotification*)notif
 {
     NSLog(@"程序进入前台！");
+}
+- (void)userDidTakeScreenshot:(NSNotification *)notification
+{
+    
+    //人为截屏, 模拟用户截屏行为, 获取所截图片
+    [MainHelper GetlatestImageForTakeScreenshot:YES finished:^(UIImage *image) {
+        
+    }];
+    
+    
 }
 
 #pragma mark - register apns

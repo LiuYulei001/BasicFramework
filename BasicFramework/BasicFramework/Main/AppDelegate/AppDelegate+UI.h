@@ -1,5 +1,5 @@
 //
-//  AppDelegate+Extension.h
+//  AppDelegate+UI.h
 //  BasicFramework
 //
 //  Created by Rainy on 2016/11/7.
@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate (Extension)
+@interface AppDelegate (UI)
 
 
 /**

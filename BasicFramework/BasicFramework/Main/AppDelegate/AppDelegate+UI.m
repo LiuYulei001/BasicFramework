@@ -1,18 +1,18 @@
 //
-//  AppDelegate+Extension.m
+//  AppDelegate+UI.m
 //  BasicFramework
 //
 //  Created by Rainy on 2016/11/7.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "AppDelegate+Extension.h"
+#import "AppDelegate+UI.h"
 #import "MainHelper.h"
 #import "AvoidCrash.h"
 #import "HomePageVC.h"
 #import "BasicMainNC.h"
 
-@implementation AppDelegate (Extension)
+@implementation AppDelegate (UI)
 
 -(void)setMyWindowAndRootViewController
 {
@@ -38,7 +38,7 @@
 
 -(UIImageView *)GetPortraitIMG
 {
-    CGSize viewSize = kWindow.bounds.size;
+    CGSize viewSize = self.window.bounds.size;
     NSString *viewOrientation = @"Portrait";//横屏 @"Landscape"
     __block NSString *launchImage = nil;
     NSArray* imagesDict = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
@@ -57,7 +57,7 @@
     }];
     
     UIImageView *launchView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:launchImage]];
-    launchView.frame = kWindow.bounds;
+    launchView.frame = self.window.bounds;
     
     return launchView;
 }

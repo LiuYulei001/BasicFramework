@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E054F1DD029B700E7C6C1 /* MainHelper.m */; };
-		360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */; };
+		360E05531DD02E5300E7C6C1 /* AppDelegate+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05521DD02E5300E7C6C1 /* AppDelegate+UI.m */; };
 		360E05661DD042A100E7C6C1 /* GraphicBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E055E1DD042A100E7C6C1 /* GraphicBT.m */; };
 		360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E056C1DD05A3900E7C6C1 /* TextView_Placeholder.m */; };
 		360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05821DD1D52600E7C6C1 /* LoginVC.m */; };
@@ -99,8 +99,8 @@
 /* Begin PBXFileReference section */
 		360E054E1DD029B700E7C6C1 /* MainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHelper.h; sourceTree = "<group>"; };
 		360E054F1DD029B700E7C6C1 /* MainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHelper.m; sourceTree = "<group>"; };
-		360E05511DD02E5300E7C6C1 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
-		360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
+		360E05511DD02E5300E7C6C1 /* AppDelegate+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UI.h"; sourceTree = "<group>"; };
+		360E05521DD02E5300E7C6C1 /* AppDelegate+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UI.m"; sourceTree = "<group>"; };
 		360E055D1DD042A100E7C6C1 /* GraphicBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicBT.h; sourceTree = "<group>"; };
 		360E055E1DD042A100E7C6C1 /* GraphicBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicBT.m; sourceTree = "<group>"; };
 		360E056B1DD05A3900E7C6C1 /* TextView_Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView_Placeholder.h; sourceTree = "<group>"; };
@@ -754,8 +754,8 @@
 			children = (
 				364DA6571D65851C00F6F424 /* AppDelegate.h */,
 				364DA6581D65851C00F6F424 /* AppDelegate.m */,
-				360E05511DD02E5300E7C6C1 /* AppDelegate+Extension.h */,
-				360E05521DD02E5300E7C6C1 /* AppDelegate+Extension.m */,
+				360E05511DD02E5300E7C6C1 /* AppDelegate+UI.h */,
+				360E05521DD02E5300E7C6C1 /* AppDelegate+UI.m */,
 			);
 			name = "AppDelegate(入口)";
 			path = AppDelegate;
@@ -1196,7 +1196,7 @@
 				366787F31E0A46BC0044CE85 /* GlobalConstants.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
-				360E05531DD02E5300E7C6C1 /* AppDelegate+Extension.m in Sources */,
+				360E05531DD02E5300E7C6C1 /* AppDelegate+UI.m in Sources */,
 				36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */,
 				3679AAC21DDDB7C000169DFF /* UIImageView+Extension.m in Sources */,
 				362032731DD4748700F15494 /* NSDate+Extension.m in Sources */,

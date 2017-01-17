@@ -39,6 +39,7 @@
 		3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3630913D1DE2D233005A9C31 /* LGScrollLabel.m */; };
 		363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091411DE2D7E8005A9C31 /* BasicTouchID.m */; };
 		36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B891DC05C9300231AF5 /* HomePageVC.m */; };
+		3649D7BB1E2DF22A002E679F /* LYLShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649D7BA1E2DF22A002E679F /* LYLShareManager.m */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
 		364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5951D6584F400F6F424 /* NetWorkManager.m */; };
@@ -153,6 +154,8 @@
 		363091431DE2EE26005A9C31 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		36410B881DC05C9300231AF5 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		36410B891DC05C9300231AF5 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
+		3649D7B91E2DF22A002E679F /* LYLShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLShareManager.h; sourceTree = "<group>"; };
+		3649D7BA1E2DF22A002E679F /* LYLShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLShareManager.m; sourceTree = "<group>"; };
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5541D65849300F6F424 /* BasicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5581D65849300F6F424 /* BasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicFrameworkTests.m; sourceTree = "<group>"; };
@@ -650,6 +653,16 @@
 			path = TouchID;
 			sourceTree = "<group>";
 		};
+		3649D7B81E2DF22A002E679F /* LYLShareManager(友盟分享) */ = {
+			isa = PBXGroup;
+			children = (
+				3649D7B91E2DF22A002E679F /* LYLShareManager.h */,
+				3649D7BA1E2DF22A002E679F /* LYLShareManager.m */,
+			);
+			name = "LYLShareManager(友盟分享)";
+			path = LYLShareManager;
+			sourceTree = "<group>";
+		};
 		364DA5321D65849300F6F424 = {
 			isa = PBXGroup;
 			children = (
@@ -677,7 +690,7 @@
 			children = (
 				364DA59F1D6584F400F6F424 /* Main(主要) */,
 				364DA5711D6584F400F6F424 /* Expand(扩展) */,
-				364DA6021D6584F400F6F424 /* Vender(第三方) */,
+				364DA6021D6584F400F6F424 /* Vender(封装) */,
 				36111AD11D6EE60000A03BF4 /* Resource(资源) */,
 				36111AE41D6EE67500A03BF4 /* SDKFile(集成) */,
 				364DA53E1D65849300F6F424 /* Supporting Files */,
@@ -821,9 +834,10 @@
 			path = BaseController;
 			sourceTree = "<group>";
 		};
-		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
+		364DA6021D6584F400F6F424 /* Vender(封装) */ = {
 			isa = PBXGroup;
 			children = (
+				3649D7B81E2DF22A002E679F /* LYLShareManager(友盟分享) */,
 				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
 				3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */,
 				363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */,
@@ -831,7 +845,7 @@
 				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
 				364DA61B1D6584F400F6F424 /* NSCoding(对象Coding) */,
 			);
-			name = "Vender(第三方)";
+			name = "Vender(封装)";
 			path = Vender;
 			sourceTree = "<group>";
 		};
@@ -1243,6 +1257,7 @@
 				361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */,
 				3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
+				3649D7BB1E2DF22A002E679F /* LYLShareManager.m in Sources */,
 				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,
 				3679AAB41DDDB7A100169DFF /* UIViewController+Extension.m in Sources */,
 				362032771DD4748700F15494 /* NSString+Extension.m in Sources */,

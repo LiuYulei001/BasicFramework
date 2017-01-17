@@ -14,5 +14,10 @@ target ‘BasicFramework’ do
   pod 'AvoidCrash'
   pod 'LYLDataBase'
   pod 'MJRefresh'
-
+  
+  pod 'UMengUShare/UI’
+  pod 'UMengUShare/Social/Sina'
+  pod 'UMengUShare/Social/WeChat'
+  pod 'UMengUShare/Social/QQ'
+  
 end

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "task.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "post_normal@2x.png",
       "scale" : "2x"
     },
     {

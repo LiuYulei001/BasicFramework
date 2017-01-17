@@ -15,7 +15,6 @@
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
-		36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A981D6EE4FC00A03BF4 /* Placeholder */; };
 		36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AAE1D6EE58C00A03BF4 /* Placeholder */; };
 		36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB01D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB31D6EE58C00A03BF4 /* Placeholder */; };
@@ -28,6 +27,9 @@
 		36111AE01D6EE63200A03BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36111ADD1D6EE63200A03BF4 /* main.m */; };
 		36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE11D6EE63700A03BF4 /* LaunchScreen.storyboard */; };
 		36111AE61D6EE67500A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AE51D6EE67500A03BF4 /* Placeholder */; };
+		361FC69A1E2DB179008B8402 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 361FC6991E2DB179008B8402 /* BaseTabBar.m */; };
+		361FC69D1E2DBA64008B8402 /* BasicMainTBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 361FC69C1E2DBA64008B8402 /* BasicMainTBVC.m */; };
+		361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 361FC6A11E2DBBBE008B8402 /* UIColor+Extension.m */; };
 		362032731DD4748700F15494 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032531DD4748700F15494 /* NSDate+Extension.m */; };
 		362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032551DD4748700F15494 /* NSDictionary+Extension.m */; };
 		362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 362032571DD4748700F15494 /* NSMutableAttributedString+Extension.m */; };
@@ -112,7 +114,6 @@
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		36111A981D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AAE1D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB31D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -127,6 +128,12 @@
 		36111AE51D6EE67500A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		361EE65C1DD5BF3A00406C89 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		361EE65E1DD5BF6600406C89 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		361FC6981E2DB179008B8402 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
+		361FC6991E2DB179008B8402 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		361FC69B1E2DBA64008B8402 /* BasicMainTBVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicMainTBVC.h; sourceTree = "<group>"; };
+		361FC69C1E2DBA64008B8402 /* BasicMainTBVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMainTBVC.m; sourceTree = "<group>"; };
+		361FC6A01E2DBBBE008B8402 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		361FC6A11E2DBBBE008B8402 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		362032521DD4748700F15494 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		362032531DD4748700F15494 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		362032541DD4748700F15494 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
@@ -323,7 +330,7 @@
 		36111A971D6EE4FC00A03BF4 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				36111A981D6EE4FC00A03BF4 /* Placeholder */,
+				361FC6971E2DB160008B8402 /* specialTabBar(中间按钮) */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -553,6 +560,25 @@
 			path = SDKFile;
 			sourceTree = "<group>";
 		};
+		361FC6971E2DB160008B8402 /* specialTabBar(中间按钮) */ = {
+			isa = PBXGroup;
+			children = (
+				361FC6981E2DB179008B8402 /* BaseTabBar.h */,
+				361FC6991E2DB179008B8402 /* BaseTabBar.m */,
+			);
+			name = "specialTabBar(中间按钮)";
+			path = specialTabBar;
+			sourceTree = "<group>";
+		};
+		361FC69F1E2DBBA7008B8402 /* Color+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				361FC6A01E2DBBBE008B8402 /* UIColor+Extension.h */,
+				361FC6A11E2DBBBE008B8402 /* UIColor+Extension.m */,
+			);
+			path = "Color+Extension";
+			sourceTree = "<group>";
+		};
 		362032511DD4748700F15494 /* Data_type */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +605,7 @@
 		3620325C1DD4748700F15494 /* UIKIT */ = {
 			isa = PBXGroup;
 			children = (
+				361FC69F1E2DBBA7008B8402 /* Color+Extension */,
 				3679AAAE1DDDB73100169DFF /* UINavigationBar+SetElement */,
 				3679AAAD1DDDB72400169DFF /* UIViewController+Extension */,
 				3679AAAC1DDDB71500169DFF /* UITextField+Extension */,
@@ -788,6 +815,8 @@
 				364DA5A81D6584F400F6F424 /* BasicMainVC.m */,
 				364DA5A91D6584F400F6F424 /* BasicMainWebNC.h */,
 				364DA5AA1D6584F400F6F424 /* BasicMainWebNC.m */,
+				361FC69B1E2DBA64008B8402 /* BasicMainTBVC.h */,
+				361FC69C1E2DBA64008B8402 /* BasicMainTBVC.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -1103,7 +1132,6 @@
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
 				36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */,
-				36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				3679AA141DD99BA000169DFF /* IMG.bundle in Resources */,
 				36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -1183,11 +1211,13 @@
 			files = (
 				364DA6301D6584F400F6F424 /* BasicMainNC.m in Sources */,
 				36650FAF1E0792BB0099CD92 /* LoginConstants.m in Sources */,
+				361FC69A1E2DB179008B8402 /* BaseTabBar.m in Sources */,
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				3679AA961DDDACF300169DFF /* WMPlayer.m in Sources */,
 				36650FAC1E0791E50099CD92 /* UserModel.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
+				361FC69D1E2DBA64008B8402 /* BasicMainTBVC.m in Sources */,
 				3679AAB11DDDB79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
 				3679AA0E1DD9846700169DFF /* MainModel.m in Sources */,
 				3679AABD1DDDB7B800169DFF /* UIScrollView+Extension.m in Sources */,
@@ -1210,6 +1240,7 @@
 				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
+				361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */,
 				3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
 				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,

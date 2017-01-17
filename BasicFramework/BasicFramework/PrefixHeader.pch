@@ -42,6 +42,7 @@
 #import "NSObject+Release.h"
 #import "NSObject+Extension.h"
 
+#import "UIColor+Extension.h"
 #import "UIView+Rotate.h"
 #import "UINavigationBar+SetElement.h"
 #import "UIViewController+Extension.h"

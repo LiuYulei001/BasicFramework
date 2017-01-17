@@ -40,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setUpAllChildVc];
+    [self addChildViewControllers];
     
 #pragma mark - 自定义tabbar
 //    BaseTabBar *tabbar = [[BaseTabBar alloc] init];
@@ -51,10 +51,10 @@
     
 }
 
-- (void)setUpAllChildVc
+- (void)addChildViewControllers
 {
     HomePageVC *HomeVC = [[HomePageVC alloc] init];
-    [self setUpOneChildVcWithVc:HomeVC Image:kHomePageVC_IMG selectedImage:kHomePageVC_Selected_IMG title:kHomePageVC_Title];
+    [self setChildViewController:HomeVC Image:kHomePageVC_IMG selectedImage:kHomePageVC_Selected_IMG title:kHomePageVC_Title];
     
 }
 
@@ -68,7 +68,7 @@
  *  @param selectedImage 每一个按钮对应的选中状态下的图片
  *  @param title         每一个按钮对应的标题
  */
-- (void)setUpOneChildVcWithVc:(UIViewController *)Vc Image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title
+- (void)setChildViewController:(UIViewController *)Vc Image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title
 {
     BasicMainNC *NA_VC = [[BasicMainNC alloc] initWithRootViewController:Vc];
     

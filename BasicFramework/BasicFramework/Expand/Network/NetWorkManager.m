@@ -42,15 +42,15 @@ static NetWorkManager *network = nil;
     if (self = [super initWithBaseURL:url]) {
         
         /**
-         *  先删除cookies
+         *  先删除cookies1⃣️
          */
-        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        
-        NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
-        
-        for (NSHTTPCookie *cookie in cookies) {
-            [cookieJar deleteCookie:cookie];
-        }
+//        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//
+//        NSArray *cookies = [NSArray arrayWithArray:[cookieJar cookies]];
+//        
+//        for (NSHTTPCookie *cookie in cookies) {
+//            [cookieJar deleteCookie:cookie];
+//        }
         
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         
@@ -72,7 +72,7 @@ static NetWorkManager *network = nil;
         [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
         [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
         [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
-//    if (USER_TOKENID) {
+//2⃣️    if (USER_TOKENID) {
 //
 //        [self.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
 //    }
@@ -131,7 +131,7 @@ static NetWorkManager *network = nil;
     [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
     [request setValue:kVersion forHTTPHeaderField:@"version"];
     [request setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
-//    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
+//2⃣️    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
 //    NSData *basicAuthCredentials = [[NSString stringWithFormat:@"%@:%@", temp_array[0], temp_array[1]] dataUsingEncoding:NSUTF8StringEncoding];
 //    NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
 //    [request setValue:[NSString stringWithFormat:@"Basic %@", base64AuthCredentials] forHTTPHeaderField:@"Authorization"];
@@ -193,7 +193,7 @@ static NetWorkManager *network = nil;
     }success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         /**
-         *  get Cookies
+         *  get Cookies3⃣️
          */
 //        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
 //        if (![NSString isBlankString:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]]]) {
@@ -265,7 +265,7 @@ static NetWorkManager *network = nil;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         /**
-         *  get Cookies
+         *  get Cookies3⃣️
          */
 //        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
 //        if (![NSString isBlankString:[self getUserTokenIdInCookie:response.allHeaderFields[@"Set-Cookie"]]]) {

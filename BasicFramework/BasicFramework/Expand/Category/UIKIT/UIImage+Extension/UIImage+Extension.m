@@ -194,8 +194,29 @@ static UIImage *_img = nil;
     
     return returnImage;
 }
-
-- (UIImage *)imageFromView:(UIView *)theView
++ (UIImage *)imageFromScrollView:(UIScrollView *)scrollView{
+    UIImage* image = nil;
+    UIGraphicsBeginImageContext(scrollView.contentSize);
+    {
+        CGPoint savedContentOffset = scrollView.contentOffset;
+        CGRect savedFrame = scrollView.frame;
+        scrollView.contentOffset = CGPointZero;
+        scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height);
+        
+        [scrollView.layer renderInContext: UIGraphicsGetCurrentContext()];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        scrollView.contentOffset = savedContentOffset;
+        scrollView.frame = savedFrame;
+    }
+    UIGraphicsEndImageContext();
+    
+    if (image != nil) {
+        return image;
+    }
+    return nil;
+}
++ (UIImage *)imageFromView:(UIView *)theView
 {
     UIGraphicsBeginImageContext(theView.frame.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

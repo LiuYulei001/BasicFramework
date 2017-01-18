@@ -51,7 +51,10 @@
  *  辅助字体颜色
  */
 #define kAuxiliaryFontColor UIColorFromRGBValue(0Xcccccc)
-
+/**
+ *  默认字体颜色(非点击状态)
+ */
+#define kNormalFontColor UIColorFromRGBValue(0X999999)
 
 
 #pragma mark -  * * * * * * * * * * * * * * set Font * * * * * * * * * * * * * *
@@ -59,6 +62,10 @@
  *  10号字体
  */
 #define TenFontSize [UIFont systemFontOfSize:10]
+/**
+ *  11号字体
+ */
+#define ElevenFontSize [UIFont systemFontOfSize:11]
 /**
  *  12号字体
  */

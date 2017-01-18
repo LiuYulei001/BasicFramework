@@ -21,7 +21,10 @@
 #pragma mark - Set the image rotation Angle
 - (UIImage*)image_RotatedByAngle:(CGFloat)Angle;
 #pragma mark - image from view
-- (UIImage *)imageFromView:(UIView *)theView;
++ (UIImage *)imageFromView:(UIView *)theView;
+#pragma mark - image from scrollView
++ (UIImage *)imageFromScrollView:(UIScrollView *)scrollView;
+
 /**
  *  识别图片中的二维码
  */

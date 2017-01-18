@@ -67,6 +67,8 @@
     
     if (pan.state == UIGestureRecognizerStateBegan)
     {
+        [self updateSnapPoint];
+        
         UIOffset offset = UIOffsetMake(panLocation.x - self.zy_centerPoint.x, panLocation.y - self.zy_centerPoint.y);
         [self.zy_animator removeAllBehaviors];
         self.zy_attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:self
@@ -137,7 +139,6 @@
 - (CGFloat)zy_damping {
     return [objc_getAssociatedObject(self, @selector(zy_damping)) floatValue];
 }
-
 
 /**
  *  抖动某一视图的方法

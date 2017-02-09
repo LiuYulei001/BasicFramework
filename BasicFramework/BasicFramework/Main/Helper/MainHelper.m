@@ -45,8 +45,8 @@ static MainHelper *helper = nil;
 {
     
 #if !DEBUG
-    
-    [AvoidCrash becomeEffective];
+    [AvoidCrash becomeEffective];//所有支持避免异常的数据类型统一处理
+    //[NSMutableArray/NSArray avoidCrashExchangeMethod];//支持避免异常的数据类型单独处理
     //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
     [kNotificationCenter addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
 #endif

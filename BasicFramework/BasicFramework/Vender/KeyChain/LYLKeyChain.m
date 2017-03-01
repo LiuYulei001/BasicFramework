@@ -6,9 +6,6 @@
 //  Copyright © 2017年 Rainy. All rights reserved.
 //
 
-#define KEY_PASSWORD  @"com.rry.app.password"
-#define KEY_USERNAME_PASSWORD  @"com.rry.app.usernamepassword"
-
 #import "LYLKeyChain.h"
 #import <Security/Security.h>
 

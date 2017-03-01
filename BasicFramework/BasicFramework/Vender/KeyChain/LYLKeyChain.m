@@ -10,6 +10,7 @@
 #define KEY_USERNAME_PASSWORD  @"com.rry.app.usernamepassword"
 
 #import "LYLKeyChain.h"
+#import <Security/Security.h>
 
 @implementation LYLKeyChain
 

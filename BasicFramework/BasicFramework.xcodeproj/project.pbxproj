@@ -49,7 +49,6 @@
 		364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6051D6584F400F6F424 /* LYLIMGBrowse.m */; };
 		364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6071D6584F400F6F424 /* LYLIMGScrollView.m */; };
 		364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6091D6584F400F6F424 /* LYLPageControl.m */; };
-		364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */; };
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
 		3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652A44F1E28C22500F79333 /* NSObject+Extension.m */; };
 		36650FAC1E0791E50099CD92 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36650FAB1E0791E50099CD92 /* UserModel.m */; };
@@ -111,6 +110,7 @@
 		3686A8D41E724B5400FEA856 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3686A8C91E724B5400FEA856 /* info@2x.png */; };
 		3686A8D51E724B5400FEA856 /* LYLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8CB1E724B5400FEA856 /* LYLAlertView.m */; };
 		3686A8D61E724B5400FEA856 /* LYLBouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8CD1E724B5400FEA856 /* LYLBouncing.m */; };
+		3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */; };
 		36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF61E3058D200E3D0F5 /* HPConstantModel.m */; };
 		36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF91E305A6500E3D0F5 /* LoginConstants.m */; };
 		36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */; };
@@ -216,7 +216,6 @@
 		364DA6071D6584F400F6F424 /* LYLIMGScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLIMGScrollView.m; sourceTree = "<group>"; };
 		364DA6081D6584F400F6F424 /* LYLPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPageControl.h; sourceTree = "<group>"; };
 		364DA6091D6584F400F6F424 /* LYLPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPageControl.m; sourceTree = "<group>"; };
-		364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyObjectCoding.framework; sourceTree = "<group>"; };
 		364DA6571D65851C00F6F424 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		364DA6581D65851C00F6F424 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364DA65A1D65857200F6F424 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -332,6 +331,8 @@
 		3686A8CC1E724B5400FEA856 /* LYLBouncing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLBouncing.h; sourceTree = "<group>"; };
 		3686A8CD1E724B5400FEA856 /* LYLBouncing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLBouncing.m; sourceTree = "<group>"; };
 		3686A8CE1E724B5400FEA856 /* LYLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLConstants.h; sourceTree = "<group>"; };
+		3686A9491E72A4CC00FEA856 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
+		3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
 		36925CF51E3058D200E3D0F5 /* HPConstantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPConstantModel.h; sourceTree = "<group>"; };
 		36925CF61E3058D200E3D0F5 /* HPConstantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPConstantModel.m; sourceTree = "<group>"; };
 		36925CF81E305A6500E3D0F5 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
@@ -351,7 +352,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */,
 				3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +689,8 @@
 		362032511DD4748700F15494 /* Data_type */ = {
 			isa = PBXGroup;
 			children = (
+				3686A9491E72A4CC00FEA856 /* NSObject+NSCoding.h */,
+				3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */,
 				362032521DD4748700F15494 /* NSDate+Extension.h */,
 				362032531DD4748700F15494 /* NSDate+Extension.m */,
 				362032541DD4748700F15494 /* NSDictionary+Extension.h */,
@@ -953,7 +955,6 @@
 				363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */,
 				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
 				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
-				364DA61B1D6584F400F6F424 /* NSCoding(对象Coding) */,
 			);
 			name = "Vender(封装)";
 			path = Vender;
@@ -971,15 +972,6 @@
 			);
 			name = "IMGBrowse(图片浏览)";
 			path = IMGBrowse;
-			sourceTree = "<group>";
-		};
-		364DA61B1D6584F400F6F424 /* NSCoding(对象Coding) */ = {
-			isa = PBXGroup;
-			children = (
-				364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */,
-			);
-			name = "NSCoding(对象Coding)";
-			path = NSCoding;
 			sourceTree = "<group>";
 		};
 		366787ED1E0A46BC0044CE85 /* Constants */ = {
@@ -1608,6 +1600,7 @@
 				3675217B1E4D5A4900F2117C /* DKNightVersionManager.m in Sources */,
 				367521891E4D5A4900F2117C /* UIScrollView+NightVersion.m in Sources */,
 				3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */,
+				3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
 				366787F41E0A46BC0044CE85 /* URLConstants.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,

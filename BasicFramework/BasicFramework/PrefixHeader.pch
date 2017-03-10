@@ -20,7 +20,6 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Reachability/Reachability.h>
-#import <MyObjectCoding/NSObject+NSCoding.h>
 #import <JSONModel/JSONModel.h>
 #import <Masonry/Masonry.h>
 #import "LYLDataBaseManager.h"
@@ -41,6 +40,7 @@
 #import "NSDictionary+Extension.h"
 #import "NSObject+Release.h"
 #import "NSObject+Extension.h"
+#import "NSObject+NSCoding.h"
 
 #import "UIColor+Extension.h"
 #import "UIView+Rotate.h"

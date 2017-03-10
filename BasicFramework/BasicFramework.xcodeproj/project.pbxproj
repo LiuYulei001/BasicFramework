@@ -944,7 +944,7 @@
 		364DA6021D6584F400F6F424 /* Vender(封装) */ = {
 			isa = PBXGroup;
 			children = (
-				3686A8C21E724B5400FEA856 /* AlertView */,
+				3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */,
 				3686A8BE1E724B1B00FEA856 /* YM_ShareManager(友盟分享) */,
 				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
 				367521391E4D5A4900F2117C /* NightModeManager(夜间模式) */,
@@ -1297,7 +1297,7 @@
 			path = YM_ShareManager;
 			sourceTree = "<group>";
 		};
-		3686A8C21E724B5400FEA856 /* AlertView */ = {
+		3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */ = {
 			isa = PBXGroup;
 			children = (
 				3686A8C31E724B5400FEA856 /* Bundle_IMG */,
@@ -1307,6 +1307,7 @@
 				3686A8CD1E724B5400FEA856 /* LYLBouncing.m */,
 				3686A8CE1E724B5400FEA856 /* LYLConstants.h */,
 			);
+			name = "AlertView(成功/失败/提醒弹框)";
 			path = AlertView;
 			sourceTree = "<group>";
 		};

@@ -37,6 +37,8 @@
 		363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091411DE2D7E8005A9C31 /* BasicTouchID.m */; };
 		36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B891DC05C9300231AF5 /* HomePageVC.m */; };
 		3649D7BB1E2DF22A002E679F /* LYLShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649D7BA1E2DF22A002E679F /* LYLShareManager.m */; };
+		3649E1CE1E66A347004AADBC /* LYLKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649E1CD1E66A347004AADBC /* LYLKeyChain.m */; };
+		3649E1D11E66A42D004AADBC /* LYLKeyChainForPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649E1D01E66A42D004AADBC /* LYLKeyChainForPassWord.m */; };
 		364DA5591D65849300F6F424 /* BasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5581D65849300F6F424 /* BasicFrameworkTests.m */; };
 		364DA5641D65849300F6F424 /* BasicFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5631D65849300F6F424 /* BasicFrameworkUITests.m */; };
 		364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA5951D6584F400F6F424 /* NetWorkManager.m */; };
@@ -178,6 +180,10 @@
 		36410B891DC05C9300231AF5 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		3649D7B91E2DF22A002E679F /* LYLShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLShareManager.h; sourceTree = "<group>"; };
 		3649D7BA1E2DF22A002E679F /* LYLShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLShareManager.m; sourceTree = "<group>"; };
+		3649E1CC1E66A347004AADBC /* LYLKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLKeyChain.h; sourceTree = "<group>"; };
+		3649E1CD1E66A347004AADBC /* LYLKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLKeyChain.m; sourceTree = "<group>"; };
+		3649E1CF1E66A42D004AADBC /* LYLKeyChainForPassWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLKeyChainForPassWord.h; sourceTree = "<group>"; };
+		3649E1D01E66A42D004AADBC /* LYLKeyChainForPassWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLKeyChainForPassWord.m; sourceTree = "<group>"; };
 		364DA53B1D65849300F6F424 /* BasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5541D65849300F6F424 /* BasicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364DA5581D65849300F6F424 /* BasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicFrameworkTests.m; sourceTree = "<group>"; };
@@ -742,6 +748,18 @@
 			path = LYLShareManager;
 			sourceTree = "<group>";
 		};
+		3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */ = {
+			isa = PBXGroup;
+			children = (
+				3649E1CC1E66A347004AADBC /* LYLKeyChain.h */,
+				3649E1CD1E66A347004AADBC /* LYLKeyChain.m */,
+				3649E1CF1E66A42D004AADBC /* LYLKeyChainForPassWord.h */,
+				3649E1D01E66A42D004AADBC /* LYLKeyChainForPassWord.m */,
+			);
+			name = "KeyChain(敏感信息存储)";
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
 		364DA5321D65849300F6F424 = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +935,7 @@
 		364DA6021D6584F400F6F424 /* Vender(封装) */ = {
 			isa = PBXGroup;
 			children = (
+				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
 				367521391E4D5A4900F2117C /* NightModeManager(夜间模式) */,
 				3649D7B81E2DF22A002E679F /* LYLShareManager(友盟分享) */,
 				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
@@ -1468,6 +1487,7 @@
 				364DA6321D6584F400F6F424 /* BasicMainWebNC.m in Sources */,
 				36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */,
 				367521851E4D5A4900F2117C /* UINavigationBar+BarTintColor.m in Sources */,
+				3649E1CE1E66A347004AADBC /* LYLKeyChain.m in Sources */,
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				3679AA961DDDACF300169DFF /* WMPlayer.m in Sources */,
 				3675218B1E4D5A4900F2117C /* UITabBar+NightVersion.m in Sources */,
@@ -1476,6 +1496,7 @@
 				36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */,
 				367521871E4D5A4900F2117C /* UINavigationBar+TintColor.m in Sources */,
 				367521821E4D5A4900F2117C /* UIButton+TitleColor.m in Sources */,
+				3649E1D11E66A42D004AADBC /* LYLKeyChainForPassWord.m in Sources */,
 				361FC69D1E2DBA64008B8402 /* BasicMainTBVC.m in Sources */,
 				3675217F1E4D5A4900F2117C /* UIBarButtonItem+NightVersion.m in Sources */,
 				3675218D1E4D5A4900F2117C /* UITableView+NightVersion.m in Sources */,

@@ -100,6 +100,7 @@
 		3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AAC51DDDB7C700169DFF /* UIDevice+Extension.m */; };
 		3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AAC81DDDB7CF00169DFF /* UIButton+Extension.m */; };
 		3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */; };
+		3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8B91E7233AC00FEA856 /* LogManager.m */; };
 		36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF61E3058D200E3D0F5 /* HPConstantModel.m */; };
 		36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF91E305A6500E3D0F5 /* LoginConstants.m */; };
 		36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */; };
@@ -304,6 +305,8 @@
 		3679AAC81DDDB7CF00169DFF /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		3679AACA1DDEC2A800169DFF /* NSTimer+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Extension.h"; sourceTree = "<group>"; };
 		3679AACB1DDEC2A800169DFF /* NSTimer+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
+		3686A8B81E7233AC00FEA856 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		3686A8B91E7233AC00FEA856 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		36925CF51E3058D200E3D0F5 /* HPConstantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPConstantModel.h; sourceTree = "<group>"; };
 		36925CF61E3058D200E3D0F5 /* HPConstantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPConstantModel.m; sourceTree = "<group>"; };
 		36925CF81E305A6500E3D0F5 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 			children = (
 				360E054E1DD029B700E7C6C1 /* MainHelper.h */,
 				360E054F1DD029B700E7C6C1 /* MainHelper.m */,
+				3686A8B81E7233AC00FEA856 /* LogManager.h */,
+				3686A8B91E7233AC00FEA856 /* LogManager.m */,
 			);
 			name = "Helper(AppDelegateHelper)";
 			path = Helper;
@@ -1526,6 +1531,7 @@
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 				3675217B1E4D5A4900F2117C /* DKNightVersionManager.m in Sources */,
 				367521891E4D5A4900F2117C /* UIScrollView+NightVersion.m in Sources */,
+				3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
 				366787F41E0A46BC0044CE85 /* URLConstants.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,

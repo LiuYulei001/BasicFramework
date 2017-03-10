@@ -10,9 +10,6 @@
 
 @interface NSDate (Extension)
 
-//获取指定类型的日期字符串
-- (NSString *)DateToStringOfDateFormat:(NSString *)dateFromat;
-
 //时间戳转时间 YYYY-MM-dd HH:mm:ss
 -(NSString *)DateStringFromDateStamp:(NSTimeInterval)DateStamp styleFormatter:(NSString *)styleFormatter;
 //时间转时间戳

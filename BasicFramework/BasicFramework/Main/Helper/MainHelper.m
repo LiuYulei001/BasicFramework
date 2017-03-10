@@ -8,6 +8,7 @@
 
 #import "MainHelper.h"
 #import "AvoidCrash.h"
+#import "LogManager.h"
 
 static MainHelper *helper = nil;
 
@@ -32,7 +33,7 @@ static MainHelper *helper = nil;
     dispatch_once(&onceToken, ^{
 
 #pragma mark 收集崩溃信息
-        NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+        NSSetUncaughtExceptionHandler(&catchExceptionHandler);
 #pragma mark 数据容错开启
         [[MainHelper shareHelper] FaultTolerance];
 #pragma mark AppDelegate
@@ -58,15 +59,6 @@ static MainHelper *helper = nil;
     //注意:所有的信息都在userInfo中
     //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
     NSLog(@"%@",notification.userInfo);
-    
-}
-#pragma mark - 崩溃信息收集
-void UncaughtExceptionHandler(NSException *exception) {
-    NSArray *arr= [exception callStackSymbols];//得到当前调用栈信息
-    NSString*reason = [exception reason];//非常重要，就是崩溃的原因
-    NSString*name = [exception name];//异常类型
-    
-    NSLog(@" *|*|*|* exception type : %@ \n crash reason : %@ \n call stack info: %@ *|*|*|* ", name, reason, arr);
     
 }
 

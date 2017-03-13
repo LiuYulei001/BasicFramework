@@ -249,4 +249,9 @@ static  NSUUID *ExecutabUUID (void ){
 }
 
 
+
+- (void)dealloc
+{
+    [kNotificationCenter removeObserver:self];
+}
 @end

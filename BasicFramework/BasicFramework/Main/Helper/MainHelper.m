@@ -7,8 +7,6 @@
 //
 
 #import "MainHelper.h"
-#import "AvoidCrash.h"
-#import "LogManager.h"
 
 static MainHelper *helper = nil;
 

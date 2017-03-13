@@ -32,33 +32,10 @@ static MainHelper *helper = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
 
-#pragma mark 收集崩溃信息
-        NSSetUncaughtExceptionHandler(&catchExceptionHandler);
-#pragma mark 数据容错开启
-        [[MainHelper shareHelper] FaultTolerance];
-#pragma mark AppDelegate
+#pragma mark ListeningAppDelegate
         [[MainHelper shareHelper] ListeningLifeCycleAndRegisteredAPNS];
         
     });
-    
-}
--(void)FaultTolerance
-{
-    
-#if !DEBUG
-    [AvoidCrash becomeEffective];//所有支持避免异常的数据类型统一处理
-    //[NSMutableArray/NSArray avoidCrashExchangeMethod];//支持避免异常的数据类型单独处理
-    //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
-    [kNotificationCenter addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
-#endif
-    
-}
-#pragma mark - 数据容错后收集的数据崩溃信息
--(void)dealwithCrashMessage:(NSNotification *)notification
-{
-    //注意:所有的信息都在userInfo中
-    //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
-    NSLog(@"%@",notification.userInfo);
     
 }
 

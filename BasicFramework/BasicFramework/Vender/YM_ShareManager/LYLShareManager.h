@@ -41,7 +41,10 @@ typedef void (^failure)(NSError *error);
  *  @param appSecret    第三方平台的appSecret（QQ平台为appKey）
  *  @param redirectURL  redirectURL
  */
-+(BOOL)setPlatform:(UMSocialPlatformType)platform appKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectURL:(NSString *)redirectURL;
++(BOOL)setPlatform:(UMSocialPlatformType)platform
+            appKey:(NSString *)appKey
+         appSecret:(NSString *)appSecret
+       redirectURL:(NSString *)redirectURL;
 /**
  *  4.获得从sso或者web端回调到本app的回调 << - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation >>
  *

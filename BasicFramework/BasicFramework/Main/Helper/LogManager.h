@@ -10,10 +10,5 @@
 
 @interface LogManager : NSObject
 
-void catchExceptionHandler (NSException *exception);
-#pragma mark - 获取崩溃日志
-+(NSArray *)getCrashLog;
-#pragma mark - 清理日志
-+(void)clearCrashLog;
 
 @end

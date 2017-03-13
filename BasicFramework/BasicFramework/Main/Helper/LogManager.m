@@ -15,8 +15,60 @@
 
 #define ValidityOfLog  7
 
+#import "AvoidCrash.h"
+
+static LogManager *Loger = nil;
+
 @implementation LogManager
 
++(instancetype)shareLoger
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Loger = [[LogManager alloc] init];
+    });
+    
+    return Loger;
+}
+
+
+#pragma mark - 神奇的load方法
++(void)load{
+    
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+#pragma mark 数据容错开启
+        [[LogManager shareLoger] FaultTolerance];
+#pragma mark 收集崩溃信息
+        NSSetUncaughtExceptionHandler(&catchExceptionHandler);
+        
+    });
+    
+}
+#pragma mark - 开启容错
+-(void)FaultTolerance
+{
+    
+#if !DEBUG
+    [AvoidCrash becomeEffective];//所有支持避免异常的数据类型统一处理
+    //[NSMutableArray/NSArray avoidCrashExchangeMethod];//支持避免异常的数据类型单独处理
+    //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
+    [kNotificationCenter addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
+#endif
+    
+}
+#pragma mark - 数据容错后收集的数据崩溃信息
+-(void)dealwithCrashMessage:(NSNotification *)notification
+{
+    //注意:所有的信息都在userInfo中
+    //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
+    NSLog(@"%@",notification.userInfo);
+    
+}
+
+#pragma mark 崩溃信息监控
 void catchExceptionHandler (NSException *exception){
     
     if (exception==nil) return;
@@ -32,10 +84,15 @@ void catchExceptionHandler (NSException *exception){
     [exceptionDic setValue:reason forKey:@"exceptionReason"];
     [exceptionDic setValue:name forKey:@"exceptionName"];
     [exceptionDic setValue:stackArrays forKey:@"callStackSymbols"];
+    NSLog(@"%@",exceptionDic);
+    
+#if !DEBUG
     
     if ([LogManager CheckWriteCrashFileOnDocumentsException:exceptionDic]) {
         NSLog(@"Log writed!");
     }
+#endif
+    
 }
 
 #pragma mark - 获取dSYM UUID方法

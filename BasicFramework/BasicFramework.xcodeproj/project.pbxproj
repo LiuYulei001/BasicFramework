@@ -35,6 +35,7 @@
 		3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091391DE2CD60005A9C31 /* WSShiningLabel.m */; };
 		3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3630913D1DE2D233005A9C31 /* LGScrollLabel.m */; };
 		363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 363091411DE2D7E8005A9C31 /* BasicTouchID.m */; };
+		36312D111E7A7446002139B1 /* LYLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 36312D101E7A7446002139B1 /* LYLCollectionViewLayout.m */; };
 		36410B8A1DC05C9300231AF5 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36410B891DC05C9300231AF5 /* HomePageVC.m */; };
 		3649E1CE1E66A347004AADBC /* LYLKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649E1CD1E66A347004AADBC /* LYLKeyChain.m */; };
 		3649E1D11E66A42D004AADBC /* LYLKeyChainForPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3649E1D01E66A42D004AADBC /* LYLKeyChainForPassWord.m */; };
@@ -184,6 +185,8 @@
 		363091401DE2D7E8005A9C31 /* BasicTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTouchID.h; sourceTree = "<group>"; };
 		363091411DE2D7E8005A9C31 /* BasicTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTouchID.m; sourceTree = "<group>"; };
 		363091431DE2EE26005A9C31 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		36312D0F1E7A7446002139B1 /* LYLCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLCollectionViewLayout.h; sourceTree = "<group>"; };
+		36312D101E7A7446002139B1 /* LYLCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLCollectionViewLayout.m; sourceTree = "<group>"; };
 		36410B881DC05C9300231AF5 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		36410B891DC05C9300231AF5 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		3649E1CC1E66A347004AADBC /* LYLKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLKeyChain.h; sourceTree = "<group>"; };
@@ -759,6 +762,16 @@
 			path = TouchID;
 			sourceTree = "<group>";
 		};
+		36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */ = {
+			isa = PBXGroup;
+			children = (
+				36312D0F1E7A7446002139B1 /* LYLCollectionViewLayout.h */,
+				36312D101E7A7446002139B1 /* LYLCollectionViewLayout.m */,
+			);
+			name = "CollectionLayout(瀑布流)";
+			path = CollectionLayout;
+			sourceTree = "<group>";
+		};
 		3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,6 +959,7 @@
 		364DA6021D6584F400F6F424 /* Vender(封装) */ = {
 			isa = PBXGroup;
 			children = (
+				36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */,
 				3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */,
 				3686A8BE1E724B1B00FEA856 /* YM_ShareManager(友盟分享) */,
 				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
@@ -1573,6 +1587,7 @@
 				367521881E4D5A4900F2117C /* UIScrollView+BackgroundColor.m in Sources */,
 				367521841E4D5A4900F2117C /* UILabel+TextColor.m in Sources */,
 				3679AA9F1DDDB5E400169DFF /* UIView+Extension.m in Sources */,
+				36312D111E7A7446002139B1 /* LYLCollectionViewLayout.m in Sources */,
 				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,

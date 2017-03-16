@@ -811,7 +811,7 @@
 			children = (
 				364DA59F1D6584F400F6F424 /* Main(主要) */,
 				364DA5711D6584F400F6F424 /* Expand(扩展) */,
-				364DA6021D6584F400F6F424 /* Vender(封装) */,
+				364DA6021D6584F400F6F424 /* Vender(功能封装) */,
 				36111AD11D6EE60000A03BF4 /* Resource(资源) */,
 				36111AE41D6EE67500A03BF4 /* SDKFile(集成) */,
 				364DA53E1D65849300F6F424 /* Supporting Files */,
@@ -850,7 +850,7 @@
 			children = (
 				364DA5721D6584F400F6F424 /* Category(分类) */,
 				364DA58F1D6584F400F6F424 /* Macros(宏) */,
-				364DA5931D6584F400F6F424 /* Network(网络) */,
+				364DA5931D6584F400F6F424 /* Network(网络工具类) */,
 				364DA5961D6584F400F6F424 /* Tool(工具类) */,
 			);
 			name = "Expand(扩展)";
@@ -877,13 +877,13 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
-		364DA5931D6584F400F6F424 /* Network(网络) */ = {
+		364DA5931D6584F400F6F424 /* Network(网络工具类) */ = {
 			isa = PBXGroup;
 			children = (
 				364DA5941D6584F400F6F424 /* NetWorkManager.h */,
 				364DA5951D6584F400F6F424 /* NetWorkManager.m */,
 			);
-			name = "Network(网络)";
+			name = "Network(网络工具类)";
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -956,7 +956,7 @@
 			path = BaseController;
 			sourceTree = "<group>";
 		};
-		364DA6021D6584F400F6F424 /* Vender(封装) */ = {
+		364DA6021D6584F400F6F424 /* Vender(功能封装) */ = {
 			isa = PBXGroup;
 			children = (
 				36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */,
@@ -970,7 +970,7 @@
 				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
 				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
 			);
-			name = "Vender(封装)";
+			name = "Vender(功能封装)";
 			path = Vender;
 			sourceTree = "<group>";
 		};

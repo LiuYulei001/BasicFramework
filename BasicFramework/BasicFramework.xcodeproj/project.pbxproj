@@ -116,6 +116,9 @@
 		36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF91E305A6500E3D0F5 /* LoginConstants.m */; };
 		36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */; };
 		36925D001E305F6D00E3D0F5 /* ObjectDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFF1E305F6D00E3D0F5 /* ObjectDataBaseManager.m */; };
+		369318341E7B7C6A00AD8561 /* LYLCycleImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 369318331E7B7C6A00AD8561 /* LYLCycleImages.m */; };
+		369318381E7B7CF000AD8561 /* LYLCycleImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 369318361E7B7CF000AD8561 /* LYLCycleImagesCell.m */; };
+		369318391E7B7CF000AD8561 /* LYLCycleImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -344,6 +347,12 @@
 		36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRequestModel.m; sourceTree = "<group>"; };
 		36925CFE1E305F6D00E3D0F5 /* ObjectDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDataBaseManager.h; sourceTree = "<group>"; };
 		36925CFF1E305F6D00E3D0F5 /* ObjectDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDataBaseManager.m; sourceTree = "<group>"; };
+		369318321E7B7C6A00AD8561 /* LYLCycleImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLCycleImages.h; sourceTree = "<group>"; };
+		369318331E7B7C6A00AD8561 /* LYLCycleImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLCycleImages.m; sourceTree = "<group>"; };
+		369318351E7B7CF000AD8561 /* LYLCycleImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLCycleImagesCell.h; sourceTree = "<group>"; };
+		369318361E7B7CF000AD8561 /* LYLCycleImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLCycleImagesCell.m; sourceTree = "<group>"; };
+		369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLCycleImagesCell.xib; sourceTree = "<group>"; };
+		3693183B1E7BB6A000AD8561 /* LYLZoomProportion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLZoomProportion.h; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -969,6 +978,7 @@
 				363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */,
 				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
 				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
+				369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */,
 			);
 			name = "Vender(功能封装)";
 			path = Vender;
@@ -1330,6 +1340,20 @@
 			path = Bundle_IMG;
 			sourceTree = "<group>";
 		};
+		369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */ = {
+			isa = PBXGroup;
+			children = (
+				3693183B1E7BB6A000AD8561 /* LYLZoomProportion.h */,
+				369318321E7B7C6A00AD8561 /* LYLCycleImages.h */,
+				369318331E7B7C6A00AD8561 /* LYLCycleImages.m */,
+				369318351E7B7CF000AD8561 /* LYLCycleImagesCell.h */,
+				369318361E7B7CF000AD8561 /* LYLCycleImagesCell.m */,
+				369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */,
+			);
+			name = "CycleIMG(轮播图)";
+			path = CycleIMG;
+			sourceTree = "<group>";
+		};
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1460,6 +1484,7 @@
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
 				36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				3686A8D31E724B5400FEA856 /* info.png in Resources */,
+				369318391E7B7CF000AD8561 /* LYLCycleImagesCell.xib in Resources */,
 				3686A8D41E724B5400FEA856 /* info@2x.png in Resources */,
 				3686A8CF1E724B5400FEA856 /* checkMark.png in Resources */,
 				3679AA141DD99BA000169DFF /* IMG.bundle in Resources */,
@@ -1573,6 +1598,7 @@
 				3679AABA1DDDB7B100169DFF /* UIImage+Extension.m in Sources */,
 				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
 				360E056D1DD05A3900E7C6C1 /* TextView_Placeholder.m in Sources */,
+				369318341E7B7C6A00AD8561 /* LYLCycleImages.m in Sources */,
 				363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */,
 				366787F31E0A46BC0044CE85 /* GlobalConstants.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
@@ -1618,6 +1644,7 @@
 				3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
 				366787F41E0A46BC0044CE85 /* URLConstants.m in Sources */,
+				369318381E7B7CF000AD8561 /* LYLCycleImagesCell.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,
 				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				367521831E4D5A4900F2117C /* UILabel+NightVersion.m in Sources */,

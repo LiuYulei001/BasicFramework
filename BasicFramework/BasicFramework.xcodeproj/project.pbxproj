@@ -119,6 +119,8 @@
 		369318341E7B7C6A00AD8561 /* LYLCycleImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 369318331E7B7C6A00AD8561 /* LYLCycleImages.m */; };
 		369318381E7B7CF000AD8561 /* LYLCycleImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 369318361E7B7CF000AD8561 /* LYLCycleImagesCell.m */; };
 		369318391E7B7CF000AD8561 /* LYLCycleImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */; };
+		36A469971E7F673800E44702 /* LYLSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A469961E7F673800E44702 /* LYLSliderView.m */; };
+		36A4699A1E7F740E00E44702 /* LYLPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A469991E7F740E00E44702 /* LYLPageVC.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -354,6 +356,10 @@
 		369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLCycleImagesCell.xib; sourceTree = "<group>"; };
 		3693183B1E7BB6A000AD8561 /* LYLZoomProportion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLZoomProportion.h; sourceTree = "<group>"; };
 		36A1BFEC1D65B01500B67BF6 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		36A469951E7F673800E44702 /* LYLSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLSliderView.h; sourceTree = "<group>"; };
+		36A469961E7F673800E44702 /* LYLSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLSliderView.m; sourceTree = "<group>"; };
+		36A469981E7F740E00E44702 /* LYLPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPageVC.h; sourceTree = "<group>"; };
+		36A469991E7F740E00E44702 /* LYLPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPageVC.m; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -968,6 +974,7 @@
 		364DA6021D6584F400F6F424 /* Vender(功能封装) */ = {
 			isa = PBXGroup;
 			children = (
+				36A469941E7F66D400E44702 /* MultipleViewsSlider(滑动多视图) */,
 				36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */,
 				3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */,
 				3686A8BE1E724B1B00FEA856 /* YM_ShareManager(友盟分享) */,
@@ -1354,6 +1361,18 @@
 			path = CycleIMG;
 			sourceTree = "<group>";
 		};
+		36A469941E7F66D400E44702 /* MultipleViewsSlider(滑动多视图) */ = {
+			isa = PBXGroup;
+			children = (
+				36A469951E7F673800E44702 /* LYLSliderView.h */,
+				36A469961E7F673800E44702 /* LYLSliderView.m */,
+				36A469981E7F740E00E44702 /* LYLPageVC.h */,
+				36A469991E7F740E00E44702 /* LYLPageVC.m */,
+			);
+			name = "MultipleViewsSlider(滑动多视图)";
+			path = MultipleViewsSlider;
+			sourceTree = "<group>";
+		};
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1637,6 +1656,7 @@
 				3675217D1E4D5A4900F2117C /* UINavigationBar+Animation.m in Sources */,
 				3679AAC31DDDB7C000169DFF /* UIImageView+GIF.m in Sources */,
 				3675218E1E4D5A4900F2117C /* UITableView+SeparatorColor.m in Sources */,
+				36A4699A1E7F740E00E44702 /* LYLPageVC.m in Sources */,
 				364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */,
 				3675217B1E4D5A4900F2117C /* DKNightVersionManager.m in Sources */,
 				367521891E4D5A4900F2117C /* UIScrollView+NightVersion.m in Sources */,
@@ -1649,6 +1669,7 @@
 				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				367521831E4D5A4900F2117C /* UILabel+NightVersion.m in Sources */,
 				367521811E4D5A4900F2117C /* UIButton+NightVersion.m in Sources */,
+				36A469971E7F673800E44702 /* LYLSliderView.m in Sources */,
 				3679AA9E1DDDB5E400169DFF /* UIView+DragAndReset.m in Sources */,
 				3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */,
 				364DA62C1D6584F400F6F424 /* ProgressHUD.m in Sources */,

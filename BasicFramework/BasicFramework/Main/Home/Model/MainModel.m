@@ -21,6 +21,7 @@
  
  自定义model ： 第三方“ kObjectCodingAction ”//相当于以下代码实现
  
+===========================================================
 @synthesize team,dataBase_ID,mans;
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
@@ -50,5 +51,53 @@
     
     return model;
 }
+===========================================================
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+ unsigned int outCount, i;
+ objc_property_t *properties =class_copyPropertyList([self class], &outCount);
+
+ for (i = 0; i < outCount; i++)
+ {
+     objc_property_t property = properties[i];
+     const char* char_f = property_getName(property);
+     NSString *propertyName = [NSString stringWithUTF8String:char_f];
+     id propertyValue = [self valueForKey:(NSString *)propertyName];
+
+     if (propertyValue)
+     {
+         [aCoder encodeObject:propertyValue forKey:propertyName];
+     }
+ }
+}
+
+- (id)initWithCoder:(NSCoder *)aCoder
+{
+ self = [super init];
+ if (self)
+ {
+     unsigned int outCount, i;
+     objc_property_t *properties =class_copyPropertyList([self class], &outCount);
+
+     for (i = 0; i<outCount; i++)
+     {
+         objc_property_t property = properties[i];
+         const char* char_f = property_getName(property);
+         NSString *propertyName = [NSString stringWithUTF8String:char_f];
+
+         NSString *capital = [[propertyName substringToIndex:1] uppercaseString];
+         NSString *setterSelStr = [NSString stringWithFormat:@"set%@%@:",capital,[propertyName substringFromIndex:1]];
+
+         SEL sel = NSSelectorFromString(setterSelStr);
+
+         [self performSelectorOnMainThread:sel
+                                withObject:[aCoder decodeObjectForKey:propertyName]
+                             waitUntilDone:[NSThread isMainThread]];
+     }
+ }
+ return self;
+}
+===========================================================
+
 */
 @end

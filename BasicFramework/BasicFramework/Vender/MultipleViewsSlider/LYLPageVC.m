@@ -43,14 +43,14 @@
     UIViewController *temp_VC = pageViewController.viewControllers[0];
     if (temp_VC) {
         NSInteger index = [self.controllers indexOfObject:temp_VC];
-        if (self.delegate && [self.delegate respondsToSelector:@selector(pageVCDidFinishSelectedAtIndex:)]) {
-            [self.delegate pageVCDidFinishSelectedAtIndex:index];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(pageVCDidEndScrollAtIndex:)]) {
+            [self.delegate pageVCDidEndScrollAtIndex:index];
         }
     }
 }
 
 #pragma mark - setCurentController
--(void)setCurentControllerAtIndex:(NSInteger )index
+-(void)setCurrentControllerAtIndex:(NSInteger )index
 {
     if (index < 0 || index > self.controllers.count - 1) {
         
@@ -66,7 +66,7 @@
         return;
     }
     _controllers = controllers;
-    [self setCurentControllerAtIndex:0];
+    [self setCurrentControllerAtIndex:0];
     
 }
 -(UIPageViewController *)myPageVC

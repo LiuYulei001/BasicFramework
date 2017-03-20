@@ -11,7 +11,7 @@
 @protocol LYLPageVCDelegate <NSObject>
 
 @required
--(void)pageVCDidFinishSelectedAtIndex:(NSInteger )index;
+-(void)pageVCDidEndScrollAtIndex:(NSInteger )index;
 
 @end
 
@@ -20,6 +20,6 @@
 @property(nonatomic,assign)id<LYLPageVCDelegate> delegate;
 @property(nonatomic,strong)NSArray *controllers;
 
--(void)setCurentControllerAtIndex:(NSInteger )index;
+-(void)setCurrentControllerAtIndex:(NSInteger )index;
 
 @end

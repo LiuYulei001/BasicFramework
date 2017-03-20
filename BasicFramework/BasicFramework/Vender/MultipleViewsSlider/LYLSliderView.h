@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, sliderWidthType) {
 @protocol LYLSliderViewDelegate <NSObject>
 
 @required
--(void)ClickItemWith:(LYLSliderView *)SliderView indext:(NSInteger )indext title:(NSString *)title;
+-(void)sliderView:(LYLSliderView *)sliderView didSelectItemAtIndex:(NSInteger )index title:(NSString *)title;
 
 @end
 
@@ -42,6 +42,6 @@ typedef NS_ENUM(NSUInteger, sliderWidthType) {
 
 @property(nonatomic,strong)UIColor *edgeLineColor;
 
--(void)reloadSelectedItemAtIndex:(NSInteger )index;
+-(void)setCurrentItemAtIndex:(NSInteger )index;
 
 @end

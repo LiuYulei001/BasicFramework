@@ -176,9 +176,9 @@
     if (item == self.selected_item) {
         return;
     }
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ClickItemWith:indext:title:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sliderView:didSelectItemAtIndex:title:)]) {
         
-        [self.delegate ClickItemWith:self indext:[self.item_array indexOfObject:item] title:item.titleLabel.text];
+        [self.delegate sliderView:self didSelectItemAtIndex:[self.item_array indexOfObject:item] title:item.titleLabel.text];
         [self selectorBT_beFirst:NO item:item];
     }
     
@@ -234,7 +234,7 @@
         [temp_item setTitleColor:self.normalColor forState:UIControlStateNormal];
     }
 }
--(void)reloadSelectedItemAtIndex:(NSInteger )index
+-(void)setCurrentItemAtIndex:(NSInteger )index
 {
     if (index < 0 || index > self.item_array.count - 1) {
         

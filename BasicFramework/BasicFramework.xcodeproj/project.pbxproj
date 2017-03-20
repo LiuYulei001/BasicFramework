@@ -959,19 +959,19 @@
 		364DA6021D6584F400F6F424 /* Vender(功能封装) */ = {
 			isa = PBXGroup;
 			children = (
-				367A5DFC1E7FC6810026EC3D /* ButtonWithIMG(按钮中的图) */,
-				367A5DF81E7FC65D0026EC3D /* TextView(占位文字) */,
 				36A469941E7F66D400E44702 /* MultipleViewsSlider(滑动多视图) */,
-				36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */,
+				367521391E4D5A4900F2117C /* NightModeManager(夜间模式) */,
 				3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */,
 				3686A8BE1E724B1B00FEA856 /* YM_ShareManager(友盟分享) */,
-				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
-				367521391E4D5A4900F2117C /* NightModeManager(夜间模式) */,
-				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
-				3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */,
+				367A5DFC1E7FC6810026EC3D /* ButtonWithIMG(按钮中的图) */,
+				36312D0E1E7A7418002139B1 /* CollectionLayout(瀑布流) */,
 				363091371DE2CD60005A9C31 /* ShimmerLable(闪光文字) */,
+				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
+				3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */,
 				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
 				364DA6031D6584F400F6F424 /* IMGBrowse(图片浏览) */,
+				367A5DF81E7FC65D0026EC3D /* TextView(占位文字) */,
+				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
 				369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */,
 			);
 			name = "Vender(功能封装)";

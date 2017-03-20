@@ -16,7 +16,6 @@
 @interface ProductModel : JSONModel
 
 @property(nonatomic,copy)NSString *name;
-//不想因为服务器的某个值没有返回就使程序崩溃， 我们会加关键字Optional.
 @property(nonatomic,copy)NSString <Optional>*userid;
 @property(nonatomic,copy)NSString *sex;
 

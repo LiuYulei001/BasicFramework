@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E054F1DD029B700E7C6C1 /* MainHelper.m */; };
 		360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E05821DD1D52600E7C6C1 /* LoginVC.m */; };
-		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB01D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB31D6EE58C00A03BF4 /* Placeholder */; };
 		36111ACB1D6EE58C00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111AB51D6EE58C00A03BF4 /* Placeholder */; };
@@ -102,6 +101,7 @@
 		367A5E021E7FC7700026EC3D /* AppDelegate+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E011E7FC7700026EC3D /* AppDelegate+UI.m */; };
 		367A5E131E7FC7E50026EC3D /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E0F1E7FC7E50026EC3D /* GlobalConstants.m */; };
 		367A5E141E7FC7E50026EC3D /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E121E7FC7E50026EC3D /* URLConstants.m */; };
+		367A5E171E7FC8D60026EC3D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E161E7FC8D60026EC3D /* BaseModel.m */; };
 		3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8B91E7233AC00FEA856 /* LogManager.m */; };
 		3686A8C11E724B1B00FEA856 /* LYLShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8C01E724B1B00FEA856 /* LYLShareManager.m */; };
 		3686A8CF1E724B5400FEA856 /* checkMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3686A8C41E724B5400FEA856 /* checkMark.png */; };
@@ -148,7 +148,6 @@
 		360E05801DD1CA0A00E7C6C1 /* IMGNAME.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMGNAME.h; sourceTree = "<group>"; };
 		360E05811DD1D52600E7C6C1 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		360E05821DD1D52600E7C6C1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB01D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB31D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111AB51D6EE58C00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -326,6 +325,8 @@
 		367A5E0F1E7FC7E50026EC3D /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		367A5E111E7FC7E50026EC3D /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
 		367A5E121E7FC7E50026EC3D /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
+		367A5E151E7FC8D60026EC3D /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		367A5E161E7FC8D60026EC3D /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		3686A8B81E7233AC00FEA856 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
 		3686A8B91E7233AC00FEA856 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		3686A8BF1E724B1B00FEA856 /* LYLShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLShareManager.h; sourceTree = "<group>"; };
@@ -419,7 +420,8 @@
 		36111A911D6EE4FC00A03BF4 /* BaseModel(数据模型) */ = {
 			isa = PBXGroup;
 			children = (
-				36111A921D6EE4FC00A03BF4 /* Placeholder */,
+				367A5E151E7FC8D60026EC3D /* BaseModel.h */,
+				367A5E161E7FC8D60026EC3D /* BaseModel.m */,
 			);
 			name = "BaseModel(数据模型)";
 			path = BaseModel;
@@ -1508,7 +1510,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
-				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				3686A8D01E724B5400FEA856 /* checkMark@2x.png in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
 				3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */,
@@ -1661,6 +1662,7 @@
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
 				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,
 				3679AAB41DDDB7A100169DFF /* UIViewController+Extension.m in Sources */,
+				367A5E171E7FC8D60026EC3D /* BaseModel.m in Sources */,
 				3675217A1E4D5A4900F2117C /* UIViewController+ChangeColor.m in Sources */,
 				367521801E4D5A4900F2117C /* UIBarButtonItem+TintColor.m in Sources */,
 				362032771DD4748700F15494 /* NSString+Extension.m in Sources */,

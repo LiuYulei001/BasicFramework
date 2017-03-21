@@ -6,6 +6,9 @@
 //  Copyright © 2017年 Rainy. All rights reserved.
 //
 
+#define kProgressViewHeight 2.0f
+#define kMinimumFontSize    13.0f
+
 #import "JSWKWebView.h"
 
 @interface JSWKWebView ()
@@ -34,7 +37,7 @@
         
         WKPreferences *preferences = [WKPreferences new];
         preferences.javaScriptCanOpenWindowsAutomatically = YES;
-        preferences.minimumFontSize = 13.0;
+        preferences.minimumFontSize = kMinimumFontSize;
         configuration.preferences = preferences;
         
         WKWebView *WK_web = [[WKWebView alloc] initWithFrame:self.bounds configuration:configuration];
@@ -42,7 +45,7 @@
         self.webView = WK_web;
         
         UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault ];
-        progressView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 2);
+        progressView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, kProgressViewHeight);
         progressView.progressTintColor = ThemeColor;
         progressView.trackTintColor = [UIColor clearColor];
         
@@ -71,16 +74,18 @@
 -(void)setProgress:(CGFloat)progress
 {
     _progress = progress;
-    self.progressView.progress = progress;
+    if (self.progressView.alpha == 0) {self.progressView.alpha = 1;}
+    [self.progressView setProgress:progress animated:YES];
     if (progress >= 1) {
         
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:0.8 animations:^{
             
             self.progressView.alpha = 0;
+            
+        } completion:^(BOOL finished) {
+            
+            self.progressView.progress = 0;
         }];
-    }else
-    {
-        self.progressView.alpha = 1;
     }
 }
 

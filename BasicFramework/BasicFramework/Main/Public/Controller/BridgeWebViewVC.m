@@ -23,8 +23,7 @@
     
     [self createBridge];
     [self registerHandlerForLoadData];
-    [self callHandlerActionForLogin];
-    [self renderButtons:self.webParentView.webView];
+    [self createReloadButton:self.webParentView.webView];
     [self loadHtmlPageInWebView:self.webParentView.webView];
     
 }
@@ -33,7 +32,7 @@
 {
     [JSBridgeManager createBridgeWithWebView:self.webParentView.webView target:self EnableLogging:YES];
 }
-#pragma mark - registerHandlerFor...
+#pragma mark - registerHandler
 -(void)registerHandlerForLoadData
 {
     [JSBridgeManager registerHandler:@"loadData" bridgeHandler:^(id data, WVJBResponseCallback responseCallback) {
@@ -43,6 +42,7 @@
         
     }];
 }
+#pragma mark - callHandlerAction
 - (void)callHandlerActionForLogin {
     
     id data = @{@"name":@"test",@"passWord":@"998899"};
@@ -54,10 +54,8 @@
     }];
 }
 
-- (void)renderButtons:(WKWebView*)webView {
+- (void)createReloadButton:(WKWebView*)webView {
     
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"callHandler" style:UIBarButtonItemStyleDone target:self action:@selector(callHandlerActionForLogin)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"reload" style:UIBarButtonItemStyleDone target:webView action:@selector(reload)];
 }
 

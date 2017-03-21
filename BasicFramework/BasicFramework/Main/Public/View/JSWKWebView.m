@@ -56,6 +56,7 @@
         [self insertSubview:progressView aboveSubview:WK_web];
         
         [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+        [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
 
     }
     return self;
@@ -65,6 +66,11 @@
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         
         self.progress = self.webView.estimatedProgress;
+        
+    }else if ([keyPath isEqualToString:@"title"]){
+        
+        UIViewController *vc = [self viewController];
+        vc.title = self.webView.title;
         
     }else{
         
@@ -88,5 +94,13 @@
         }];
     }
 }
-
+- (UIViewController*)viewController {
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
 @end

@@ -30,4 +30,6 @@ typedef void(^downZipFailure)(NSError *error);
 
 +(NSString *)unzipPressedFilePath;
 
++(void)clearWebCaches;
+
 @end

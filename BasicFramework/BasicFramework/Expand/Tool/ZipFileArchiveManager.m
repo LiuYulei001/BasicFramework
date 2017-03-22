@@ -82,6 +82,21 @@
     NSLog(@" HTML_PACKAGE filePath = %@",path);
     return path;
 }
-
++(void)clearWebCaches
+{
+    NSString *libraryDir = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask, YES)[0];
+    NSString *bundleId  =  [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleIdentifier"];
+    NSString *webkitFolderInLib = [NSString stringWithFormat:@"%@/WebKit",libraryDir];
+    NSString *webKitFolderInCaches = [NSString stringWithFormat:@"%@/Caches/%@/WebKit",libraryDir,bundleId];
+    NSString *webKitFolderInCachesfs = [NSString stringWithFormat:@"%@/Caches/%@/fsCachedData",libraryDir,bundleId];
+    
+    NSError *error;
+    /* iOS8.0 WebView Cache的存放路径 */
+    [[NSFileManager defaultManager] removeItemAtPath:webKitFolderInCaches error:&error];
+    [[NSFileManager defaultManager] removeItemAtPath:webkitFolderInLib error:nil];
+    /* iOS7.0 WebView Cache的存放路径 */
+    [[NSFileManager defaultManager] removeItemAtPath:webKitFolderInCachesfs error:&error];
+    
+}
 
 @end

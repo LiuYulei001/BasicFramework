@@ -7,13 +7,9 @@
 //
 
 #import "BridgeWebViewVC.h"
-#import "JSBridgeManager.h"
-#import "JSWKWebView.h"
 
-@interface BridgeWebViewVC ()<WKNavigationDelegate>
 
-@property(nonatomic,strong)JSWKWebView *webParentView;
-
+@interface BridgeWebViewVC ()
 @end
 
 @implementation BridgeWebViewVC
@@ -22,15 +18,25 @@
     [super viewDidLoad];
     
     [self createBridge];
-    [self registerHandlerForLoadData];
-    [self createReloadButton:self.webParentView.webView];
-    [self loadHtmlPageInWebView:self.webParentView.webView];
     
+//=============================================================================
+    [self loadHtmlPageInWebView:self.webParentView.webView];
+    [self registerHandlerForLoadData];
+    [self callHandlerActionForLogin];
+    [self createReloadButton:self.webParentView.webView];
+//=============================================================================
+
 }
 #pragma mark - reateBridge
 -(void)createBridge
 {
     [JSBridgeManager createBridgeWithWebView:self.webParentView.webView target:self EnableLogging:YES];
+}
+//=============================================================================
+#pragma mark - createReloadButton
+- (void)createReloadButton:(WKWebView*)webView {
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"reload" style:UIBarButtonItemStyleDone target:webView action:@selector(reload)];
 }
 #pragma mark - registerHandler
 -(void)registerHandlerForLoadData
@@ -47,40 +53,36 @@
     
     id data = @{@"name":@"test",@"passWord":@"998899"};
     
-    [JSBridgeManager callHandler:@"toLogin" data:data responseCallback:^(id response) {
+    [JSBridgeManager callHandler:@"Login" data:data responseCallback:^(id response) {
         
         NSLog(@"toLogin responded: %@", response);
         
     }];
 }
-
-- (void)createReloadButton:(WKWebView*)webView {
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"reload" style:UIBarButtonItemStyleDone target:webView action:@selector(reload)];
-}
-
-
 #pragma mark - loadHtmlPageInWebView
 - (void)loadHtmlPageInWebView:(WKWebView*)webView {
     
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://baidu.com"]]];
 }
-
+//=============================================================================
 
 
 #pragma mark - <WKNavigationDelegate>
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+{
     NSLog(@"webViewDidStartLoad");
 }
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
     NSLog(@"webViewDidFinishLoad");
 }
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation
 {
     NSLog(@"webViewDidFailLoad");
 }
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
+{
     
     NSString *requestString = navigationResponse.response.URL.absoluteString;
     

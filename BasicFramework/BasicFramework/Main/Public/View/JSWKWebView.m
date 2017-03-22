@@ -103,4 +103,9 @@
     }
     return nil;
 }
+-(void)dealloc
+{
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.webView removeObserver:self forKeyPath:@"title"];
+}
 @end

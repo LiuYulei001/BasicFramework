@@ -126,6 +126,7 @@
 		36A530431E811C770067F8F7 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530411E811C770067F8F7 /* URLConstants.m */; };
 		36A530461E811D800067F8F7 /* JSWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530451E811D800067F8F7 /* JSWKWebView.m */; };
 		36A530491E811DC50067F8F7 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530481E811DC50067F8F7 /* BaseTabBar.m */; };
+		36E9F9141E825A22004AA47E /* ZipFileArchiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E9F9131E825A22004AA47E /* ZipFileArchiveManager.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -377,6 +378,8 @@
 		36A530451E811D800067F8F7 /* JSWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWKWebView.m; sourceTree = "<group>"; };
 		36A530471E811DC50067F8F7 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		36A530481E811DC50067F8F7 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		36E9F9121E825A22004AA47E /* ZipFileArchiveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFileArchiveManager.h; sourceTree = "<group>"; };
+		36E9F9131E825A22004AA47E /* ZipFileArchiveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipFileArchiveManager.m; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -910,6 +913,8 @@
 				36925CFF1E305F6D00E3D0F5 /* ObjectDataBaseManager.m */,
 				36A530251E8111930067F8F7 /* JSBridgeManager.h */,
 				36A530261E8111930067F8F7 /* JSBridgeManager.m */,
+				36E9F9121E825A22004AA47E /* ZipFileArchiveManager.h */,
+				36E9F9131E825A22004AA47E /* ZipFileArchiveManager.m */,
 			);
 			name = "Tool(工具类)";
 			path = Tool;
@@ -1615,6 +1620,7 @@
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				3679AA961DDDACF300169DFF /* WMPlayer.m in Sources */,
 				3675218B1E4D5A4900F2117C /* UITabBar+NightVersion.m in Sources */,
+				36E9F9141E825A22004AA47E /* ZipFileArchiveManager.m in Sources */,
 				36650FAC1E0791E50099CD92 /* UserModel.m in Sources */,
 				367A5DFF1E7FC6810026EC3D /* GraphicBT.m in Sources */,
 				3686A8D61E724B5400FEA856 /* LYLBouncing.m in Sources */,

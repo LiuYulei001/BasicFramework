@@ -19,13 +19,13 @@
     
     [self createBridge];
     
-//=============================================================================
+    //=============================================================================
     [self loadHtmlPageInWebView:self.webParentView.webView];
     [self registerHandlerForLoadData];
     [self callHandlerActionForLogin];
     [self createReloadButton:self.webParentView.webView];
-//=============================================================================
-
+    //=============================================================================
+    
 }
 #pragma mark - reateBridge
 -(void)createBridge
@@ -62,7 +62,11 @@
 #pragma mark - loadHtmlPageInWebView
 - (void)loadHtmlPageInWebView:(WKWebView*)webView {
     
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://baidu.com"]]];
+    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
+    [webView loadHTMLString:appHtml baseURL:baseURL];
+    //    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://baidu.com"]]];
 }
 //=============================================================================
 

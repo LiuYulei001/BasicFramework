@@ -53,6 +53,7 @@
 #define Request_Success @"成功"
 #define Request_NOMore @"已加载全部"
 #define Request_NoNetwork @"请检查网络链接"
+#define DownLoad_Failure @"下载失败"
 /**
  *  iPhone or iPad
  */

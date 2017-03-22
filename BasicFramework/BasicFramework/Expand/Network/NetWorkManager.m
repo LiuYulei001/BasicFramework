@@ -456,7 +456,7 @@ static NetWorkManager *network = nil;
                          SavaPath:(NSString *)savePath
                         UrlString:(NSString *)urlString
                  DownLoadProgress:(downloadProgress)progress
-                     SuccessBlock:(requestSuccess)successBlock
+                     SuccessBlock:(downloadSuccess)successBlock
                      FailureBlock:(requestFailure)failureBlock
 {
     if ([kNetworkType isEqualToString:kNoNetwork]) {
@@ -482,6 +482,9 @@ static NetWorkManager *network = nil;
         if (error) {
             
             failureBlock(error);
+        }else
+        {
+            successBlock(response,filePath);
         }
         
     }];

@@ -16,6 +16,8 @@ typedef void(^requestFailure)( NSError *error);
 typedef void(^uploadProgress)(float progress);
 /**定义下载进度block*/
 typedef void(^downloadProgress)(float progress);
+/**下载成功的block*/
+typedef void(^downloadSuccess)(NSURLResponse *response, NSURL *filePath);
 
 @interface NetWorkManager : AFHTTPSessionManager
 
@@ -117,7 +119,7 @@ typedef void(^downloadProgress)(float progress);
                          SavaPath:(NSString *)savePath
                         UrlString:(NSString *)urlString
                  DownLoadProgress:(downloadProgress)progress
-                     SuccessBlock:(requestSuccess)successBlock
+                     SuccessBlock:(downloadSuccess)successBlock
                      FailureBlock:(requestFailure)failureBlock;
 /**
  *  取消指定的url请求

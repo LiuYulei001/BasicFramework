@@ -14,6 +14,7 @@ target ‘BasicFramework’ do
   pod 'AvoidCrash'
   pod 'LYLDataBase'
   pod 'MJRefresh'
+  pod 'SSZipArchive'
   
   pod 'UMengUShare/UI’
   pod 'UMengUShare/Social/Sina'

@@ -25,6 +25,7 @@ static WKWebViewJavascriptBridge* _bridge;
     }
     _bridge = [WKWebViewJavascriptBridge bridgeForWebView:webView];
     [_bridge setWebViewDelegate:target];
+    webView.UIDelegate = target;
     return _bridge;
 }
 +(void)registerHandler:(NSString *)handler bridgeHandler:(JSBridgeHandler)bridgeHandler

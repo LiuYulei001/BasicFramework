@@ -10,7 +10,7 @@
 #import "JSBridgeManager.h"
 #import "JSWKWebView.h"
 
-@interface BridgeWebViewVC : BasicMainVC<WKNavigationDelegate>
+@interface BridgeWebViewVC : BasicMainVC<WKNavigationDelegate,WKUIDelegate>
 
 @property(nonatomic,strong)JSWKWebView *webParentView;
 

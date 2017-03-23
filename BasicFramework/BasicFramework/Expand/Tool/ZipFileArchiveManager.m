@@ -8,7 +8,7 @@
 
 #define kDataFileName         @"HTML_PACKAGE"
 #define kZipFileName          @"HTML.zip"
-#define kunzipPressedFileName @"HTML_directories"
+#define kunzipPressedFileName @"HTML_directories.bundle"
 #define kEntranceHtmlFileName @"index.html"
 
 #import "ZipFileArchiveManager.h"

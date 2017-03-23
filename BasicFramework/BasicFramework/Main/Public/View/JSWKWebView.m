@@ -32,8 +32,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        // 禁止选择CSS
+        NSString *css = @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
+        // CSS选中样式取消
+        NSMutableString *javascript = [NSMutableString string];
+        [javascript appendString:@"var style = document.createElement('style');"];
+        [javascript appendString:@"style.type = 'text/css';"];
+        [javascript appendFormat:@"var cssContent = document.createTextNode('%@');", css];
+        [javascript appendString:@"style.appendChild(cssContent);"];
+        [javascript appendString:@"document.body.appendChild(style);"];
+        
+        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        WKUserContentController *userContentController = [[WKUserContentController alloc] init];
+        [userContentController addUserScript:noneSelectScript];
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-        configuration.userContentController = [WKUserContentController new];
+        configuration.userContentController = userContentController;
         
         WKPreferences *preferences = [WKPreferences new];
         preferences.javaScriptCanOpenWindowsAutomatically = YES;
@@ -41,7 +54,7 @@
         configuration.preferences = preferences;
         
         WKWebView *WK_web = [[WKWebView alloc] initWithFrame:self.bounds configuration:configuration];
-        
+//        WK_web.allowsBackForwardNavigationGestures = YES;
         self.webView = WK_web;
         
         UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault ];

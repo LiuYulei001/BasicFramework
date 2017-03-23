@@ -20,7 +20,7 @@
     [self createBridge];
     
     //=============================================================================
-    [self loadHtmlPageInWebView:self.webParentView.webView];
+    [self webViewReload];
     [self registerHandlerForLoadData];
     [self callHandlerActionForLogin];
     [self createReloadButton:self.webParentView.webView];
@@ -60,15 +60,21 @@
     }];
 }
 #pragma mark - loadHtmlPageInWebView
-- (void)loadHtmlPageInWebView:(WKWebView*)webView {
+- (void)webViewReload {
     
 //本地html文件访问
     NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
     NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
-    [webView loadHTMLString:appHtml baseURL:baseURL];
-//html链接访问
-//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://baidu.com"]]];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0) {
+        
+        [self.webParentView.webView loadFileURL:baseURL allowingReadAccessToURL:baseURL];
+        
+    } else {
+        
+        [self.webParentView.webView loadHTMLString:appHtml baseURL:baseURL];
+        
+    }
 }
 //=============================================================================
 

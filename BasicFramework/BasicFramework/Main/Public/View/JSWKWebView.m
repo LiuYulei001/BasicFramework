@@ -54,7 +54,7 @@
         configuration.preferences = preferences;
         
         WKWebView *WK_web = [[WKWebView alloc] initWithFrame:self.bounds configuration:configuration];
-//        WK_web.allowsBackForwardNavigationGestures = YES;
+
         self.webView = WK_web;
         
         UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault ];

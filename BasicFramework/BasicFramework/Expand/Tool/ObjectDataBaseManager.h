@@ -11,12 +11,15 @@
 @interface ObjectDataBaseManager : NSObject
 
 + (BOOL)createDataBase:(NSString *)dataBase ValueField:(NSString *)ValueField;
+
 + (NSString *)updateModel:(MainModel *)Model forDataBase:(NSString *)dataBase ValueField:(NSString *)ValueField;
-+ (MainModel *)queryModelOfID:(NSString *)ID InDataBase:(NSString *)dataBase  ValueField:(NSString *)ValueField;
+
++ (MainModel *)queryModelOfID:(NSString *)ID InDataBase:(NSString *)dataBase ValueField:(NSString *)ValueField;
+
 + (NSArray *)queryAllModelInDataBase:(NSString *)dataBase ValueField:(NSString *)ValueField;
+
 + (NSString *)deleteModelOfModel:(MainModel *)Model InDataBase:(NSString *)dataBase;
+
 + (NSString *)deleteAllModelInDataBase:(NSString *)dataBase;
-
-
 
 @end

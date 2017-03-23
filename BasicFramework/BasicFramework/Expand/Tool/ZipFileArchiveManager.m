@@ -17,21 +17,30 @@
 @implementation ZipFileArchiveManager
 
 +(void)downFileFromServerWithUrlString:(NSString *)UrlString
-                             Parameters:(NSDictionary *)parameters
-                         downZipSuccess:(downZipSuccess)downZipSuccess
-                         downZipFailure:(downZipFailure)downZipFailure
+                            Parameters:(NSDictionary *)parameters
+                        downZipSuccess:(downZipSuccess)downZipSuccess
+                        downZipFailure:(downZipFailure)downZipFailure
 {
     
+    [ProgressHUD showProgressHUDWithMode:ProgressHUDModeProgress withText:nil isTouched:NO inView:kWindow];
     
     [NetWorkManager downLoadFileWithParameters:parameters SavaPath:[ZipFileArchiveManager zipFilePath] UrlString:UrlString DownLoadProgress:^(float progress) {
         
-        
+        [ProgressHUD setProgress:progress];
         
     } SuccessBlock:^(NSURLResponse *response, NSURL *filePath) {
         
-        [[NSFileManager defaultManager]removeItemAtPath:[ZipFileArchiveManager unzipPressedFilePath] error:nil];
+        [ZipFileArchiveManager clearWebCaches];
+        
         BOOL success = [ZipFileArchiveManager unzipPressedAtdataPath:[ZipFileArchiveManager filePath] zipPath:[ZipFileArchiveManager zipFilePath]];
         if (success) {
+            /*
+            获取解压后的目录
+            NSError *error = nil;
+            NSMutableArray<NSString *> *items = [[[NSFileManager defaultManager]
+                                                  contentsOfDirectoryAtPath:[ZipFileArchiveManager unzipPressedFilePath]
+                                                  error:&error] mutableCopy];
+             */
             downZipSuccess([ZipFileArchiveManager entranceHtmlFilePath]);
         }
         
@@ -74,7 +83,7 @@
 +(NSString *)filePath
 {
     
-    NSString *path = [NSString stringWithFormat:@"%@/%@",NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0],kDataFileName];
+    NSString *path = [NSString stringWithFormat:@"%@/%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0],kDataFileName];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:nil]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:nil];
@@ -84,6 +93,8 @@
 }
 +(void)clearWebCaches
 {
+    [[NSFileManager defaultManager]removeItemAtPath:[ZipFileArchiveManager unzipPressedFilePath] error:nil];
+    
     NSString *libraryDir = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask, YES)[0];
     NSString *bundleId  =  [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleIdentifier"];
     NSString *webkitFolderInLib = [NSString stringWithFormat:@"%@/WebKit",libraryDir];

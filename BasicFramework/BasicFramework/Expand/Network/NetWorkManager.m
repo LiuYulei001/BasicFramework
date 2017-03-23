@@ -469,7 +469,7 @@ static NetWorkManager *network = nil;
         
         if (progress) {
             
-            progress(downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+            progress((CGFloat)downloadProgress.completedUnitCount / (CGFloat)downloadProgress.totalUnitCount);
         }
         
         

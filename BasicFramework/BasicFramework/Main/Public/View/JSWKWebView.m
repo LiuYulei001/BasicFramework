@@ -32,17 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        // 禁止选择CSS
-        NSString *css = @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
-        // CSS选中样式取消
-        NSMutableString *javascript = [NSMutableString string];
-        [javascript appendString:@"var style = document.createElement('style');"];
-        [javascript appendString:@"style.type = 'text/css';"];
-        [javascript appendFormat:@"var cssContent = document.createTextNode('%@');", css];
-        [javascript appendString:@"style.appendChild(cssContent);"];
-        [javascript appendString:@"document.body.appendChild(style);"];
-        
-        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:[self javascriptOfCSS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
         WKUserContentController *userContentController = [[WKUserContentController alloc] init];
         [userContentController addUserScript:noneSelectScript];
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
@@ -106,6 +96,19 @@
             self.progressView.progress = 0;
         }];
     }
+}
+- (NSString *)javascriptOfCSS
+{
+    // 禁止选择CSS
+    NSString *css = @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
+    // CSS选中样式取消
+    NSMutableString *javascript = [NSMutableString string];
+    [javascript appendString:@"var style = document.createElement('style');"];
+    [javascript appendString:@"style.type = 'text/css';"];
+    [javascript appendFormat:@"var cssContent = document.createTextNode('%@');", css];
+    [javascript appendString:@"style.appendChild(cssContent);"];
+    [javascript appendString:@"document.body.appendChild(style);"];
+    return javascript;
 }
 - (UIViewController*)viewController {
     for (UIView* next = [self superview]; next; next = next.superview) {

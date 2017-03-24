@@ -54,6 +54,10 @@ static NetWorkManager *network = nil;
         
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         
+#if !DEBUG
+        ((AFJSONResponseSerializer *)self.responseSerializer).removesKeysWithNullValues = YES;
+#endif
+        
         self.responseSerializer.stringEncoding = NSUTF8StringEncoding;//默认 NSUTF8StringEncoding
         
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];

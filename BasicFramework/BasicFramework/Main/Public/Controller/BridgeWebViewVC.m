@@ -128,6 +128,21 @@
     
     [self presentViewController:alert animated:YES completion:NULL];
 }
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+    
+    NSLog(@"webViewDidCreateWebView");
+    if (!navigationAction.targetFrame.isMainFrame) {
+        
+        [webView loadRequest:navigationAction.request];
+    }
+    return nil;
+}
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_9_0
+- (void)webViewDidClose:(WKWebView *)webView {
+    NSLog(@"webViewDidClose");
+}
+#endif
+
 #pragma mark - <WKNavigationDelegate>
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {

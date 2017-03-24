@@ -7,7 +7,6 @@
 //
 
 #define kDataFileName         @"HTML_PACKAGE"
-#define kZipFileName          @"HTML.zip"
 #define kunzipPressedFileName @"HTML_directories.bundle"
 #define kEntranceHtmlFileName @"index.html"
 
@@ -21,35 +20,40 @@
                         downZipSuccess:(downZipSuccess)downZipSuccess
                         downZipFailure:(downZipFailure)downZipFailure
 {
+    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    progressView.frame = CGRectMake(0, kScreenHeight - 2, [[UIScreen mainScreen] bounds].size.width, 2);
+    progressView.progressTintColor = ThemeColor;
+    progressView.trackTintColor = [UIColor clearColor];
+    [kWindow addSubview:progressView];
     
-    [ProgressHUD showProgressHUDWithMode:ProgressHUDModeProgress withText:nil isTouched:NO inView:kWindow];
+    [ProgressHUD showProgressHUDWithMode:ProgressHUDModeActivityIndicator withText:Loading isTouched:NO inView:kWindow];
     
-    [NetWorkManager downLoadFileWithParameters:parameters SavaPath:[ZipFileArchiveManager zipFilePath] UrlString:UrlString DownLoadProgress:^(float progress) {
+    [NetWorkManager downLoadFileWithParameters:parameters SavaPath:[ZipFileArchiveManager filePath] UrlString:UrlString DownLoadProgress:^(float progress) {
         
-        [ProgressHUD setProgress:progress];
+        [progressView setProgress:progress animated:YES];
         
     } SuccessBlock:^(NSURLResponse *response, NSURL *filePath) {
         
+        [progressView removeFromSuperview];
+        
+        [ProgressHUD hideProgressHUDAfterDelay:0];
+        
         [ZipFileArchiveManager clearWebCaches];
         
-        BOOL success = [ZipFileArchiveManager unzipPressedAtdataPath:[ZipFileArchiveManager filePath] zipPath:[ZipFileArchiveManager zipFilePath]];
+        BOOL success = [ZipFileArchiveManager unzipPressedAtdataPath:[ZipFileArchiveManager unzipPressedFilePath] zipPath:[NSString stringWithFormat:@"%@/%@",[ZipFileArchiveManager filePath],response.suggestedFilename]];
         if (success) {
-            /*
-            获取解压后的目录
-            NSError *error = nil;
-            NSMutableArray<NSString *> *items = [[[NSFileManager defaultManager]
-                                                  contentsOfDirectoryAtPath:[ZipFileArchiveManager unzipPressedFilePath]
-                                                  error:&error] mutableCopy];
-             */
             downZipSuccess([ZipFileArchiveManager entranceHtmlFilePath]);
         }
         
     } FailureBlock:^(NSError *error) {
         
-        [ProgressHUD showProgressHUDWithMode:ProgressHUDModeOnlyText withText:DownLoad_Failure afterDelay:HUD_DismisTime isTouched:NO inView:kWindow];
-        downZipFailure(error);
+        [progressView removeFromSuperview];
         
+        [ProgressHUD showProgressHUDWithMode:ProgressHUDModeOnlyText withText:DownLoad_Failure afterDelay:HUD_DismisTime isTouched:NO inView:kWindow];
+        
+        downZipFailure(error);
     }];
+    
 }
 
 +(BOOL)zipPressedFileAtZipPath:(NSString *)zipPath
@@ -63,7 +67,7 @@
     BOOL success = [SSZipArchive unzipFileAtPath:zipPath toDestination:dataPath];
     if (success) {
         
-        [[NSFileManager defaultManager] removeItemAtPath:[ZipFileArchiveManager zipFilePath] error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:zipPath error:nil];
     }
     return success;
 }
@@ -75,10 +79,6 @@
 +(NSString *)entranceHtmlFilePath
 {
     return [NSString stringWithFormat:@"%@/%@",[ZipFileArchiveManager unzipPressedFilePath],kEntranceHtmlFileName];
-}
-+(NSString *)zipFilePath
-{
-    return [NSString stringWithFormat:@"%@/%@",[ZipFileArchiveManager filePath],kZipFileName];
 }
 +(NSString *)filePath
 {

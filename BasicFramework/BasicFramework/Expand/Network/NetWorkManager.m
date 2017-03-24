@@ -468,8 +468,7 @@ static NetWorkManager *network = nil;
         return;
     }
     
-    
-    [kNetWorkManager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]] progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDownloadTask *downloadTask = [kNetWorkManager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]] progress:^(NSProgress * _Nonnull downloadProgress) {
         
         if (progress) {
             
@@ -479,7 +478,8 @@ static NetWorkManager *network = nil;
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         
-        return  [NSURL URLWithString:savePath];
+        NSString *path = [savePath stringByAppendingPathComponent:response.suggestedFilename];
+        return [NSURL fileURLWithPath:path];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
@@ -492,6 +492,8 @@ static NetWorkManager *network = nil;
         }
         
     }];
+    
+    [downloadTask resume];
 }
 /**
  *  HTTPS证书认证

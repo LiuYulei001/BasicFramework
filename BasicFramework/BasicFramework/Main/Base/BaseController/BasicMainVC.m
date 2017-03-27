@@ -1,3 +1,11 @@
+//
+//  BasicMainVC.m
+//  BasicFramework
+//
+//  Created by Rainy on 2017/1/17.
+//  Copyright © 2017年 Rainy. All rights reserved.
+//
+
 
 #define backIMG [UIImage imageNamed:@"back"]
 

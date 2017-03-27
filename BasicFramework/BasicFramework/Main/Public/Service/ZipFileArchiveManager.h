@@ -36,5 +36,23 @@ typedef void(^downZipFailure)(NSError *error);
                             Parameters:(NSDictionary *)parameters
                         downZipSuccess:(downZipSuccess)downZipSuccess
                         downZipFailure:(downZipFailure)downZipFailure;
+/**
+ *  压缩文件
+ *
+ *  @param zipPath       目标文件路径
+ *  @param dataPath      资源文件路径
+ *
+ */
++(BOOL)zipPressedFileAtZipPath:(NSString *)zipPath
+                      dataPath:(NSString *)dataPath;
+/**
+ *  解压文件
+ *
+ *  @param dataPath      目标文件路径
+ *  @param zipPath       资源文件路径
+ *
+ */
++(BOOL)unzipPressedAtdataPath:(NSString *)dataPath
+                      zipPath:(NSString *)zipPath;
 
 @end

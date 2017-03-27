@@ -9,7 +9,7 @@
 #import "BridgeWebViewVC.h"
 
 
-@interface BridgeWebViewVC ()
+@interface BridgeWebViewVC ()<WKUIDelegate>
 @end
 
 @implementation BridgeWebViewVC

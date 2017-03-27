@@ -101,14 +101,32 @@ static MainHelper *helper = nil;
     }
     
 #if !TARGET_IPHONE_SIMULATOR
+    
     //iOS8 注册APNS
     if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
         [application registerForRemoteNotifications];
     }else{
-        UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
-        UIRemoteNotificationTypeSound |
-        UIRemoteNotificationTypeAlert;
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
+        
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                                
+                                                (UIUserNotificationTypeBadge |
+                                                 UIUserNotificationTypeSound |
+                                                 UIUserNotificationTypeAlert)
+                                                                                 categories:nil];
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+#else
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIUserNotificationTypeBadge |
+          UIUserNotificationTypeSound |
+          UIUserNotificationTypeAlert)];
+        
+#endif
+        
     }
 #endif
 }

@@ -99,6 +99,10 @@
 }
 - (NSString *)javascriptOfCSS
 {
+    /*
+     js-禁止手势缩放，自适应屏幕尺寸
+     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+     */
     // 禁止选择CSS
     NSString *css = @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
     // CSS选中样式取消

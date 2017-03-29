@@ -50,8 +50,12 @@ static MainHelper *helper = nil;
 // 监听系统生命周期回调，以便将需要的事件传给SDK
 - (void)_setupAppDelegateNotifications
 {
-    [kNotificationCenter addObserver:self selector:@selector(appDidEnterBackgroundNotif:)name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [kNotificationCenter addObserver:self selector:@selector(appWillEnterForeground:)name:UIApplicationWillEnterForegroundNotification object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(appWillResignActiveNotif:)name:UIApplicationWillResignActiveNotification object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(appDidBecomeActiveNotif:)name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [kNotificationCenter addObserver:self selector:@selector(appWillEnterForegroundNotif:)name:UIApplicationWillEnterForegroundNotification object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(appWillEnterBackgroundNotif:)name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
     [kNotificationCenter addObserver:self selector:@selector(application_OpenURL_SourceApplication_Annotation:) name:_NotificationNameForAppDelegateBackOff object:nil];
     [kNotificationCenter addObserver:self selector:@selector(userDidTakeScreenshot:)name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
@@ -66,15 +70,27 @@ static MainHelper *helper = nil;
         [alert show];
     }
 }
-- (void)appDidEnterBackgroundNotif:(NSNotification*)notif
+
+- (void)appWillResignActiveNotif:(NSNotification*)notif
+{
+    NSLog(@"程序进入非活跃状态！");
+}
+
+- (void)appDidBecomeActiveNotif:(NSNotification*)notif
+{
+    NSLog(@"程序进入活跃状态！");
+}
+
+- (void)appWillEnterBackgroundNotif:(NSNotification*)notif
 {
     NSLog(@"程序进入后台！");
 }
 
-- (void)appWillEnterForeground:(NSNotification*)notif
+- (void)appWillEnterForegroundNotif:(NSNotification*)notif
 {
     NSLog(@"程序进入前台！");
 }
+
 - (void)userDidTakeScreenshot:(NSNotification *)notification
 {
     

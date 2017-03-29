@@ -199,6 +199,17 @@ static char AddressKey;
     effectView.frame = self.bounds;
     [self addSubview:effectView];
 }
+-(void)removeBlur
+{
+    for (UIView *temp_view in self.subviews) {
+        
+        if ([temp_view isKindOfClass:[UIVisualEffectView class]]) {
+            
+            [temp_view removeFromSuperview];
+        }
+    }
+}
+
 +(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing
 {
     

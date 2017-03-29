@@ -14,6 +14,7 @@
 @property(nonatomic,assign)CGFloat Sw;
 
 -(void)setBlurStyle:(UIBlurEffectStyle)style;
+-(void)removeBlur;
 
 #pragma mark - Create Table for button
 +(UIView *)CreateTableWithFrame:(CGRect )frame Number:(int)Number spacing:(CGFloat)spacing;

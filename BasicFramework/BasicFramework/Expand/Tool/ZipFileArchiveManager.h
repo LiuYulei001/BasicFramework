@@ -28,12 +28,14 @@ typedef void(^downZipFailure)(NSError *error);
  *
  *  @param UrlString       接口
  *  @param parameters      参数
+ *  @param isMandatory     是否强制(YES：下载后解压后加载新的H5； NO：下载zip至tempZipfilePath，下次进入程序再解压加载)
  *  @param downZipSuccess  成功后返回H5入口路径
  *  @param downZipFailure  下载失败
  *
  */
 +(void)downFileFromServerWithUrlString:(NSString *)UrlString
                             Parameters:(NSDictionary *)parameters
+                           isMandatory:(BOOL)isMandatory
                         downZipSuccess:(downZipSuccess)downZipSuccess
                         downZipFailure:(downZipFailure)downZipFailure;
 /**
@@ -54,5 +56,30 @@ typedef void(^downZipFailure)(NSError *error);
  */
 +(BOOL)unzipPressedAtdataPath:(NSString *)dataPath
                       zipPath:(NSString *)zipPath;
+
+/**
+ *  解压文件至tempUnzipPressedFilePath 解压成功后再删除zip并移动解压后的文件至unzipPressedFilePath
+ *
+ *  @param zipPath       资源文件路径
+ *
+ */
++(BOOL)unzipPressedAtzipPath:(NSString *)zipPath;
+/**
+ *  清理缓存
+ */
++(void)clearWebCaches;
+/**
+ *  清理前文件
+ */
++(void)clearOldFile;
+/** H5入口文件路径路径 */
++(NSString *)entranceHtmlFilePath;
+/** zip解压后最终文件路径路径 */
++(NSString *)unzipPressedFilePath;
+/** zip解压后临时文件路径路径 */
++(NSString *)tempUnzipPressedFilePath;
+/** 临时文件路径文件路径路径 */
++(NSString *)tempZipfilePath;
+
 
 @end

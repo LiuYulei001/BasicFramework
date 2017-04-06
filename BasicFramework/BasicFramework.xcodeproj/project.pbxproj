@@ -98,6 +98,8 @@
 		367A5DFF1E7FC6810026EC3D /* GraphicBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5DFE1E7FC6810026EC3D /* GraphicBT.m */; };
 		367A5E021E7FC7700026EC3D /* AppDelegate+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E011E7FC7700026EC3D /* AppDelegate+UI.m */; };
 		367A5E171E7FC8D60026EC3D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E161E7FC8D60026EC3D /* BaseModel.m */; };
+		3681EC061E96172900AF2E0B /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 3681EC051E96172900AF2E0B /* Placeholder */; };
+		3681EC081E96172E00AF2E0B /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 3681EC071E96172E00AF2E0B /* Placeholder */; };
 		3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8B91E7233AC00FEA856 /* LogManager.m */; };
 		3686A8C11E724B1B00FEA856 /* LYLShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8C01E724B1B00FEA856 /* LYLShareManager.m */; };
 		3686A8CF1E724B5400FEA856 /* checkMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3686A8C41E724B5400FEA856 /* checkMark.png */; };
@@ -118,14 +120,12 @@
 		369318391E7B7CF000AD8561 /* LYLCycleImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369318371E7B7CF000AD8561 /* LYLCycleImagesCell.xib */; };
 		36A469971E7F673800E44702 /* LYLSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A469961E7F673800E44702 /* LYLSliderView.m */; };
 		36A4699A1E7F740E00E44702 /* LYLPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A469991E7F740E00E44702 /* LYLPageVC.m */; };
-		36A5302E1E8111B60067F8F7 /* BridgeWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5302D1E8111B60067F8F7 /* BridgeWebViewVC.m */; };
 		36A530381E8112220067F8F7 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530311E8112220067F8F7 /* WebViewJavascriptBridge.m */; };
 		36A530391E8112220067F8F7 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530331E8112220067F8F7 /* WebViewJavascriptBridge_JS.m */; };
 		36A5303A1E8112220067F8F7 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530351E8112220067F8F7 /* WebViewJavascriptBridgeBase.m */; };
 		36A5303B1E8112220067F8F7 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530371E8112220067F8F7 /* WKWebViewJavascriptBridge.m */; };
 		36A530421E811C770067F8F7 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5303E1E811C770067F8F7 /* GlobalConstants.m */; };
 		36A530431E811C770067F8F7 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530411E811C770067F8F7 /* URLConstants.m */; };
-		36A530461E811D800067F8F7 /* JSWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530451E811D800067F8F7 /* JSWKWebView.m */; };
 		36A530491E811DC50067F8F7 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530481E811DC50067F8F7 /* BaseTabBar.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
@@ -326,6 +326,8 @@
 		367A5E011E7FC7700026EC3D /* AppDelegate+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UI.m"; sourceTree = "<group>"; };
 		367A5E151E7FC8D60026EC3D /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		367A5E161E7FC8D60026EC3D /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		3681EC051E96172900AF2E0B /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
+		3681EC071E96172E00AF2E0B /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		3686A8B81E7233AC00FEA856 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
 		3686A8B91E7233AC00FEA856 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		3686A8BF1E724B1B00FEA856 /* LYLShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLShareManager.h; sourceTree = "<group>"; };
@@ -362,8 +364,6 @@
 		36A469961E7F673800E44702 /* LYLSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLSliderView.m; sourceTree = "<group>"; };
 		36A469981E7F740E00E44702 /* LYLPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPageVC.h; sourceTree = "<group>"; };
 		36A469991E7F740E00E44702 /* LYLPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPageVC.m; sourceTree = "<group>"; };
-		36A5302C1E8111B60067F8F7 /* BridgeWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeWebViewVC.h; sourceTree = "<group>"; };
-		36A5302D1E8111B60067F8F7 /* BridgeWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeWebViewVC.m; sourceTree = "<group>"; };
 		36A530301E8112220067F8F7 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		36A530311E8112220067F8F7 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		36A530321E8112220067F8F7 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
@@ -376,8 +376,6 @@
 		36A5303E1E811C770067F8F7 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		36A530401E811C770067F8F7 /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
 		36A530411E811C770067F8F7 /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
-		36A530441E811D800067F8F7 /* JSWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWKWebView.h; sourceTree = "<group>"; };
-		36A530451E811D800067F8F7 /* JSWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWKWebView.m; sourceTree = "<group>"; };
 		36A530471E811DC50067F8F7 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		36A530481E811DC50067F8F7 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -612,8 +610,7 @@
 		36111AB71D6EE58C00A03BF4 /* Controller(控制器) */ = {
 			isa = PBXGroup;
 			children = (
-				36A5302C1E8111B60067F8F7 /* BridgeWebViewVC.h */,
-				36A5302D1E8111B60067F8F7 /* BridgeWebViewVC.m */,
+				3681EC051E96172900AF2E0B /* Placeholder */,
 			);
 			name = "Controller(控制器)";
 			path = Controller;
@@ -640,8 +637,7 @@
 		36111ABF1D6EE58C00A03BF4 /* View(视图) */ = {
 			isa = PBXGroup;
 			children = (
-				36A530441E811D800067F8F7 /* JSWKWebView.h */,
-				36A530451E811D800067F8F7 /* JSWKWebView.m */,
+				3681EC071E96172E00AF2E0B /* Placeholder */,
 			);
 			name = "View(视图)";
 			path = View;
@@ -1526,9 +1522,11 @@
 				3679AA951DDDACF300169DFF /* WMPlayer.bundle in Resources */,
 				366787FC1E0A4BAF0044CE85 /* Placeholder in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
+				3681EC061E96172900AF2E0B /* Placeholder in Resources */,
 				3686A8D21E724B5400FEA856 /* crossMark@2x.png in Resources */,
 				36111AC91D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
+				3681EC081E96172E00AF2E0B /* Placeholder in Resources */,
 				36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				3686A8D31E724B5400FEA856 /* info.png in Resources */,
 				369318391E7B7CF000AD8561 /* LYLCycleImagesCell.xib in Resources */,
@@ -1653,7 +1651,6 @@
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				36A530431E811C770067F8F7 /* URLConstants.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
-				36A530461E811D800067F8F7 /* JSWKWebView.m in Sources */,
 				3675217C1E4D5A4900F2117C /* DKNightVersionUtility.m in Sources */,
 				36A530381E8112220067F8F7 /* WebViewJavascriptBridge.m in Sources */,
 				367521901E4D5A4900F2117C /* UITableViewCell+NightVersion.m in Sources */,
@@ -1697,7 +1694,6 @@
 				3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */,
 				3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */,
 				36A530391E8112220067F8F7 /* WebViewJavascriptBridge_JS.m in Sources */,
-				36A5302E1E8111B60067F8F7 /* BridgeWebViewVC.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
 				369318381E7B7CF000AD8561 /* LYLCycleImagesCell.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,

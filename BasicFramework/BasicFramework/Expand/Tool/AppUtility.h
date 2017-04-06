@@ -9,6 +9,8 @@ typedef void(^RefreshAndLoadMoreHandle)(void);
 
 /** 获取当前网络 */
 + (NSString *)getNetworkType;
+/** 清除WKWebview缓存 */
++(void)clearWKWebviewCaches;
 /** 开始下拉刷新 */
 + (void)beginPullRefreshForScrollView:(UIScrollView *)scrollView;
 

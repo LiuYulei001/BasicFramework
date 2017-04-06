@@ -241,7 +241,23 @@
 
 
 
-
++(void)clearWKWebviewCaches
+{
+    
+    NSString *libraryDir = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask, YES)[0];
+    NSString *bundleId  =  [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleIdentifier"];
+    NSString *webkitFolderInLib = [NSString stringWithFormat:@"%@/WebKit",libraryDir];
+    NSString *webKitFolderInCaches = [NSString stringWithFormat:@"%@/Caches/%@/WebKit",libraryDir,bundleId];
+    NSString *webKitFolderInCachesfs = [NSString stringWithFormat:@"%@/Caches/%@/fsCachedData",libraryDir,bundleId];
+    
+    NSError *error;
+    
+    [[NSFileManager defaultManager] removeItemAtPath:webKitFolderInCaches error:&error];
+    [[NSFileManager defaultManager] removeItemAtPath:webkitFolderInLib error:nil];
+    
+    [[NSFileManager defaultManager] removeItemAtPath:webKitFolderInCachesfs error:&error];
+    
+}
 
 
 

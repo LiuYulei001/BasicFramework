@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HomePageVC</key>
+	<dict>
+		<key>ControlEventIDs</key>
+		<dict>
+			<key>BP_FavBtnPressed:</key>
+			<string>CTRL_EVENT_HOME_FAV</string>
+			<key>BP_ShareBtnPressed:</key>
+			<string>CTRL_EVENT_HOME_SHARE</string>
+		</dict>
+		<key>PageEventIDs</key>
+		<dict>
+			<key>Leave</key>
+			<string>PAGE_EVENT_HOME_LEAVE</string>
+			<key>Enter</key>
+			<string>PAGE_EVENT_HOME_ENTER</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

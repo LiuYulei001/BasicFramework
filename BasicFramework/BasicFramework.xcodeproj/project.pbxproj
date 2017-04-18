@@ -112,9 +112,9 @@
 		3686A8D61E724B5400FEA856 /* LYLBouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8CD1E724B5400FEA856 /* LYLBouncing.m */; };
 		3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */; };
 		368A592F1EA5B56F00F153CA /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A592E1EA5B56F00F153CA /* HookUtility.m */; };
-		368A59321EA5B67400F153CA /* UIViewController+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59311EA5B67400F153CA /* UIViewController+BuriedPoint.m */; };
-		368A593A1EA5BAF300F153CA /* UIControl+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59391EA5BAF300F153CA /* UIControl+BuriedPoint.m */; };
 		368A593E1EA5BC8600F153CA /* BuriedPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368A593D1EA5BC8600F153CA /* BuriedPoint.plist */; };
+		368A59441EA5C2B400F153CA /* UIControl+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */; };
+		368A59451EA5C2B400F153CA /* UIViewController+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */; };
 		36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF61E3058D200E3D0F5 /* HPConstantModel.m */; };
 		36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF91E305A6500E3D0F5 /* LoginConstants.m */; };
 		36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */; };
@@ -351,11 +351,11 @@
 		3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
 		368A592D1EA5B56F00F153CA /* HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
 		368A592E1EA5B56F00F153CA /* HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
-		368A59301EA5B67400F153CA /* UIViewController+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BuriedPoint.h"; sourceTree = "<group>"; };
-		368A59311EA5B67400F153CA /* UIViewController+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BuriedPoint.m"; sourceTree = "<group>"; };
-		368A59381EA5BAF300F153CA /* UIControl+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BuriedPoint.h"; sourceTree = "<group>"; };
-		368A59391EA5BAF300F153CA /* UIControl+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BuriedPoint.m"; sourceTree = "<group>"; };
 		368A593D1EA5BC8600F153CA /* BuriedPoint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuriedPoint.plist; sourceTree = "<group>"; };
+		368A59401EA5C2B400F153CA /* UIControl+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BuriedPoint.h"; sourceTree = "<group>"; };
+		368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BuriedPoint.m"; sourceTree = "<group>"; };
+		368A59421EA5C2B400F153CA /* UIViewController+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BuriedPoint.h"; sourceTree = "<group>"; };
+		368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BuriedPoint.m"; sourceTree = "<group>"; };
 		36925CF51E3058D200E3D0F5 /* HPConstantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPConstantModel.h; sourceTree = "<group>"; };
 		36925CF61E3058D200E3D0F5 /* HPConstantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPConstantModel.m; sourceTree = "<group>"; };
 		36925CF81E305A6500E3D0F5 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
@@ -881,7 +881,6 @@
 		364DA5721D6584F400F6F424 /* Category(分类) */ = {
 			isa = PBXGroup;
 			children = (
-				368A592C1EA5B50900F153CA /* BuriedPoint(埋点) */,
 				362032511DD4748700F15494 /* Data_type */,
 				3620325C1DD4748700F15494 /* UIKIT */,
 			);
@@ -998,6 +997,7 @@
 				367A5DF81E7FC65D0026EC3D /* TextView(占位文字) */,
 				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
 				369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */,
+				368A593F1EA5C2B400F153CA /* BuriedPoint(埋点) */,
 			);
 			name = "Vender(功能封装)";
 			path = Vender;
@@ -1351,13 +1351,13 @@
 			path = Bundle_IMG;
 			sourceTree = "<group>";
 		};
-		368A592C1EA5B50900F153CA /* BuriedPoint(埋点) */ = {
+		368A593F1EA5C2B400F153CA /* BuriedPoint(埋点) */ = {
 			isa = PBXGroup;
 			children = (
-				368A59301EA5B67400F153CA /* UIViewController+BuriedPoint.h */,
-				368A59311EA5B67400F153CA /* UIViewController+BuriedPoint.m */,
-				368A59381EA5BAF300F153CA /* UIControl+BuriedPoint.h */,
-				368A59391EA5BAF300F153CA /* UIControl+BuriedPoint.m */,
+				368A59401EA5C2B400F153CA /* UIControl+BuriedPoint.h */,
+				368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */,
+				368A59421EA5C2B400F153CA /* UIViewController+BuriedPoint.h */,
+				368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */,
 			);
 			name = "BuriedPoint(埋点)";
 			path = BuriedPoint;
@@ -1662,6 +1662,7 @@
 				3675218D1E4D5A4900F2117C /* UITableView+NightVersion.m in Sources */,
 				3675218A1E4D5A4900F2117C /* UITabBar+BarTintColor.m in Sources */,
 				3679E9E81E8B452D00180014 /* JSBridgeManager.m in Sources */,
+				368A59451EA5C2B400F153CA /* UIViewController+BuriedPoint.m in Sources */,
 				3679AAB11DDDB79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
 				367521861E4D5A4900F2117C /* UINavigationBar+NightVersion.m in Sources */,
 				3679AA0E1DD9846700169DFF /* MainModel.m in Sources */,
@@ -1672,7 +1673,6 @@
 				362032761DD4748700F15494 /* NSObject+Release.m in Sources */,
 				360E05831DD1D52600E7C6C1 /* LoginVC.m in Sources */,
 				3679AABA1DDDB7B100169DFF /* UIImage+Extension.m in Sources */,
-				368A593A1EA5BAF300F153CA /* UIControl+BuriedPoint.m in Sources */,
 				360E05501DD029B700E7C6C1 /* MainHelper.m in Sources */,
 				36A530491E811DC50067F8F7 /* BaseTabBar.m in Sources */,
 				369318341E7B7C6A00AD8561 /* LYLCycleImages.m in Sources */,
@@ -1693,7 +1693,6 @@
 				36312D111E7A7446002139B1 /* LYLCollectionViewLayout.m in Sources */,
 				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
-				368A59321EA5B67400F153CA /* UIViewController+BuriedPoint.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
 				368A592F1EA5B56F00F153CA /* HookUtility.m in Sources */,
 				361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */,
@@ -1715,6 +1714,7 @@
 				364DA62B1D6584F400F6F424 /* AppUtility.m in Sources */,
 				364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */,
 				3679AAB71DDDB7A800169DFF /* UITextField+Extension.m in Sources */,
+				368A59441EA5C2B400F153CA /* UIControl+BuriedPoint.m in Sources */,
 				3675217D1E4D5A4900F2117C /* UINavigationBar+Animation.m in Sources */,
 				3679AAC31DDDB7C000169DFF /* UIImageView+GIF.m in Sources */,
 				3675218E1E4D5A4900F2117C /* UITableView+SeparatorColor.m in Sources */,

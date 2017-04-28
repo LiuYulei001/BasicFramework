@@ -9,6 +9,7 @@
 #import "LogManager.h"
 #import <mach-o/dyld.h>
 #import <mach-o/loader.h>
+#import "BuriedPointManager.h"
 
 #define DateFormat @"yyyy-MM-dd HH:mm:ss Z"
 #define FilePath @"Log/Error"
@@ -39,6 +40,8 @@ static LogManager *Loger = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
+#pragma mark 开始埋点
+        [BuriedPointManager becomeBuriedPoint];
 #pragma mark 数据容错开启
         [[LogManager shareLoger] FaultTolerance];
 #pragma mark 收集崩溃信息

@@ -1,16 +1,27 @@
 //
-//  HookUtility.m
+//  BuriedPointManager.m
 //  BasicFramework
 //
-//  Created by Rainy on 2017/4/18.
+//  Created by Rainy on 2017/4/28.
 //  Copyright © 2017年 Rainy. All rights reserved.
 //
 
-#import "HookUtility.h"
+#import "BuriedPointManager.h"
 #import <objc/runtime.h>
+#import "UIControl+BuriedPoint.h"
+#import "UIViewController+BuriedPoint.h"
 
-@implementation HookUtility
-
+@implementation BuriedPointManager
++ (void)becomeBuriedPoint {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        [UIControl buriedPointForControl];
+        [UIViewController buriedPointForViewController];
+        
+    });
+}
 + (void)swizzlingInClass:(Class)cls originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector
 {
     Class class = cls;
@@ -32,5 +43,4 @@
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
 }
-
 @end

@@ -7,22 +7,22 @@
 //
 
 #import "UIViewController+BuriedPoint.h"
-#import "HookUtility.h"
+#import "BuriedPointManager.h"
 
 @implementation UIViewController (BuriedPoint)
 
-+ (void)load {
++ (void)buriedPointForViewController {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL originalSelector1 = @selector(viewWillAppear:);
         SEL swizzledSelector1 = @selector(swiz_viewWillAppear:);
-        [HookUtility swizzlingInClass:[self class]
+        [BuriedPointManager swizzlingInClass:[self class]
                      originalSelector:originalSelector1
                      swizzledSelector:swizzledSelector1];
         
         SEL originalSelector2 = @selector(viewWillDisappear:);
         SEL swizzledSelector2 = @selector(swiz_viewWillDisappear:);
-        [HookUtility swizzlingInClass:[self class]
+        [BuriedPointManager swizzlingInClass:[self class]
                      originalSelector:originalSelector2
                      swizzledSelector:swizzledSelector2];
     });

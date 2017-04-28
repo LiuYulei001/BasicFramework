@@ -10,4 +10,6 @@
 
 @interface UIControl (BuriedPoint)
 
++ (void)buriedPointForControl;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface UIViewController (BuriedPoint)
 
++ (void)buriedPointForViewController;
+
 @end

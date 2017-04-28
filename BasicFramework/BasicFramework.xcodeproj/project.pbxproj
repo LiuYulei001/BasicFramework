@@ -111,10 +111,10 @@
 		3686A8D51E724B5400FEA856 /* LYLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8CB1E724B5400FEA856 /* LYLAlertView.m */; };
 		3686A8D61E724B5400FEA856 /* LYLBouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8CD1E724B5400FEA856 /* LYLBouncing.m */; };
 		3686A94B1E72A4CC00FEA856 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */; };
-		368A592F1EA5B56F00F153CA /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A592E1EA5B56F00F153CA /* HookUtility.m */; };
 		368A593E1EA5BC8600F153CA /* BuriedPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368A593D1EA5BC8600F153CA /* BuriedPoint.plist */; };
-		368A59441EA5C2B400F153CA /* UIControl+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */; };
-		368A59451EA5C2B400F153CA /* UIViewController+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */; };
+		368E151D1EB2ED6F00765F4B /* UIControl+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E151A1EB2ED6F00765F4B /* UIControl+BuriedPoint.m */; };
+		368E151E1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E151C1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m */; };
+		368E15211EB2ED8B00765F4B /* BuriedPointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E15201EB2ED8B00765F4B /* BuriedPointManager.m */; };
 		36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF61E3058D200E3D0F5 /* HPConstantModel.m */; };
 		36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CF91E305A6500E3D0F5 /* LoginConstants.m */; };
 		36925CFD1E305F5D00E3D0F5 /* HPRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36925CFC1E305F5D00E3D0F5 /* HPRequestModel.m */; };
@@ -349,13 +349,13 @@
 		3686A8CE1E724B5400FEA856 /* LYLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLConstants.h; sourceTree = "<group>"; };
 		3686A9491E72A4CC00FEA856 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
 		3686A94A1E72A4CC00FEA856 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
-		368A592D1EA5B56F00F153CA /* HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
-		368A592E1EA5B56F00F153CA /* HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
 		368A593D1EA5BC8600F153CA /* BuriedPoint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuriedPoint.plist; sourceTree = "<group>"; };
-		368A59401EA5C2B400F153CA /* UIControl+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BuriedPoint.h"; sourceTree = "<group>"; };
-		368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BuriedPoint.m"; sourceTree = "<group>"; };
-		368A59421EA5C2B400F153CA /* UIViewController+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BuriedPoint.h"; sourceTree = "<group>"; };
-		368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BuriedPoint.m"; sourceTree = "<group>"; };
+		368E15191EB2ED6F00765F4B /* UIControl+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BuriedPoint.h"; sourceTree = "<group>"; };
+		368E151A1EB2ED6F00765F4B /* UIControl+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BuriedPoint.m"; sourceTree = "<group>"; };
+		368E151B1EB2ED6F00765F4B /* UIViewController+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BuriedPoint.h"; sourceTree = "<group>"; };
+		368E151C1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BuriedPoint.m"; sourceTree = "<group>"; };
+		368E151F1EB2ED8B00765F4B /* BuriedPointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuriedPointManager.h; sourceTree = "<group>"; };
+		368E15201EB2ED8B00765F4B /* BuriedPointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuriedPointManager.m; sourceTree = "<group>"; };
 		36925CF51E3058D200E3D0F5 /* HPConstantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPConstantModel.h; sourceTree = "<group>"; };
 		36925CF61E3058D200E3D0F5 /* HPConstantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPConstantModel.m; sourceTree = "<group>"; };
 		36925CF81E305A6500E3D0F5 /* LoginConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConstants.h; sourceTree = "<group>"; };
@@ -923,8 +923,6 @@
 				3679E9E51E8B452D00180014 /* JSBridgeManager.m */,
 				3679E9E61E8B452D00180014 /* ZipFileArchiveManager.h */,
 				3679E9E71E8B452D00180014 /* ZipFileArchiveManager.m */,
-				368A592D1EA5B56F00F153CA /* HookUtility.h */,
-				368A592E1EA5B56F00F153CA /* HookUtility.m */,
 			);
 			name = "Tool(工具类)";
 			path = Tool;
@@ -1354,13 +1352,23 @@
 		368A593F1EA5C2B400F153CA /* BuriedPoint(埋点) */ = {
 			isa = PBXGroup;
 			children = (
-				368A59401EA5C2B400F153CA /* UIControl+BuriedPoint.h */,
-				368A59411EA5C2B400F153CA /* UIControl+BuriedPoint.m */,
-				368A59421EA5C2B400F153CA /* UIViewController+BuriedPoint.h */,
-				368A59431EA5C2B400F153CA /* UIViewController+BuriedPoint.m */,
+				368E151F1EB2ED8B00765F4B /* BuriedPointManager.h */,
+				368E15201EB2ED8B00765F4B /* BuriedPointManager.m */,
+				368E15181EB2ED6F00765F4B /* BuriedPoint-Category */,
 			);
 			name = "BuriedPoint(埋点)";
 			path = BuriedPoint;
+			sourceTree = "<group>";
+		};
+		368E15181EB2ED6F00765F4B /* BuriedPoint-Category */ = {
+			isa = PBXGroup;
+			children = (
+				368E15191EB2ED6F00765F4B /* UIControl+BuriedPoint.h */,
+				368E151A1EB2ED6F00765F4B /* UIControl+BuriedPoint.m */,
+				368E151B1EB2ED6F00765F4B /* UIViewController+BuriedPoint.h */,
+				368E151C1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m */,
+			);
+			path = "BuriedPoint-Category";
 			sourceTree = "<group>";
 		};
 		369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */ = {
@@ -1653,6 +1661,7 @@
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				36925CFA1E305A6500E3D0F5 /* LoginConstants.m in Sources */,
 				367A5DFB1E7FC65D0026EC3D /* TextView_Placeholder.m in Sources */,
+				368E15211EB2ED8B00765F4B /* BuriedPointManager.m in Sources */,
 				367521871E4D5A4900F2117C /* UINavigationBar+TintColor.m in Sources */,
 				367521821E4D5A4900F2117C /* UIButton+TitleColor.m in Sources */,
 				3686A8D51E724B5400FEA856 /* LYLAlertView.m in Sources */,
@@ -1662,7 +1671,6 @@
 				3675218D1E4D5A4900F2117C /* UITableView+NightVersion.m in Sources */,
 				3675218A1E4D5A4900F2117C /* UITabBar+BarTintColor.m in Sources */,
 				3679E9E81E8B452D00180014 /* JSBridgeManager.m in Sources */,
-				368A59451EA5C2B400F153CA /* UIViewController+BuriedPoint.m in Sources */,
 				3679AAB11DDDB79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
 				367521861E4D5A4900F2117C /* UINavigationBar+NightVersion.m in Sources */,
 				3679AA0E1DD9846700169DFF /* MainModel.m in Sources */,
@@ -1679,6 +1687,7 @@
 				363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				36A530431E811C770067F8F7 /* URLConstants.m in Sources */,
+				368E151E1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				3675217C1E4D5A4900F2117C /* DKNightVersionUtility.m in Sources */,
 				36A530381E8112220067F8F7 /* WebViewJavascriptBridge.m in Sources */,
@@ -1694,7 +1703,6 @@
 				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
-				368A592F1EA5B56F00F153CA /* HookUtility.m in Sources */,
 				361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */,
 				36A5303B1E8112220067F8F7 /* WKWebViewJavascriptBridge.m in Sources */,
 				36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */,
@@ -1714,7 +1722,6 @@
 				364DA62B1D6584F400F6F424 /* AppUtility.m in Sources */,
 				364DA64C1D6584F400F6F424 /* LYLIMGScrollView.m in Sources */,
 				3679AAB71DDDB7A800169DFF /* UITextField+Extension.m in Sources */,
-				368A59441EA5C2B400F153CA /* UIControl+BuriedPoint.m in Sources */,
 				3675217D1E4D5A4900F2117C /* UINavigationBar+Animation.m in Sources */,
 				3679AAC31DDDB7C000169DFF /* UIImageView+GIF.m in Sources */,
 				3675218E1E4D5A4900F2117C /* UITableView+SeparatorColor.m in Sources */,
@@ -1731,6 +1738,7 @@
 				3679AACC1DDEC2A800169DFF /* NSTimer+Extension.m in Sources */,
 				367521831E4D5A4900F2117C /* UILabel+NightVersion.m in Sources */,
 				367521811E4D5A4900F2117C /* UIButton+NightVersion.m in Sources */,
+				368E151D1EB2ED6F00765F4B /* UIControl+BuriedPoint.m in Sources */,
 				36A469971E7F673800E44702 /* LYLSliderView.m in Sources */,
 				3679AA9E1DDDB5E400169DFF /* UIView+DragAndReset.m in Sources */,
 				3679AA8A1DDC521F00169DFF /* FileCacheManager.m in Sources */,

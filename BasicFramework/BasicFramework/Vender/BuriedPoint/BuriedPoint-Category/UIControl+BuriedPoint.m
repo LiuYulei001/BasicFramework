@@ -7,16 +7,16 @@
 //
 
 #import "UIControl+BuriedPoint.h"
-#import "HookUtility.h"
+#import "BuriedPointManager.h"
 
 @implementation UIControl (BuriedPoint)
 
-+ (void)load {
++ (void)buriedPointForControl {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(sendAction:to:forEvent:);
         SEL swizzledSelector = @selector(swiz_sendAction:to:forEvent:);
-        [HookUtility swizzlingInClass:[self class]
+        [BuriedPointManager swizzlingInClass:[self class]
                      originalSelector:originalSelector
                      swizzledSelector:swizzledSelector];
     });

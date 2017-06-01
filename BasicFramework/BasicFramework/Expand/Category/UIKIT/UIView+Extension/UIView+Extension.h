@@ -37,5 +37,9 @@
  *  切某一方向的圆角
  */
 -(void)viewCutRoundedOfRectCorner:(UIRectCorner)rectCorner cornerRadii:(CGFloat)cornerRadii;
+/**
+ *  获取view的所在控制器
+ */
+-(UIViewController*)MyViewController;
 
 @end

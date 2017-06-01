@@ -246,6 +246,32 @@ static char AddressKey;
     
     return view;
 }
-
+-(void)viewCutRoundedOfRectCorner:(UIRectCorner)rectCorner cornerRadii:(CGFloat)cornerRadii
+{
+    /*
+     类型共有以下几种:
+     
+     * UIRectCornerTopLeft
+     
+     * UIRectCornerTopRight
+     
+     * UIRectCornerBottomLeft
+     
+     * UIRectCornerBottomRight
+     
+     * UIRectCornerAllCorners
+     
+     */
+    
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:rectCorner cornerRadii:CGSizeMake(cornerRadii, cornerRadii)];
+    
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    
+    maskLayer.frame = self.bounds;
+    
+    maskLayer.path = maskPath.CGPath;
+    
+    self.layer.mask = maskLayer;
+}
 
 @end

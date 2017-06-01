@@ -21,4 +21,9 @@ typedef void(^timingChildThreadsBlock)(NSObject *obj,NSTimeInterval TimeInterval
 + (void)GetlatestImageForTakeScreenshot:(BOOL)isTakeScreenshot finished:(void (^)(UIImage *image))finished;
 #pragma mark - 获取相簿所有图片
 +(void)GetAllImagesInPhotoAlbumFinished:(void (^)(NSMutableArray *images))Finished;
+
+#pragma mark - 手机震动
++(void)iPhoneVibration;
+
+
 @end

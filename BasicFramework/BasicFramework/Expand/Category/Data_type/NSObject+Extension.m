@@ -9,6 +9,7 @@
 #import "NSObject+Extension.h"
 #import <objc/runtime.h>
 #import <PhotosUI/PhotosUI.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation NSObject (Extension)
 
@@ -130,6 +131,10 @@ static char const dispatch_source_timer_;
             }];
         }
     }];
+}
++(void)iPhoneVibration
+{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 @end

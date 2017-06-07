@@ -26,6 +26,10 @@
  *  @return kVersion
  */
 #define kVersion [NSString stringWithFormat:@"%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]
+/** 
+ *  当前系统版本号
+ */
+#define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
 /**
  *  当前网络状态
  */
@@ -86,6 +90,13 @@ return self;\
 {\
 \
 }
+/**
+ *  @param instead 需要给用户提醒的话,例子：XMCDeprecated("此方法已经过期")
+ */
+#define XMCDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+
+
+
 
 //#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
 //

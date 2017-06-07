@@ -128,9 +128,9 @@
 		36A530391E8112220067F8F7 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530331E8112220067F8F7 /* WebViewJavascriptBridge_JS.m */; };
 		36A5303A1E8112220067F8F7 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530351E8112220067F8F7 /* WebViewJavascriptBridgeBase.m */; };
 		36A5303B1E8112220067F8F7 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530371E8112220067F8F7 /* WKWebViewJavascriptBridge.m */; };
-		36A530421E811C770067F8F7 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5303E1E811C770067F8F7 /* GlobalConstants.m */; };
-		36A530431E811C770067F8F7 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530411E811C770067F8F7 /* URLConstants.m */; };
 		36A530491E811DC50067F8F7 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A530481E811DC50067F8F7 /* BaseTabBar.m */; };
+		36B7B6871EE4F77A00E18E25 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7B6831EE4F77A00E18E25 /* GlobalConstants.m */; };
+		36B7B6881EE4F77A00E18E25 /* URLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7B6861EE4F77A00E18E25 /* URLConstants.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
 /* End PBXBuildFile section */
 
@@ -383,12 +383,12 @@
 		36A530351E8112220067F8F7 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		36A530361E8112220067F8F7 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		36A530371E8112220067F8F7 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		36A5303D1E811C770067F8F7 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
-		36A5303E1E811C770067F8F7 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
-		36A530401E811C770067F8F7 /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
-		36A530411E811C770067F8F7 /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
 		36A530471E811DC50067F8F7 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		36A530481E811DC50067F8F7 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		36B7B6821EE4F77A00E18E25 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		36B7B6831EE4F77A00E18E25 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
+		36B7B6851EE4F77A00E18E25 /* URLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
+		36B7B6861EE4F77A00E18E25 /* URLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConstants.m; sourceTree = "<group>"; };
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -611,8 +611,6 @@
 				36111AB91D6EE58C00A03BF4 /* Model(数据模型) */,
 				36111ABF1D6EE58C00A03BF4 /* View(视图) */,
 				36111ABD1D6EE58C00A03BF4 /* Service(服务类) */,
-				36A5303C1E811C770067F8F7 /* Constants(常量) */,
-				36A5303F1E811C770067F8F7 /* URL(接口) */,
 			);
 			name = "Public(公共)";
 			path = Public;
@@ -869,6 +867,8 @@
 		364DA5711D6584F400F6F424 /* Expand(扩展) */ = {
 			isa = PBXGroup;
 			children = (
+				36B7B6811EE4F77A00E18E25 /* Constants(常量) */,
+				36B7B6841EE4F77A00E18E25 /* URL(接口) */,
 				364DA5721D6584F400F6F424 /* Category(分类) */,
 				364DA58F1D6584F400F6F424 /* Macros(宏) */,
 				364DA5931D6584F400F6F424 /* Network(网络工具类) */,
@@ -1413,21 +1413,21 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
-		36A5303C1E811C770067F8F7 /* Constants(常量) */ = {
+		36B7B6811EE4F77A00E18E25 /* Constants(常量) */ = {
 			isa = PBXGroup;
 			children = (
-				36A5303D1E811C770067F8F7 /* GlobalConstants.h */,
-				36A5303E1E811C770067F8F7 /* GlobalConstants.m */,
+				36B7B6821EE4F77A00E18E25 /* GlobalConstants.h */,
+				36B7B6831EE4F77A00E18E25 /* GlobalConstants.m */,
 			);
 			name = "Constants(常量)";
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		36A5303F1E811C770067F8F7 /* URL(接口) */ = {
+		36B7B6841EE4F77A00E18E25 /* URL(接口) */ = {
 			isa = PBXGroup;
 			children = (
-				36A530401E811C770067F8F7 /* URLConstants.h */,
-				36A530411E811C770067F8F7 /* URLConstants.m */,
+				36B7B6851EE4F77A00E18E25 /* URLConstants.h */,
+				36B7B6861EE4F77A00E18E25 /* URLConstants.m */,
 			);
 			name = "URL(接口)";
 			path = URL;
@@ -1672,6 +1672,7 @@
 				3675218A1E4D5A4900F2117C /* UITabBar+BarTintColor.m in Sources */,
 				3679E9E81E8B452D00180014 /* JSBridgeManager.m in Sources */,
 				3679AAB11DDDB79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
+				36B7B6881EE4F77A00E18E25 /* URLConstants.m in Sources */,
 				367521861E4D5A4900F2117C /* UINavigationBar+NightVersion.m in Sources */,
 				3679AA0E1DD9846700169DFF /* MainModel.m in Sources */,
 				3679AABD1DDDB7B800169DFF /* UIScrollView+Extension.m in Sources */,
@@ -1686,7 +1687,6 @@
 				369318341E7B7C6A00AD8561 /* LYLCycleImages.m in Sources */,
 				363091421DE2D7E8005A9C31 /* BasicTouchID.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
-				36A530431E811C770067F8F7 /* URLConstants.m in Sources */,
 				368E151E1EB2ED6F00765F4B /* UIViewController+BuriedPoint.m in Sources */,
 				362032751DD4748700F15494 /* NSMutableAttributedString+Extension.m in Sources */,
 				3675217C1E4D5A4900F2117C /* DKNightVersionUtility.m in Sources */,
@@ -1703,12 +1703,12 @@
 				3652A4501E28C22500F79333 /* NSObject+Extension.m in Sources */,
 				3679AAA01DDDB5E400169DFF /* UIView+Rotate.m in Sources */,
 				3679AAC61DDDB7C700169DFF /* UIDevice+Extension.m in Sources */,
+				36B7B6871EE4F77A00E18E25 /* GlobalConstants.m in Sources */,
 				361FC6A21E2DBBBE008B8402 /* UIColor+Extension.m in Sources */,
 				36A5303B1E8112220067F8F7 /* WKWebViewJavascriptBridge.m in Sources */,
 				36925CF71E3058D200E3D0F5 /* HPConstantModel.m in Sources */,
 				367521911E4D5A4900F2117C /* UIView+BackgroundColor.m in Sources */,
 				3630913A1DE2CD60005A9C31 /* WSShiningLabel.m in Sources */,
-				36A530421E811C770067F8F7 /* GlobalConstants.m in Sources */,
 				362032741DD4748700F15494 /* NSDictionary+Extension.m in Sources */,
 				3679AA8D1DDD534200169DFF /* NSArray+RemoveDuplicate.m in Sources */,
 				3679AAB41DDDB7A100169DFF /* UIViewController+Extension.m in Sources */,

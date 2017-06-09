@@ -33,7 +33,8 @@
 
 
 @implementation UIButton (Extension)
--(void)startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle{
+-(dispatch_source_t )startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle finished:(void(^)(UIButton *button))finished
+{
     __block NSInteger timeOut = timeout; //The countdown time
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
@@ -45,6 +46,7 @@
                 //it is time to  set title
                 [self setTitle:tittle forState:UIControlStateNormal];
                 self.userInteractionEnabled = YES;
+                finished(self);
             });
         }else{
             
@@ -60,9 +62,13 @@
         }
     });
     dispatch_resume(_timer);
-    
+    return _timer;
 }
--(UIImageView *)addImg:(UIImage *)img withIMGframe:(CGRect )IMGframe
+-(void)cancelTimer:(dispatch_source_t)timer
+{
+    if (!timer) return;
+    dispatch_source_cancel(timer);
+}-(UIImageView *)addImg:(UIImage *)img withIMGframe:(CGRect )IMGframe
 {
     UIImageView *img_VC = [[UIImageView alloc]initWithFrame:IMGframe];
     img_VC.image = img;

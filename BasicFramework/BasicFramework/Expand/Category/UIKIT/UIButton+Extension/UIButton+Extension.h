@@ -10,7 +10,8 @@
 
 @interface UIButton (Extension)
 
--(void)startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
+-(dispatch_source_t )startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle finished:(void(^)(UIButton *button))finished;
+-(void)cancelTimer:(dispatch_source_t)timer;
 
 -(UIImageView *)addImg:(UIImage *)img withIMGframe:(CGRect )IMGframe;
 

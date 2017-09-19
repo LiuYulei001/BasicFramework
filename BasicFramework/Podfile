@@ -21,4 +21,6 @@ target ‘BasicFramework’ do
   pod 'UMengUShare/Social/WeChat'
   pod 'UMengUShare/Social/QQ'
   
+  pod 'KVOController'
+  
 end

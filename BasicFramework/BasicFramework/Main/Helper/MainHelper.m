@@ -32,7 +32,6 @@ static MainHelper *helper = nil;
 
 #pragma mark ListeningAppDelegate
         [[MainHelper shareHelper] ListeningLifeCycleAndRegisteredAPNS];
-        
     });
     
 }
@@ -148,6 +147,54 @@ static MainHelper *helper = nil;
 }
 
 
+#pragma mark - Local push
+static UILocalNotification *notif;
+
+- (void)localPush {
+    
+    notif = [UILocalNotification new];
+    notif.fireDate = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
+    notif.alertBody = @"一天后提示push";
+    notif.userInfo = @{@"key":@"value"};
+    [[UIApplication sharedApplication] scheduleLocalNotification:notif];
+}
+- (void)cancelLocalPush {
+    
+    [[UIApplication sharedApplication] cancelLocalNotification:notif];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+}
+
+#pragma mark - app进入后台还将继续运行几分钟（iOS7之前为十分钟，之后为三分钟）
+- (void)beginBackgroundTask {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    __block UIBackgroundTaskIdentifier taskId = [app beginBackgroundTaskWithExpirationHandler:^{
+        
+        [app endBackgroundTask:taskId];
+        
+        taskId = UIBackgroundTaskInvalid;
+    }];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        while (true) {
+            
+            int remainingTime = app.backgroundTimeRemaining;
+            if (remainingTime <= 5) {
+                break;
+            }
+            
+            NSLog(@"remaining background time = %d",remainingTime);
+            
+            [NSThread sleepForTimeInterval:1.0];
+        }
+        [app endBackgroundTask:taskId];
+        taskId = UIBackgroundTaskInvalid;
+    });
+    
+    
+}
 
 
 

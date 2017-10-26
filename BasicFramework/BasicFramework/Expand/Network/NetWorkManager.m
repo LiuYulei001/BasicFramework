@@ -336,6 +336,9 @@ static NetWorkManager *network = nil;
             //拼接data
             [formData appendPartWithFileData:imgData name:[NSString stringWithFormat:@"picflie%ld",(long)i] fileName:[NSString stringWithFormat:@"%@.png",[NetWorkManager randomString]] mimeType:@"image/jpeg"];
             
+            //上传语音
+//             [formData appendPartWithFileData:amr name:@"file" fileName: [NSString stringWithFormat:@"%@.amr", fileName] mimeType:@"amr/mp3/wmr"];
+            
             i++;
         }
         

@@ -11,7 +11,7 @@
 
 #import "BasicMainVC.h"
 
-@interface BasicMainVC ()<UIGestureRecognizerDelegate>
+@interface BasicMainVC ()
 
 @property(nonatomic,strong)UIBarButtonItem *BarButtonItem;
 
@@ -42,8 +42,6 @@
     if (self.navigationController != nil && self.navigationController.viewControllers.count > 1) {
         
         self.navigationItem.leftBarButtonItem = self.BarButtonItem;
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES ;
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
 }
 -(void)backAction

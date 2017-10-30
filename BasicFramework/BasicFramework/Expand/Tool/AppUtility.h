@@ -5,7 +5,12 @@
 typedef void(^RefreshAndLoadMoreHandle)(void);
 
 @interface AppUtility : NSObject
-
+/** 检测访问相册的权限 */
++ (void)checkPhotoAlbumAuthorizationGrand:(void (^)())permissionGranted
+                         withNoPermission:(void (^)())noPermission;
+/** 检测访问相机、麦克风的权限 */
++ (void)checkAudioAuthorizationGrand:(void (^)())permissionGranted
+                    withNoPermission:(void (^)())noPermission;
 /** get currentViewController */
 + (UIViewController *)currentViewController;
 /** call */

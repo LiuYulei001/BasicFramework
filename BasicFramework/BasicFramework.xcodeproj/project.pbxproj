@@ -919,9 +919,9 @@
 		364DA6021D6584F400F6F424 /* Vender(功能封装) */ = {
 			isa = PBXGroup;
 			children = (
-				365A393C1FA7014B009B2170 /* GWLPhotoSelector(相册选择器) */,
 				36A5302F1E8112220067F8F7 /* WebViewJavascriptBridge(H5原生交互) */,
 				36A469941E7F66D400E44702 /* MultipleViewsSlider(滑动多视图) */,
+				365A393C1FA7014B009B2170 /* GWLPhotoSelector(相册选择器) */,
 				367521391E4D5A4900F2117C /* NightModeManager(夜间模式) */,
 				3686A8C21E724B5400FEA856 /* AlertView(成功/失败/提醒弹框) */,
 				3686A8BE1E724B1B00FEA856 /* YM_ShareManager(友盟分享) */,
@@ -931,9 +931,9 @@
 				3649E1CB1E66A313004AADBC /* KeyChain(敏感信息存储) */,
 				3630913B1DE2D233005A9C31 /* LGScrollLabel(滚动字条) */,
 				3679AA911DDDACF300169DFF /* WMPlayer(视频播放器) */,
+				365A39471FA7014D009B2170 /* IMGBrowse(图片浏览) */,
 				367A5DF81E7FC65D0026EC3D /* TextView(占位文字) */,
 				3630913F1DE2D7B2005A9C31 /* TouchID(指纹验证) */,
-				365A39471FA7014D009B2170 /* IMGBrowse(图片浏览) */,
 				369318311E7B7B3100AD8561 /* CycleIMG(轮播图) */,
 				368A593F1EA5C2B400F153CA /* BuriedPoint(埋点) */,
 				365A395C1FA706A1009B2170 /* ConvertMp3 */,

@@ -7,8 +7,74 @@
 #import "Reachability.h"
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <AVFoundation/AVFoundation.h>
+#import <Photos/Photos.h>
 
 @implementation AppUtility
+
++ (void)checkAudioAuthorizationGrand:(void (^)())permissionGranted
+                    withNoPermission:(void (^)())noPermission
+{
+    AVAuthorizationStatus videoAuthStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    switch (videoAuthStatus) {
+        case AVAuthorizationStatusNotDetermined:
+        {
+            //第一次提示用户授权
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+                granted ? permissionGranted() : noPermission();
+            }];
+            break;
+        }
+        case AVAuthorizationStatusAuthorized:
+        {
+            //通过授权
+            permissionGranted();
+            break;
+        }
+        case AVAuthorizationStatusRestricted:
+            //不能授权
+            noPermission();
+        case AVAuthorizationStatusDenied:{
+            //提示跳转到相机设置(这里使用了blockits的弹窗方法）
+            noPermission();
+        }
+            break;
+        default:
+            break;
+    }
+}
++ (void)checkPhotoAlbumAuthorizationGrand:(void (^)())permissionGranted
+                         withNoPermission:(void (^)())noPermission
+{
+    PHAuthorizationStatus photoAuthStatus = [PHPhotoLibrary authorizationStatus];
+    switch (photoAuthStatus) {
+        case PHAuthorizationStatusNotDetermined:
+        {
+            //第一次提示用户授权
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                status == PHAuthorizationStatusAuthorized ? permissionGranted() : noPermission();
+            }];
+            break;
+        }
+        case PHAuthorizationStatusAuthorized:
+        {
+            //已经通过授权
+            permissionGranted();
+            break;
+        }
+        case PHAuthorizationStatusRestricted:
+            //不能授权
+            noPermission();
+        case PHAuthorizationStatusDenied:{
+            //提示跳转相册授权设置
+            noPermission();
+            break;
+        }
+        default:
+            break;
+            
+    }
+}
 + (UIViewController *)topMostController
 {
     UIViewController *topController = [kWindow rootViewController];

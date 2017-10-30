@@ -6,7 +6,14 @@ typedef void(^RefreshAndLoadMoreHandle)(void);
 
 @interface AppUtility : NSObject
 
-
+/** get currentViewController */
++ (UIViewController *)currentViewController;
+/** call */
++ (void)callWithPhoneNumber:(NSString *)phoneNumber;
+/** status gradient color */
++ (void)gradientStartColor:(UIColor *)startColor
+                  endColor:(UIColor *)endColor
+                statusView:(UIView *)statusView;
 /** 获取当前网络 */
 + (NSString *)getNetworkType;
 /** 清除WKWebview缓存 */

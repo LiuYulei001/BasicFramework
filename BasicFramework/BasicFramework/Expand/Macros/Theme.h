@@ -27,6 +27,10 @@
  */
 #define ThemeColor UIColorFromRGBValue(0X0096f4)
 /**
+ *  page control default color
+ */
+#define kPageDefaultColor UIColorFromRGBValue(0X828CA1)
+/**
  *  主题辅助颜色（状态，提示等...）
  */
 #define OrangeColor UIColorFromRGBValue(0Xef5a50)

@@ -15,6 +15,4 @@
 //用户姓名
 @property(nonatomic,copy)NSString *UserName;
 
-+(void)loginWithName:(NSString *)name PW:(NSString *)PW FinishedLogin:(void(^)(UserModel *model))FinishedLogin;
-
 @end

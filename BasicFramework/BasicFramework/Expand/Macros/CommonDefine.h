@@ -1,63 +1,32 @@
 
-
 /**
- *  提醒消失时间
+ *  user
  */
-#define HUD_DismisTime 0.5
+#define USER_ID [FileCacheManager getValueInMyLocalStoreForKey:kUSER_ID_KEY]
 /**
- *  透明度
- */
-#define kAlpha 0.3
-/**
- *  获取Window
+ *  Bounds
  */
 #define kWindow [UIApplication sharedApplication].keyWindow
-/**
- *  获取mainScreen的bounds
- */
 #define kScreenBounds [[UIScreen mainScreen] bounds]
 #define kScreenWidth kScreenBounds.size.width
 #define kScreenHeight kScreenBounds.size.height
 /**
- *  版本号
- *
- *  @param  CFBundleShortVersionString
- *
- *  @return kVersion
+ *  Version
  */
 #define kVersion [NSString stringWithFormat:@"%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]
-/** 
- *  当前系统版本号
- */
 #define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
 /**
- *  当前网络状态
+ *  Network
  */
 #define kNetworkType [AppUtility getNetworkType]
-/**
- *  用户惟一标示
- */
-#define USER_ID [FileCacheManager getValueInMyLocalStoreForKey:KEY_USER_ID]
+
 
 /**
- *  持久化 KEY 值
- */
-#define kNoNetwork @"no network"
-#define KEY_USER_ID @"USER_ID"
-/**
- *  懒人简化书写宏
+ *  lazy
  */
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
-/**
- *  请求提示文字
- */
-#define Loading @"请稍后..."
-#define Request_Failure @"失败"
-#define Request_Success @"成功"
-#define Request_NOMore @"已加载全部"
-#define Request_NoNetwork @"请检查网络链接"
-#define DownLoad_Failure @"下载失败"
+
 /**
  *  iPhone or iPad
  */
@@ -101,6 +70,7 @@ return self;\
 //#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
 //
 //#endif
+
 
 
 

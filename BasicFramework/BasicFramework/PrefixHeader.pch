@@ -9,7 +9,6 @@
 #import "ProgressHUD.h"
 #import "AppUtility.h"
 #import "NetWorkManager.h"
-#import "GlobalConstants.h"
 #import "URLConstants.h"
 #import "FileCacheManager.h"
 
@@ -26,9 +25,9 @@
 
 #pragma mark - H file
 
-#import "IMGNAME.h"
 #import "Theme.h"
 #import "CommonDefine.h"
+#import "BasicConstants.h"
 
 #pragma mark - categories
 

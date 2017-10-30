@@ -8,6 +8,7 @@
 
 #import "LoginVC.h"
 #import "UserModel.h"
+#import "RequestTool.h"
 
 @interface LoginVC ()
 
@@ -21,8 +22,10 @@
     
 }
 -(void)logining{
-    
-    [UserModel loginWithName:@"" PW:@"" FinishedLogin:^(UserModel *model) {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setValue:@"1" forKey:@"name"];
+    [dic setValue:@"2" forKey:@"password"];
+    [[RequestTool sharedRequestTool].userRequestTool loginWithParameters:dic FinishedLogin:^(id responseObject) {
         
     }];
     

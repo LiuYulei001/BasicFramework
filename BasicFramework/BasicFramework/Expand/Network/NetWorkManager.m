@@ -72,10 +72,10 @@ static NetWorkManager *network = nil;
         
         self.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         self.requestSerializer = [AFJSONRequestSerializer serializer];
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
-        [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
-        [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
+//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//        [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
+//        [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+//        [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];
 //2⃣️    if (USER_TOKENID) {
 //
 //        [self.requestSerializer setValue:USER_TOKENID forHTTPHeaderField:@"Cookie"];
@@ -132,9 +132,9 @@ static NetWorkManager *network = nil;
     
     [request setHTTPMethod:RequestType];
     
-    [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
-    [request setValue:kVersion forHTTPHeaderField:@"version"];
-    [request setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
+//    [request setValue:[USER_ID stringValue] forHTTPHeaderField:@"uid"];
+//    [request setValue:kVersion forHTTPHeaderField:@"version"];
+//    [request setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
 //2⃣️    NSArray *temp_array = [NAMEANDPWFORBASIC componentsSeparatedByString:@"#"];
 //    NSData *basicAuthCredentials = [[NSString stringWithFormat:@"%@:%@", temp_array[0], temp_array[1]] dataUsingEncoding:NSUTF8StringEncoding];
 //    NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
@@ -182,10 +182,10 @@ static NetWorkManager *network = nil;
                          success:(requestSuccess)success
                          failure:(requestFailure)failure
 {
-    if ([kNetworkType isEqualToString:kNoNetwork]) {
-        failure(nil);
-        return;
-    }
+//    if ([kNetworkType isEqualToString:kNoNetwork]) {
+//        failure(nil);
+//        return;
+//    }
     
     [kNetWorkManager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -254,10 +254,10 @@ static NetWorkManager *network = nil;
                         failure:(requestFailure)failure
 {
     
-    if ([kNetworkType isEqualToString:kNoNetwork]) {
-        failure(nil);
-        return;
-    }
+//    if ([kNetworkType isEqualToString:kNoNetwork]) {
+//        failure(nil);
+//        return;
+//    }
     
     [kNetWorkManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -317,10 +317,10 @@ static NetWorkManager *network = nil;
                      success:(requestSuccess)success
                      failure:(requestFailure)failure
 {
-    if ([kNetworkType isEqualToString:kNoNetwork]) {
-        failure(nil);
-        return;
-    }
+//    if ([kNetworkType isEqualToString:kNoNetwork]) {
+//        failure(nil);
+//        return;
+//    }
     [kNetWorkManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         NSUInteger i = 0 ;
@@ -376,10 +376,10 @@ static NetWorkManager *network = nil;
                     SuccessBlock:(requestSuccess)successBlock
                     FailureBlock:(requestFailure)failureBlock
 {
-    if ([kNetworkType isEqualToString:kNoNetwork]) {
-        failureBlock(nil);
-        return;
-    }
+//    if ([kNetworkType isEqualToString:kNoNetwork]) {
+//        failureBlock(nil);
+//        return;
+//    }
     
     /**获得视频资源*/
     
@@ -466,11 +466,11 @@ static NetWorkManager *network = nil;
                      SuccessBlock:(downloadSuccess)successBlock
                      FailureBlock:(requestFailure)failureBlock
 {
-    if ([kNetworkType isEqualToString:kNoNetwork]) {
-        failureBlock(nil);
-        return;
-    }
-    
+//    if ([kNetworkType isEqualToString:kNoNetwork]) {
+//        failureBlock(nil);
+//        return;
+//    }
+//
     NSURLSessionDownloadTask *downloadTask = [kNetWorkManager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]] progress:^(NSProgress * _Nonnull downloadProgress) {
         
         if (progress) {
@@ -572,7 +572,7 @@ static NetWorkManager *network = nil;
  */
 +(void)clearUserCaches
 {
-    [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
+//    [FileCacheManager DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
 }
 /**
  *  创建日期字符串防止重复命名

@@ -9,6 +9,39 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 @implementation AppUtility
++ (UIViewController *)topMostController
+{
+    UIViewController *topController = [kWindow rootViewController];
+    while ([topController presentedViewController]) topController = [topController presentedViewController];
+    return topController;
+}
++ (UIViewController *)currentViewController
+{
+    UIViewController *currentViewController = [self topMostController];
+    while ([currentViewController isKindOfClass:[UINavigationController class]] && [(UINavigationController*)currentViewController topViewController])
+        currentViewController = [(UINavigationController*)currentViewController topViewController];
+    return currentViewController;
+}
++ (void)callWithPhoneNumber:(NSString *)phoneNumber
+{
+    phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSMutableString* str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",phoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
++ (void)gradientStartColor:(UIColor *)startColor endColor:(UIColor *)endColor statusView:(UIView *)statusView
+{
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = statusView.bounds;
+    [statusView.layer addSublayer:gradientLayer];
+    
+    gradientLayer.locations = @[[NSNumber numberWithFloat:0], [NSNumber numberWithFloat:1.0]];
+    
+    gradientLayer.colors = @[(__bridge NSArray * _Nullable)(startColor.CGColor), (__bridge NSArray * _Nullable)(endColor.CGColor)];
+    
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+}
+
 /** 获取当前网络 */
 -(void)setReachability
 {
@@ -77,7 +110,7 @@
         case NotReachable:
         {
             
-            netconnType = kNoNetwork;
+            netconnType = @"NoNetwork";
         }
             break;
             

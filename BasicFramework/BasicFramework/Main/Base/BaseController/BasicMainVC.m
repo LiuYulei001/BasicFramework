@@ -95,7 +95,59 @@
 }
 
 
-
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion
+{
+    
+//    1.#define定义的常量
+//    kCATransitionFade   交叉淡化过渡
+//    kCATransitionMoveIn 新视图移到旧视图上面
+//    kCATransitionPush   新视图把旧视图推出去
+//    kCATransitionReveal 将旧视图移开,显示下面的新视图
+//
+//    2.用字符串表示 动画类型
+//    pageCurl            向上翻一页
+//    pageUnCurl          向下翻一页
+//    rippleEffect        滴水效果
+//    suckEffect          收缩效果，如一块布被抽走
+//    cube                立方体效果
+//    oglFlip             上下翻转效果
+//
+//
+//    示例：
+//    CATransition *animation=[CATransition animation];
+//    animation.delegate=self;
+//    animation.duration=1.0f;
+//    animation.timingFunction=UIViewAnimationCurveEaseInOut;
+//    animation.type=kCATransitionMoveIn;
+//    animation.subtype=kCATransitionFromTop;
+//
+//    [myView.layer addAnimation:animation forKey:@"move in"];
+    
+    //创建动画
+    CATransition * transition = [CATransition animation];
+    
+    //设置动画类型
+    transition.type = @"rippleEffect";
+    
+    //动画出现类型
+    transition.subtype = @"fromCenter";
+    
+    //动画时间
+    transition.duration = 0.3;
+    
+    //移除当前window的layer层的动画
+    [self.view.window.layer removeAllAnimations];
+    
+    //将定制好的动画添加到当前控制器window的layer层
+    [self.view.window.layer addAnimation:transition forKey:nil];
+    //自定义动画 需要关闭系统动画
+    [super presentViewController:viewControllerToPresent animated:NO completion:completion];
+}
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion
+{
+    //也可加动画
+    [super dismissViewControllerAnimated:flag completion:completion];
+}
 
 
 #pragma mark - lazy

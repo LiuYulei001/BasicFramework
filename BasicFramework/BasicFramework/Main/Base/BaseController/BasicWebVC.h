@@ -12,6 +12,7 @@
 
 @property(nonatomic,assign)CGRect viewFrame;
 
--(void)reloadWebView:(NSString *)htmlUrlStr;
+- (void)reloadForGetWebView:(NSString *)htmlStr;
+- (void)reloadForPostWebView:(NSString *)htmlStr parameters:(NSDictionary *)parameters;
 
 @end

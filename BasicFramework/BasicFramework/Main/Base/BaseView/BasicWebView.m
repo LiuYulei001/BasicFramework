@@ -21,18 +21,18 @@
 @implementation BasicWebView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
--(instancetype)initWithFrame:(CGRect)frame
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
+-(instancetype)initWithFrame:(CGRect)frame canCopy:(BOOL)canCopy canZoom:(BOOL)canZoom
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:[self javascriptOfCSS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:[self javascriptOfCSS:canCopy canZoom:canZoom] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
         WKUserContentController *userContentController = [[WKUserContentController alloc] init];
         [userContentController addUserScript:noneSelectScript];
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
@@ -54,14 +54,14 @@
         self.progressView = progressView;
         
         [self addSubview:WK_web];
-
+        
         [self insertSubview:progressView aboveSubview:WK_web];
         
         [self.webView addObserver:self
                        forKeyPath:@"estimatedProgress"
                           options:NSKeyValueObservingOptionNew
                           context:nil];
-
+        
     }
     return self;
 }
@@ -96,17 +96,18 @@
         }];
     }
 }
-- (NSString *)javascriptOfCSS
+- (NSString *)javascriptOfCSS:(BOOL)canCopy canZoom:(BOOL)canZoom
 {
-    NSString *css = @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
+    NSString *css = canCopy ? @"" : @"body{-webkit-user-select:none;-webkit-user-drag:none;}";
     NSMutableString *javascript = [NSMutableString string];
     [javascript appendString:@"var style = document.createElement('style');"];
     [javascript appendString:@"style.type = 'text/css';"];
     [javascript appendFormat:@"var cssContent = document.createTextNode('%@');", css];
     [javascript appendString:@"style.appendChild(cssContent);"];
     [javascript appendString:@"document.body.appendChild(style);"];
-    NSString *injectionJSString = @"var script = document.createElement('meta');""script.name = 'viewport';""script.content=\"width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\";""document.getElementsByTagName('head')[0].appendChild(script);";
-    [javascript appendString:injectionJSString];
+    [javascript appendString:@"document.documentElement.style.webkitTouchCallout='none';"];
+    [javascript appendString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%';"];
+    [javascript appendString:canZoom ? @"" : @"var script = document.createElement('meta');""script.name = 'viewport';""script.content=\"width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\";""document.getElementsByTagName('head')[0].appendChild(script);"];
     return javascript;
 }
 - (UIViewController*)viewController {
@@ -180,3 +181,4 @@
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 @end
+

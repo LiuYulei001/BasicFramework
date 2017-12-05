@@ -109,6 +109,8 @@
 		367A5DFF1E7FC6810026EC3D /* GraphicBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5DFE1E7FC6810026EC3D /* GraphicBT.m */; };
 		367A5E021E7FC7700026EC3D /* AppDelegate+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E011E7FC7700026EC3D /* AppDelegate+UI.m */; };
 		367A5E171E7FC8D60026EC3D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A5E161E7FC8D60026EC3D /* BaseModel.m */; };
+		368225F61FD63F3B004DFDEF /* YGMapManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368225F41FD63F3A004DFDEF /* YGMapManagerView.m */; };
+		368225F91FD63F5B004DFDEF /* YGAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 368225F81FD63F5B004DFDEF /* YGAnnotation.m */; };
 		3686A8BA1E7233AC00FEA856 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8B91E7233AC00FEA856 /* LogManager.m */; };
 		3686A8C11E724B1B00FEA856 /* LYLShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686A8C01E724B1B00FEA856 /* LYLShareManager.m */; };
 		3686A8CF1E724B5400FEA856 /* checkMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3686A8C41E724B5400FEA856 /* checkMark.png */; };
@@ -358,6 +360,10 @@
 		367A5E011E7FC7700026EC3D /* AppDelegate+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UI.m"; sourceTree = "<group>"; };
 		367A5E151E7FC8D60026EC3D /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		367A5E161E7FC8D60026EC3D /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		368225F41FD63F3A004DFDEF /* YGMapManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGMapManagerView.m; sourceTree = "<group>"; };
+		368225F51FD63F3B004DFDEF /* YGMapManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMapManagerView.h; sourceTree = "<group>"; };
+		368225F71FD63F5B004DFDEF /* YGAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAnnotation.h; sourceTree = "<group>"; };
+		368225F81FD63F5B004DFDEF /* YGAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAnnotation.m; sourceTree = "<group>"; };
 		3686A8B81E7233AC00FEA856 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
 		3686A8B91E7233AC00FEA856 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		3686A8BF1E724B1B00FEA856 /* LYLShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLShareManager.h; sourceTree = "<group>"; };
@@ -465,6 +471,8 @@
 		36111A911D6EE4FC00A03BF4 /* BaseModel(数据模型) */ = {
 			isa = PBXGroup;
 			children = (
+				368225F71FD63F5B004DFDEF /* YGAnnotation.h */,
+				368225F81FD63F5B004DFDEF /* YGAnnotation.m */,
 				367A5E151E7FC8D60026EC3D /* BaseModel.h */,
 				367A5E161E7FC8D60026EC3D /* BaseModel.m */,
 			);
@@ -483,6 +491,8 @@
 				365A39581FA703E4009B2170 /* YGDatePicker.m */,
 				365A39591FA703E5009B2170 /* YGOptionPicker.h */,
 				365A39571FA703E4009B2170 /* YGOptionPicker.m */,
+				368225F51FD63F3B004DFDEF /* YGMapManagerView.h */,
+				368225F41FD63F3A004DFDEF /* YGMapManagerView.m */,
 			);
 			name = "BaseView(视图)";
 			path = BaseView;
@@ -1640,6 +1650,7 @@
 				3675217F1E4D5A4900F2117C /* UIBarButtonItem+NightVersion.m in Sources */,
 				3675218D1E4D5A4900F2117C /* UITableView+NightVersion.m in Sources */,
 				3675218A1E4D5A4900F2117C /* UITabBar+BarTintColor.m in Sources */,
+				368225F61FD63F3B004DFDEF /* YGMapManagerView.m in Sources */,
 				3679E9E81E8B452D00180014 /* JSBridgeManager.m in Sources */,
 				3679AAB11DDDB79A00169DFF /* UINavigationBar+SetElement.m in Sources */,
 				365A39311FA6FD5B009B2170 /* BasicWebView.m in Sources */,
@@ -1708,6 +1719,7 @@
 				36A530391E8112220067F8F7 /* WebViewJavascriptBridge_JS.m in Sources */,
 				365A395B1FA703E5009B2170 /* YGDatePicker.m in Sources */,
 				3679AAC91DDDB7CF00169DFF /* UIButton+Extension.m in Sources */,
+				368225F91FD63F5B004DFDEF /* YGAnnotation.m in Sources */,
 				369318381E7B7CF000AD8561 /* LYLCycleImagesCell.m in Sources */,
 				365A394D1FA7014D009B2170 /* GWLPhotoGroupTableViewController.m in Sources */,
 				3630913E1DE2D233005A9C31 /* LGScrollLabel.m in Sources */,

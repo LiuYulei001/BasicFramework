@@ -9,9 +9,40 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
+#import <CoreLocation/CoreLocation.h>
 
 @implementation AppUtility
 
++ (void)checkLocationServiceAuthorization:(void(^)(BOOL authorizationAllow))checkFinishBack
+{
+    if ([CLLocationManager locationServicesEnabled])
+    {
+        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+        switch (status) {
+            case kCLAuthorizationStatusNotDetermined:
+                checkFinishBack(NO);
+                break;
+            case kCLAuthorizationStatusRestricted:
+                checkFinishBack(NO);
+                break;
+            case kCLAuthorizationStatusDenied:
+                NSLog(@"请在系统设置中开启定位服务(设置>隐私>定位服务>开启)");
+                break;
+            case kCLAuthorizationStatusAuthorizedAlways:
+                checkFinishBack(YES);
+                break;
+            case kCLAuthorizationStatusAuthorizedWhenInUse:
+                checkFinishBack(YES);
+                break;
+                
+            default:
+                break;
+        }
+    }else
+    {
+        NSLog(@"此设备不支持定位服务");
+    }
+}
 + (void)checkAudioAuthorizationGrand:(void (^)())permissionGranted
                     withNoPermission:(void (^)())noPermission
 {

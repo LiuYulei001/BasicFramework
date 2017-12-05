@@ -11,6 +11,8 @@
 
 @interface BasicWebView : UIView
 
+-(instancetype)initWithFrame:(CGRect)frame canCopy:(BOOL)canCopy canZoom:(BOOL)canZoom;
 @property(nonatomic,strong)WKWebView *webView;
 
 @end
+

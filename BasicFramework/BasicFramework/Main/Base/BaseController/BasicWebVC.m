@@ -34,8 +34,9 @@
 {
     htmlStr = [NSString stringWithFormat:@"%@%@",_Environment_Domain,htmlStr];
     NSMutableURLRequest * requestShare = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:htmlStr]];
+    [requestShare addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [requestShare setHTTPMethod:@"POST"];
-    [requestShare setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil]];
+    [requestShare setHTTPBody: [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil]];
     [self.webParentView.webView loadRequest:requestShare];
 }
 #pragma mark - <WKNavigationDelegate>

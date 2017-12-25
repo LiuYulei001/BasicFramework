@@ -72,7 +72,7 @@ static NetWorkManager *network = nil;
         
         self.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         self.requestSerializer = [AFJSONRequestSerializer serializer];
-//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 //        [self.requestSerializer setValue:USER_ID forHTTPHeaderField:@"USER_ID"];
 //        [self.requestSerializer setValue:[NetWorkManager getUUID] forHTTPHeaderField:@"EquipmentOnlyLabeled"];
 //        [self.requestSerializer setValue:kVersion forHTTPHeaderField:@"version"];

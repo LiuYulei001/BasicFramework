@@ -27,6 +27,7 @@ static LogManager *Loger = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Loger = [[LogManager alloc] init];
+        
     });
     
     return Loger;
@@ -39,7 +40,9 @@ static LogManager *Loger = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
+    
+#pragma mark - 网络实时监控
+        [[LogManager shareLoger] reachabilityStatusMonitoring];
 #pragma mark 开始埋点
         [BuriedPointManager becomeBuriedPoint];
 #pragma mark 数据容错开启
@@ -49,6 +52,40 @@ static LogManager *Loger = nil;
         
     });
     
+}
+#pragma mark - 网络实时监控
+-(void)reachabilityStatusMonitoring
+{
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        switch (status) {
+            case AFNetworkReachabilityStatusNotReachable:{
+                
+                NSLog(@"无网络连接");
+            }
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:{
+                
+                NSLog(@"移动蜂窝网络");
+            }
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:{
+                
+                NSLog(@"wifi网络");
+            }
+                break;
+            case AFNetworkReachabilityStatusUnknown:{
+                
+                NSLog(@"无法获取网络状态");
+            }
+                break;
+            default:
+                break;
+        }
+        
+    }];
 }
 #pragma mark - 开启容错
 -(void)FaultTolerance

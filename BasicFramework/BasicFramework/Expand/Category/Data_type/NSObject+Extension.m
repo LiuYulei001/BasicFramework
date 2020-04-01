@@ -137,4 +137,18 @@ static char const dispatch_source_timer_;
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
+- (NSArray *)getAllPropertiesOfObject:(id)object
+{
+    u_int count;
+    objc_property_t *properties  =class_copyPropertyList([object class], &count);
+    NSMutableArray *propertiesArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i<count; i++)
+    {
+        const char* propertyName =property_getName(properties[i]);
+        [propertiesArray addObject: [NSString stringWithUTF8String: propertyName]];
+    }
+    free(properties);
+    return propertiesArray;
+}
+
 @end

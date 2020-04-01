@@ -25,5 +25,11 @@ typedef void(^timingChildThreadsBlock)(NSObject *obj,NSTimeInterval TimeInterval
 #pragma mark - 手机震动
 +(void)iPhoneVibration;
 
+/**
+ *  获取对象所有属性
+ */
+- (NSArray *)getAllPropertiesOfObject:(id)object;
+
+
 
 @end
